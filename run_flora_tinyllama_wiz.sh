@@ -14,7 +14,7 @@ set -e
 
 mkdir -p logs
 
-# Step 1: Load conda and activate environment
+# Step 1: Load conda and activate FLoRA environment
 module load conda
 conda activate flora
 
