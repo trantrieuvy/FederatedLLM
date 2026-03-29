@@ -60,7 +60,8 @@ def fl_finetune(
         local_ranks: List[int] = [64, 32, 16, 16, 8, 8, 4, 4, 4, 4],
         zero_padding: bool = False,
         Adalora: bool = False,
-        full: bool = False
+        full: bool = False,
+        seed: int = 42
 ):
     if int(os.environ.get("LOCAL_RANK", 0)) == 0:
         print(
@@ -87,6 +88,7 @@ def fl_finetune(
             f"group_by_length: {group_by_length}\n"
             f"resume_from_checkpoint: {resume_from_checkpoint or False}\n"
             f"prompt template: {prompt_template_name}\n"
+            f"seed: {seed}\n"
         )
     assert (
         global_model
@@ -235,6 +237,12 @@ def fl_finetune(
     if not ddp and torch.cuda.device_count() > 1:
         model.is_parallelizable = True
         model.model_parallel = True
+
+    # Set global seeds for reproducibility (after model/tokenizer loading)
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
 
     print("The process of federated instruction-tuning has started..")
     previously_selected_clients_set = set()

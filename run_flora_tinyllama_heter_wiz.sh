@@ -39,4 +39,5 @@ python main.py \
   --heter True \
   --local_ranks '[64,32,16,16,8,8,4,4,4,4]' \
   --full False \
-  --dev_data_path './mmlu_test_1444.jsonl'
+  --dev_data_path './mmlu_test_1444.jsonl' \
+  --seed 42

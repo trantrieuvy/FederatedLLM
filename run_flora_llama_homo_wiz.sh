@@ -36,4 +36,5 @@ python main.py \
   --stacking True \
   --heter False \
   --full False \
-  --dev_data_path './mmlu_test_1444.jsonl'
+  --dev_data_path './mmlu_test_1444.jsonl' \
+  --seed 42
