@@ -1,0 +1,493 @@
+"""
+Federated instruction-tuning — PEFT backbone + layercraft adapters.
+
+Design principle:
+  PEFT owns everything about model management (device_map, dispatch hooks,
+  training loop, fp16, DataLoader workers).  After PEFT wraps the model,
+  we swap its standard lora.Linear modules with layercraft adapter modules.
+
+  This means:
+    - No device hacks, no hook removal, no single-GPU forcing
+    - Same behaviour as main.py for plain LoRA (adapter_type=None)
+    - Custom adapters (shim, baba, …) slot in by changing adapter_type or
+      layer_config without touching anything else
+
+Usage — plain LoRA verification (should match main.py results):
+    python main_layercraft.py \
+        --global_model TinyLlama/TinyLlama-1.1B-Chat-v1.0 \
+        --data_path ./data_wiz --output_dir ./layercraft-tinyllama-homo-wiz/ \
+        --stacking True --seed 0
+
+Usage — per-layer custom adapters:
+    python main_layercraft.py ... \
+        --adapter_type shim \
+        --layer_config '{"0":"lora","3":"shim","6":"baba"}'
+"""
+
+import os
+import json
+import copy
+from typing import List
+
+import fire
+import torch
+import numpy as np
+import random
+from tqdm import tqdm
+from transformers import (
+    AutoModelForCausalLM, AutoTokenizer,
+    LlamaTokenizer, LlamaForCausalLM,
+    GPT2Tokenizer, GPT2LMHeadModel,
+)
+from peft import LoraConfig, get_peft_model
+
+import layercraft
+from layercraft.adapters import (
+    LoRAAdapter, LoRA_SHIM_Adapter, LoRA_BABA_Adapter,
+    LoRANonLinearAdapter, LoRANonLinearB, LoRA_BABA_NonLinear,
+)
+from fed_utils.client_layercraft import GeneralClient
+from fed_utils.model_aggregation_layercraft import FedAvg
+from fed_utils.client_participation_scheduling import client_selection
+from fed_utils.evaluation import global_evaluation
+from utils.prompter import Prompter
+
+
+# ---------------------------------------------------------------------------
+# Swap helpers
+# ---------------------------------------------------------------------------
+
+def _peft_lora_cls():
+    """Return PEFT's LoRA Linear class, handling different PEFT version paths."""
+    try:
+        from peft.tuners.lora.layer import Linear as Cls
+    except ImportError:
+        from peft.tuners.lora import Linear as Cls
+    return Cls
+
+
+def _build_adapter(base_linear, adapter_type, r, alpha, dropout):
+    """Instantiate the right layercraft adapter for a given base nn.Linear."""
+    t = adapter_type
+    if t is None or t == "lora":
+        return LoRAAdapter(base_linear, r=r, alpha=alpha, dropout=dropout)
+    elif t == "shim":
+        return LoRA_SHIM_Adapter(base_linear, r=r, alpha=alpha, dropout=dropout)
+    elif t == "baba":
+        return LoRA_BABA_Adapter(base_linear, r1=r, r2=r, alpha=alpha, dropout=dropout)
+    elif t == "lora_nonlinear":
+        return LoRANonLinearAdapter(base_linear, r=r, alpha=alpha, dropout=dropout)
+    elif t == "lora_nonlinear_b":
+        return LoRANonLinearB(base_linear, r=r, alpha=alpha, dropout=dropout)
+    else:
+        raise ValueError(f"Unknown adapter_type: {t!r}")
+
+
+def _layer_idx_from_name(name):
+    """Extract transformer layer index (as string) from a dotted module name."""
+    parts = name.split(".")
+    for i, p in enumerate(parts):
+        if p == "layers" and i + 1 < len(parts) and parts[i + 1].isdigit():
+            return parts[i + 1]
+    return None
+
+
+def _set_submodule(model, dotted_name, new_module):
+    """Replace the sub-module at `dotted_name` with `new_module`."""
+    parts = dotted_name.split(".")
+    parent = model
+    for p in parts[:-1]:
+        parent = getattr(parent, p)
+    setattr(parent, parts[-1], new_module)
+
+
+def _swap_peft_to_layercraft(model, r, alpha, dropout,
+                              adapter_type=None, layer_config_dict=None):
+    """
+    Find every PEFT lora.Linear inside `model` and replace it with the
+    corresponding layercraft adapter.
+
+    PEFT's PeftModel wrapper, device dispatch hooks, and training
+    infrastructure are left completely intact — only the inner computation
+    changes.
+
+    Returns the number of modules swapped.
+    """
+    PeftLoraLinear = _peft_lora_cls()
+    count = 0
+    for name, module in list(model.named_modules()):
+        if not isinstance(module, PeftLoraLinear):
+            continue
+        # New PEFT (>=0.4): base_layer is the original nn.Linear.
+        # Old PEFT: Linear subclasses nn.Linear directly, so module IS the base.
+        base_linear = getattr(module, 'base_layer', module)
+        # Per-layer type override
+        this_type = adapter_type
+        if layer_config_dict:
+            idx = _layer_idx_from_name(name)
+            if idx is not None and idx in layer_config_dict:
+                this_type = layer_config_dict[idx]
+        adapter = _build_adapter(base_linear, this_type, r, alpha, dropout)
+        # Move adapter to the same device as the base weight (GPU)
+        adapter = adapter.to(base_linear.weight.device)
+        _set_submodule(model, name, adapter)
+        count += 1
+    return count
+
+
+def _wrap_and_swap(raw_model, r, alpha, dropout,
+                   target_modules, global_model,
+                   adapter_type, layer_config_dict):
+    """
+    Wrap `raw_model` with PEFT LoRA, then swap PEFT's adapters with
+    layercraft's.  Returns (peft_model, adapter_count).
+
+    The PeftModel wrapper keeps all PEFT infrastructure working.
+    Layercraft's adapters replace only the forward computation.
+    """
+    config = LoraConfig(
+        r=r,
+        lora_alpha=alpha,
+        lora_dropout=dropout,
+        target_modules=target_modules,
+        bias="none",
+        task_type="CAUSAL_LM",
+        base_model_name_or_path=global_model,
+    )
+    peft_model = get_peft_model(raw_model, config)
+    count = _swap_peft_to_layercraft(
+        peft_model, r, alpha, dropout, adapter_type, layer_config_dict
+    )
+    return peft_model, count
+
+
+def _merge_and_unwrap(peft_model):
+    """
+    Merge layercraft adapter ΔW into base weights then unwrap the PeftModel.
+
+    Equivalent to PEFT's merge_and_unload(), but for layercraft adapters.
+    Returns the raw base model with merged weights (ready for the next round).
+    """
+    layercraft.merge_adapters(peft_model)    # LoRAAdapter → nn.Linear in-place
+    return peft_model.base_model.model       # strip LoraModel wrapper
+
+
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
+
+def fl_finetune(
+    # model / data
+    global_model: str = "huggyllama/llama-7b",
+    data_path: str = "./data",
+    output_dir: str = "./layercraft-out/",
+    # FL
+    client_selection_strategy: str = "random",
+    client_selection_frac: float = 1,
+    num_communication_rounds: int = 5,
+    num_clients: int = 10,
+    # local training
+    local_batch_size: int = 128,
+    local_micro_batch_size: int = 16,
+    local_num_epochs: int = 3,
+    local_learning_rate: float = 3e-4,
+    local_val_set_size: int = 0,
+    local_save_steps: int = 3,
+    cutoff_len: int = 512,
+    # LoRA / adapter
+    lora_r: int = 16,
+    lora_alpha: int = 32,
+    lora_dropout: float = 0.05,
+    lora_target_modules: List[str] = ["q_proj", "v_proj"],
+    adapter_type: str = None,       # None = plain LoRA; "shim", "baba", …
+    layer_config: str = None,       # JSON: '{"0":"shim","3":"baba"}'
+    # llm
+    train_on_inputs: bool = True,
+    group_by_length: bool = False,
+    prompt_template_name: str = "alpaca",
+    # aggregation
+    stacking: bool = False,
+    # evaluation
+    dev_data_path: str = "./mmlu_test_1444.jsonl",
+    # heterogeneous
+    heter: bool = False,
+    local_ranks: List[int] = [64, 32, 16, 16, 8, 8, 4, 4, 4, 4],
+    zero_padding: bool = False,
+    # reproducibility
+    seed: int = 42,
+):
+    layer_config_dict = None
+    if layer_config is not None:
+        layer_config_dict = (
+            json.loads(layer_config) if isinstance(layer_config, str) else layer_config
+        )
+
+    print(
+        f"Federated Finetuning with layercraft adapters (PEFT backbone):\n"
+        f"global_model: {global_model}\n"
+        f"data_path: {data_path}\n"
+        f"output_dir: {output_dir}\n"
+        f"client_selection_strategy: {client_selection_strategy}\n"
+        f"client_selection_frac: {client_selection_frac}\n"
+        f"num_communication_rounds: {num_communication_rounds}\n"
+        f"num_clients: {num_clients}\n"
+        f"local_batch_size: {local_batch_size}\n"
+        f"local_micro_batch_size: {local_micro_batch_size}\n"
+        f"local_num_epochs: {local_num_epochs}\n"
+        f"local_learning_rate: {local_learning_rate}\n"
+        f"cutoff_len: {cutoff_len}\n"
+        f"lora_r: {lora_r}\n"
+        f"lora_alpha: {lora_alpha}\n"
+        f"lora_dropout: {lora_dropout}\n"
+        f"lora_target_modules: {lora_target_modules}\n"
+        f"adapter_type: {adapter_type}\n"
+        f"layer_config: {layer_config_dict}\n"
+        f"stacking: {stacking}\n"
+        f"heter: {heter}\n"
+        f"local_ranks: {local_ranks if heter else 'N/A'}\n"
+        f"zero_padding: {zero_padding}\n"
+        f"seed: {seed}\n"
+    )
+
+    assert global_model, "Please specify --global_model"
+    data_path = os.path.join(data_path, str(num_clients))
+    assert os.path.exists(data_path), "Please generate the data files for each client"
+
+    # ----------------------------------------------------------------
+    # Model + tokenizer  (identical to main.py — no hacks needed)
+    # ----------------------------------------------------------------
+    gradient_accumulation_steps = local_batch_size // local_micro_batch_size
+    prompter = Prompter(prompt_template_name)
+    world_size = int(os.environ.get("WORLD_SIZE", 1))
+    ddp = world_size != 1
+    device_map = "auto"
+    if ddp:
+        device_map = {"": int(os.environ.get("LOCAL_RANK") or 0)}
+        gradient_accumulation_steps = gradient_accumulation_steps // world_size
+
+    if global_model == "gpt2":
+        raw_model = GPT2LMHeadModel.from_pretrained(
+            global_model, load_in_8bit=False, torch_dtype=torch.float32,
+            device_map=device_map,
+        )
+    elif global_model in ("google/gemma-2b", "google/gemma-7b"):
+        raw_model = AutoModelForCausalLM.from_pretrained(
+            global_model, load_in_8bit=False, torch_dtype=torch.float32,
+            device_map=device_map, token="your token",
+        )
+    else:
+        raw_model = LlamaForCausalLM.from_pretrained(
+            global_model, load_in_8bit=False, torch_dtype=torch.float32,
+            device_map=device_map, token="your_token",
+        )
+
+    if global_model == "gpt2":
+        tokenizer = GPT2Tokenizer.from_pretrained(global_model)
+    elif global_model in ("google/gemma-2b", "google/gemma-7b"):
+        tokenizer = AutoTokenizer.from_pretrained(global_model, token="your_token")
+    else:
+        tokenizer = LlamaTokenizer.from_pretrained(global_model, token="your_token")
+
+    tokenizer.pad_token_id = 0
+    tokenizer.padding_side = "left"
+
+    def tokenize(prompt, add_eos_token=True):
+        result = tokenizer(
+            prompt, truncation=True, max_length=cutoff_len,
+            padding=False, return_tensors=None,
+        )
+        if (
+            result["input_ids"][-1] != tokenizer.eos_token_id
+            and len(result["input_ids"]) < cutoff_len
+            and add_eos_token
+        ):
+            result["input_ids"].append(tokenizer.eos_token_id)
+            result["attention_mask"].append(1)
+        result["labels"] = result["input_ids"].copy()
+        return result
+
+    def generate_and_tokenize_prompt(data_point):
+        if data_path == "./data/10":
+            full_prompt = prompter.generate_prompt(
+                data_point["instruction"], data_point["context"], data_point["response"],
+            )
+        elif data_path in ("./data_wiz/10", "./data_mix/20"):
+            full_prompt = prompter.generate_prompt(
+                data_point["instruction"], None, data_point["output"],
+            )
+        else:
+            full_prompt = prompter.generate_prompt(
+                data_point["instruction"], data_point["input"], data_point["output"],
+            )
+        tokenized = tokenize(full_prompt)
+        if not train_on_inputs:
+            user_prompt = prompter.generate_prompt(
+                data_point["instruction"], data_point.get("context")
+            )
+            user_len = len(tokenize(user_prompt, add_eos_token=False)["input_ids"])
+            tokenized["labels"] = [-100] * user_len + tokenized["labels"][user_len:]
+        return tokenized
+
+    # ----------------------------------------------------------------
+    # Shared kwargs for _wrap_and_swap calls throughout training
+    # ----------------------------------------------------------------
+    wrap_kwargs = dict(
+        dropout=lora_dropout,
+        target_modules=lora_target_modules,
+        global_model=global_model,
+        adapter_type=adapter_type,
+        layer_config_dict=layer_config_dict,
+    )
+
+    # ----------------------------------------------------------------
+    # Non-stacking homogeneous: wrap once, all clients share the model
+    # ----------------------------------------------------------------
+    if not stacking and not heter:
+        model, count = _wrap_and_swap(raw_model, r=lora_r, alpha=lora_alpha, **wrap_kwargs)
+        stats = layercraft.count_parameters(model)
+        print(f"Global model: {count} PEFT lora.Linear → layercraft adapters")
+        print(f"  Trainable: {stats['trainable']:,}  Total: {stats['total']:,}")
+    else:
+        # Stacking / heter: raw_model is the clean base.
+        # Each client gets its own deepcopy + fresh PEFT wrap + swap.
+        model = raw_model
+
+    if not ddp and torch.cuda.device_count() > 1:
+        model.is_parallelizable = True
+        model.model_parallel = True
+
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+
+    # ----------------------------------------------------------------
+    # Federated training loop
+    # ----------------------------------------------------------------
+    print("\nThe process of federated instruction-tuning has started..")
+    previously_selected_clients_set = set()
+    last_client_id = None
+    local_dataset_len_dict = dict()
+    output_dir = os.path.join(output_dir, str(num_clients))
+    acc_list = []
+
+    for epoch in tqdm(range(num_communication_rounds)):
+
+        print("\nConducting the client selection")
+        selected_clients_set = client_selection(
+            num_clients, client_selection_frac, client_selection_strategy,
+            other_info=epoch,
+        )
+
+        for client_id in selected_clients_set:
+
+            if stacking or heter:
+                # Each client gets a fresh copy of the base model + fresh adapters.
+                # PEFT initialises B=0, so ΔW=0 at the start of each client's training
+                # — identical to main.py's deepcopy + get_peft_model pattern.
+                client_r     = local_ranks[client_id] if heter else lora_r
+                client_alpha = (2 * local_ranks[client_id]) if heter else lora_alpha
+                model_client, cnt = _wrap_and_swap(
+                    copy.deepcopy(model), r=client_r, alpha=client_alpha, **wrap_kwargs
+                )
+                stats = layercraft.count_parameters(model_client)
+                print(f"  Client_{client_id}: {cnt} adapters (r={client_r}), "
+                      f"trainable={stats['trainable']:,}")
+            else:
+                model_client = model     # shared; weights restored after each client
+
+            client = GeneralClient(client_id, model_client, data_path, output_dir)
+
+            print(f"\nPreparing the local dataset and trainer for Client_{client_id}")
+            client.preprare_local_dataset(generate_and_tokenize_prompt, local_val_set_size)
+            client.build_local_trainer(
+                tokenizer, local_micro_batch_size, gradient_accumulation_steps,
+                local_num_epochs, local_learning_rate, group_by_length, ddp,
+            )
+
+            print(f"Initiating the local training of Client_{client_id}")
+            client.initiate_local_training()
+
+            print("Local training starts ... ")
+            client.train()
+
+            print(f"\nTerminating the local training of Client_{client_id}")
+            (
+                model_client,
+                local_dataset_len_dict,
+                previously_selected_clients_set,
+                last_client_id,
+            ) = client.terminate_local_training(
+                epoch, local_dataset_len_dict, previously_selected_clients_set
+            )
+            del client
+            if stacking or heter:
+                del model_client   # GC per-client model; base model unchanged
+
+        # ---- Aggregation ----
+        print("Collecting the weights of clients and performing aggregation")
+        model = FedAvg(
+            model, selected_clients_set, output_dir, local_dataset_len_dict,
+            epoch, stacking, lora_r, heter, local_ranks, zero_padding,
+        )
+
+        # ---- Stacking: build eval model with stacked rank, then merge ----
+        if stacking:
+            stacked_path    = os.path.join(output_dir, str(epoch), "adapter_model.bin")
+            stacked_weights = torch.load(stacked_path, map_location="cpu")
+
+            # Infer stacked rank from the first A matrix in saved weights
+            stacked_r = lora_r * len(selected_clients_set)
+            for key, val in stacked_weights.items():
+                if key.endswith(".A") or key.endswith(".A1"):
+                    stacked_r = val.shape[0]
+                    break
+            # Scale alpha so that scaling = stacked_alpha/stacked_r = lora_alpha/lora_r
+            stacked_alpha = lora_alpha * (stacked_r // lora_r)
+
+            model_eval, _ = _wrap_and_swap(
+                copy.deepcopy(model), r=stacked_r, alpha=stacked_alpha, **wrap_kwargs
+            )
+            layercraft.load_adapter_state_dict(model_eval, stacked_weights)
+            print(f"  Stacked adapter loaded: r={stacked_r}, alpha={stacked_alpha}, "
+                  f"scaling={stacked_alpha / stacked_r:.3f}")
+
+            acc = global_evaluation(model_eval, tokenizer, prompter, dev_data_path)
+            print(f"Acc of Epoch {epoch} is: {acc}")
+            acc_list.append(acc)
+
+            # Merge ΔW into base weights → updated raw model for next round
+            model = _merge_and_unwrap(model_eval)
+            del model_eval
+            print("  Merged stacked adapter into base weights")
+
+        else:
+            acc = global_evaluation(model, tokenizer, prompter, dev_data_path)
+            print(f"Acc of Epoch {epoch} is: {acc}")
+            acc_list.append(acc)
+
+        # Save layercraft config for reproducibility
+        epoch_dir = os.path.join(output_dir, str(epoch))
+        os.makedirs(epoch_dir, exist_ok=True)
+        with open(os.path.join(epoch_dir, "layercraft_config.json"), "w") as f:
+            json.dump(
+                dict(r=lora_r, alpha=lora_alpha, target_modules=lora_target_modules,
+                     dropout=lora_dropout, adapter_type=adapter_type,
+                     layer_config=layer_config_dict),
+                f, indent=2,
+            )
+
+        if epoch < (num_communication_rounds - 1):
+            os.system(f"rm -rf {os.path.join(output_dir, str(epoch))}")
+
+    # ---- Final log ----
+    print(acc_list)
+    filename = output_dir + "log.txt"
+    with open(filename, "a") as f:
+        for acc in acc_list:
+            f.write(str(acc) + "\n")
+    print("Log Saved")
+
+
+if __name__ == "__main__":
+    fire.Fire(fl_finetune)

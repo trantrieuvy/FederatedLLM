@@ -126,7 +126,7 @@ def fl_finetune(
         model = LlamaForCausalLM.from_pretrained(
             global_model,
             load_in_8bit=False,
-            torch_dtype=torch.float32,
+            torch_dtype=torch.bfloat16,
             device_map=device_map,
             token="your token",
         )
@@ -164,7 +164,7 @@ def fl_finetune(
         return result
 
     def generate_and_tokenize_prompt(data_point):
-        if data_path == './data/10':
+        if data_path == './data_dolly/10':
             full_prompt = prompter.generate_prompt(
                 data_point["instruction"],
                 data_point["context"],

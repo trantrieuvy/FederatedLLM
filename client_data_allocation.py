@@ -14,7 +14,7 @@ random.seed(42)
 
 # Divide the entire dataset into a training set and a test set.
 
-df = pd.read_json("new-databricks-dolly-15k.json", orient='records')
+df = pd.read_json("new-databricks-dolly-15k.json", orient='records', lines=True)
 sorted_df = df.sort_values(by=['category'])
 grouped = sorted_df.groupby('category')
 sampled_df = grouped.apply(lambda x: x.sample(n=10))
