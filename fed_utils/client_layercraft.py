@@ -1,13 +1,18 @@
+"""
+Federated learning client using layercraft adapters instead of PEFT.
+
+Drop-in replacement for client.py — same interface, same training flow,
+but uses layercraft.adapter_state_dict / load_adapter_state_dict
+instead of PEFT's get_peft_model_state_dict / set_peft_model_state_dict.
+"""
+
 import transformers
 import os
 from datasets import load_dataset
 import copy
-from collections import OrderedDict
 import torch
-from peft import (
-    get_peft_model_state_dict,
-    set_peft_model_state_dict,
-)
+import layercraft
+
 
 class GeneralClient:
     def __init__(self, client_id, model, data_path, output_dir):
@@ -30,7 +35,7 @@ class GeneralClient:
                 local_train_val["test"].shuffle().map(generate_and_tokenize_prompt)
             )
         else:
-            self.local_train_dataset = self.local_data["train"].shuffle(seed=self.client_id).map(generate_and_tokenize_prompt)
+            self.local_train_dataset = self.local_data["train"].shuffle().map(generate_and_tokenize_prompt)
             self.local_eval_dataset = None
         self.local_val_set_size = local_val_set_size
 
@@ -48,7 +53,7 @@ class GeneralClient:
             warmup_steps=0,
             num_train_epochs=local_num_epochs,
             learning_rate=local_learning_rate,
-            bf16=True,
+            fp16=True,
             logging_steps=1,
             optim="adamw_torch",
             evaluation_strategy="steps" if self.local_val_set_size > 0 else "no",
@@ -61,45 +66,44 @@ class GeneralClient:
             ddp_find_unused_parameters=False if ddp else None,
             group_by_length=group_by_length,
             dataloader_drop_last=False,
-            dataloader_num_workers=4,
-            gradient_checkpointing=True,
-            gradient_checkpointing_kwargs={"use_reentrant": False},
+            dataloader_num_workers=4
         )
-        self.local_trainer = transformers.Trainer(model=self.model,
-                                                  train_dataset=self.local_train_dataset,
-                                                  eval_dataset=self.local_eval_dataset,
-                                                  args=self.train_args,
-                                                  data_collator=transformers.DataCollatorForSeq2Seq(
-                                                      tokenizer, pad_to_multiple_of=8, return_tensors="pt", padding=True
-                                                  ),
-                                                  )
+        self.local_trainer = transformers.Trainer(
+            model=self.model,
+            train_dataset=self.local_train_dataset,
+            eval_dataset=self.local_eval_dataset,
+            args=self.train_args,
+            data_collator=transformers.DataCollatorForSeq2Seq(
+                tokenizer, pad_to_multiple_of=8, return_tensors="pt", padding=True
+            ),
+        )
 
     def initiate_local_training(self):
         self.model.config.use_cache = False
-        self.params_dict_old = copy.deepcopy(
-            OrderedDict((name, param.detach()) for name, param in self.model.named_parameters() if
-                        "default" in name))
-        self.params_dict_new = OrderedDict((name, param.detach()) for name, param in self.model.named_parameters() if
-                                           "default" in name)
+
+        # Save a deep copy of current adapter weights (before training)
+        self.params_dict_old = copy.deepcopy(layercraft.adapter_state_dict(self.model))
+
+        # Override model.state_dict() so that Trainer only saves adapter weights
         self.model.state_dict = (
-            lambda instance, *_, **__: get_peft_model_state_dict(
-                instance, self.params_dict_new, "default"
-            )
+            lambda instance, *_, **__: layercraft.adapter_state_dict(instance)
         ).__get__(self.model, type(self.model))
 
     def train(self):
         self.local_trainer.train()
 
     def terminate_local_training(self, epoch, local_dataset_len_dict, previously_selected_clients_set):
-
         local_dataset_len_dict[self.client_id] = len(self.local_train_dataset)
+
+        # Save trained adapter weights to disk
         new_adapter_weight = self.model.state_dict()
         single_output_dir = os.path.join(self.output_dir, str(epoch), "local_output_{}".format(self.client_id))
         os.makedirs(single_output_dir, exist_ok=True)
         torch.save(new_adapter_weight, single_output_dir + "/pytorch_model.bin")
 
-        older_adapter_weight = get_peft_model_state_dict(self.model, self.params_dict_old, "default")
-        set_peft_model_state_dict(self.model, older_adapter_weight, "default")
+        # Restore pre-training adapter weights
+        layercraft.load_adapter_state_dict(self.model, self.params_dict_old)
+
         previously_selected_clients_set = previously_selected_clients_set | set({self.client_id})
         last_client_id = self.client_id
 
