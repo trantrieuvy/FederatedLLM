@@ -360,10 +360,10 @@ def fl_finetune(
         os.makedirs(epoch_dir, exist_ok=True)
         with open(os.path.join(epoch_dir, "round_config.json"), "w") as f:
             json.dump(dict(
-                epoch=epoch,
-                lora_r=lora_r, lora_alpha=lora_alpha, stacked_r=stacked_r,
-                selected_clients=sorted(selected_clients_set),
-                frozen_adapter_params=(
+                epoch=int(epoch),
+                lora_r=int(lora_r), lora_alpha=int(lora_alpha), stacked_r=int(stacked_r),
+                selected_clients=[int(c) for c in sorted(selected_clients_set)],
+                frozen_adapter_params=int(
                     sum(v.numel() for v in A_frozen_dict.values())
                     + sum(v.numel() for v in B_frozen_dict.values())
                 ),
