@@ -53,7 +53,7 @@ class GeneralClient:
             warmup_steps=0,
             num_train_epochs=local_num_epochs,
             learning_rate=local_learning_rate,
-            fp16=True,
+            bf16=True,
             logging_steps=1,
             optim="adamw_torch",
             evaluation_strategy="steps" if self.local_val_set_size > 0 else "no",
@@ -66,7 +66,9 @@ class GeneralClient:
             ddp_find_unused_parameters=False if ddp else None,
             group_by_length=group_by_length,
             dataloader_drop_last=False,
-            dataloader_num_workers=4
+            dataloader_num_workers=4,
+            gradient_checkpointing=True,
+            gradient_checkpointing_kwargs={"use_reentrant": False}
         )
         self.local_trainer = transformers.Trainer(
             model=self.model,

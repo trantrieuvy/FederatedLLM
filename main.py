@@ -270,8 +270,10 @@ def fl_finetune(
                         task_type="CAUSAL_LM",                      
                         base_model_name_or_path=global_model,
                     )
+                    model.to('cpu')
                     model_client = copy.deepcopy(model)
                     model_client = get_peft_model(model_client, config)
+                    model_client.to('cuda')
                 else:
                     if stacking:
                         if heter:
@@ -284,8 +286,10 @@ def fl_finetune(
                             task_type="CAUSAL_LM",
                             base_model_name_or_path=global_model,
                             )
+                            model.to('cpu')
                             model_client = copy.deepcopy(model)
                             model_client = get_peft_model(model_client, config)
+                            model_client.to('cuda')
                         else:
                             config = LoraConfig(
                             r=lora_r,
@@ -296,8 +300,10 @@ def fl_finetune(
                             task_type="CAUSAL_LM",
                             base_model_name_or_path=global_model,
                             )
+                            model.to('cpu')
                             model_client = copy.deepcopy(model)
                             model_client = get_peft_model(model_client, config)
+                            model_client.to('cuda')
                     else:
                         if heter:
                             config = LoraConfig(
@@ -309,8 +315,10 @@ def fl_finetune(
                             task_type="CAUSAL_LM",
                             base_model_name_or_path=global_model,
                             )
+                            model.to('cpu')
                             model_client = copy.deepcopy(model)
                             model_client = get_peft_model(model_client, config)
+                            model_client.to('cuda')
                         else:
                             model_client = model
             
@@ -339,7 +347,10 @@ def fl_finetune(
             model_client, local_dataset_len_dict, previously_selected_clients_set, last_client_id = client.terminate_local_training(
                 epoch, local_dataset_len_dict, previously_selected_clients_set)
             del client
+            del model_client
+            torch.cuda.empty_cache()
 
+        model.to('cuda')
         print("Collecting the weights of clients and performing aggregation")
         #local_dataset_len_dict = [1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00]
         

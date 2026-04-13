@@ -4,7 +4,7 @@
 #SBATCH --error=logs/%x_%j.err
 #SBATCH --partition=ampere
 #SBATCH --nodes=1
-#SBATCH --gres=gpu:a100:2
+#SBATCH --gres=gpu:a100:1
 #SBATCH --nodelist=gpunode06
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=0

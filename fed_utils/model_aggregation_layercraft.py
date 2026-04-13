@@ -81,6 +81,7 @@ def FedAvg(
     heter,
     local_ranks,
     zero_padding,
+    nonlinear=False,
 ):
     """
     Aggregate client adapter weights via FedAvg.
@@ -122,34 +123,57 @@ def FedAvg(
 
         if stacking:
             # ---- Stacking: concatenate along rank dimension ----
-            # Match PEFT behavior: only weight A-like matrices (rank in dim 0),
-            # B-like matrices (rank in dim 1) are concatenated WITHOUT weighting.
-            # This gives: B_stacked @ (w_i * A_stacked) = w_i * (B @ A)
+            # Linear adapters (default): weight A (rank in dim 0), leave B unweighted.
+            #   B_stacked @ (pk * A_stacked) @ x = pk * B @ A @ x  ✓
+            # Nonlinear adapters (nonlinear=True): weight B (rank in dim 1), leave A unweighted.
+            #   (pk * B_stacked) @ σ(A_stacked @ x) = pk * B @ σ(A @ x)  ✓
+            #   Weighting A would bury pk inside σ, distorting the intended scaling.
             client_rank = local_ranks[client_id] if heter else lora_r
             if k == 0:
                 weighted_single_weights = {}
                 for key in single_weights:
                     t = single_weights[key]
-                    if t.ndim >= 1 and t.shape[0] == client_rank:
-                        # A-like: rank is dim 0 → apply weight
-                        weighted_single_weights[key] = t * weight
+                    is_A = t.ndim >= 1 and t.shape[0] == client_rank
+                    is_B = (not is_A) and t.ndim >= 2 and t.shape[1] == client_rank
+                    if nonlinear:
+                        # Nonlinear: weight B, leave A unweighted
+                        if is_B:
+                            weighted_single_weights[key] = t * weight
+                        else:
+                            weighted_single_weights[key] = t.clone()
                     else:
-                        # B-like or other: no weighting
-                        weighted_single_weights[key] = t.clone()
+                        # Linear: weight A, leave B unweighted
+                        if is_A:
+                            weighted_single_weights[key] = t * weight
+                        else:
+                            weighted_single_weights[key] = t.clone()
             else:
                 for key in single_weights:
                     t = single_weights[key]
-                    if t.ndim >= 1 and t.shape[0] == client_rank:
-                        # A-like: weight then stack along dim 0
-                        scaled = t * weight
-                        weighted_single_weights[key] = torch.cat(
-                            [weighted_single_weights[key], scaled], dim=0
-                        )
-                    elif t.ndim >= 2 and t.shape[1] == client_rank:
-                        # B-like: stack along dim 1, no weighting
-                        weighted_single_weights[key] = torch.cat(
-                            [weighted_single_weights[key], t], dim=1
-                        )
+                    is_A = t.ndim >= 1 and t.shape[0] == client_rank
+                    is_B = (not is_A) and t.ndim >= 2 and t.shape[1] == client_rank
+                    if is_A:
+                        if nonlinear:
+                            # Nonlinear: A unweighted, stack along dim 0
+                            weighted_single_weights[key] = torch.cat(
+                                [weighted_single_weights[key], t], dim=0
+                            )
+                        else:
+                            # Linear: A weighted, stack along dim 0
+                            weighted_single_weights[key] = torch.cat(
+                                [weighted_single_weights[key], t * weight], dim=0
+                            )
+                    elif is_B:
+                        if nonlinear:
+                            # Nonlinear: B weighted, stack along dim 1
+                            weighted_single_weights[key] = torch.cat(
+                                [weighted_single_weights[key], t * weight], dim=1
+                            )
+                        else:
+                            # Linear: B unweighted, stack along dim 1
+                            weighted_single_weights[key] = torch.cat(
+                                [weighted_single_weights[key], t], dim=1
+                            )
                     else:
                         # Non-adapter param (e.g. bias): weighted average
                         weighted_single_weights[key] += t * weight

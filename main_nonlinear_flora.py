@@ -215,7 +215,7 @@ def fl_finetune(
         tokenizer = AutoTokenizer.from_pretrained(global_model, token="your_token")
     else:
         raw_model = LlamaForCausalLM.from_pretrained(
-            global_model, load_in_8bit=False, torch_dtype=torch.float32,
+            global_model, load_in_8bit=False, torch_dtype=torch.bfloat16,
             device_map=device_map, token="your_token",
         )
         tokenizer = LlamaTokenizer.from_pretrained(global_model, token="your_token")
@@ -302,14 +302,20 @@ def fl_finetune(
         for client_id in selected_clients_set:
             # Build per-client model: frozen base + fresh trainable adapter
             client_r = local_ranks[client_id] if heter else lora_r
+            # Keep alpha/r constant across clients so frozen_scaling is valid
+            # for all blocks after stacking (e.g. r=64 → alpha=128, r=4 → alpha=8,
+            # all giving alpha/r = frozen_scaling = lora_alpha/lora_r).
+            client_alpha = frozen_scaling * client_r
+            raw_model.to('cpu')
             model_client, n_adapters = _inject_adapters(
                 copy.deepcopy(raw_model),
                 target_modules=lora_target_modules,
-                r=client_r, alpha=lora_alpha, dropout=lora_dropout,
+                r=client_r, alpha=client_alpha, dropout=lora_dropout,
                 A_frozen_dict=A_frozen_dict,
                 B_frozen_dict=B_frozen_dict,
                 frozen_scaling=frozen_scaling,
             )
+            model_client.to('cuda')
             trainable = sum(p.numel() for p in model_client.parameters() if p.requires_grad)
             print(f"  Client_{client_id}: {n_adapters} adapters, trainable={trainable:,}")
 
@@ -326,6 +332,7 @@ def fl_finetune(
                 epoch, local_dataset_len_dict, previously_selected_clients_set,
             )
             del client, model_client
+            torch.cuda.empty_cache()
 
         # ---- Stack A_new / B_new across clients (reuses layercraft FedAvg) ----
         print("  Stacking …")
@@ -333,13 +340,18 @@ def fl_finetune(
             raw_model, selected_clients_set, output_dir, local_dataset_len_dict,
             epoch, stacking=True, lora_r=lora_r, heter=heter,
             local_ranks=local_ranks if heter else [], zero_padding=False,
+            nonlinear=True,
         )
         stacked_path = os.path.join(output_dir, str(epoch), "adapter_model.bin")
         A_frozen_dict, B_frozen_dict = _parse_stacked(
             torch.load(stacked_path, map_location="cpu")
         )
         stacked_r = next(iter(A_frozen_dict.values())).shape[0]
-        print(f"  Stacked adapter: r={stacked_r} ({len(selected_clients_set)} clients × {lora_r})")
+        if heter:
+            client_ranks_str = "+".join(str(local_ranks[c]) for c in sorted(selected_clients_set))
+            print(f"  Stacked adapter: r={stacked_r} ({client_ranks_str})")
+        else:
+            print(f"  Stacked adapter: r={stacked_r} ({len(selected_clients_set)} clients × {lora_r})")
 
         # ---- Evaluate: frozen adapters only, B_new=zeros → no leakage ----
         model_eval, _ = _inject_adapters(
@@ -350,10 +362,12 @@ def fl_finetune(
             B_frozen_dict=B_frozen_dict,
             frozen_scaling=frozen_scaling,
         )
+        model_eval.to('cuda')
         acc = global_evaluation(model_eval, tokenizer, prompter, dev_data_path)
         print(f"  Acc round {epoch}: {acc}")
         acc_list.append(acc)
         del model_eval
+        torch.cuda.empty_cache()
 
         # Save round metadata
         epoch_dir = os.path.join(output_dir, str(epoch))
@@ -362,6 +376,10 @@ def fl_finetune(
             json.dump(dict(
                 epoch=int(epoch),
                 lora_r=int(lora_r), lora_alpha=int(lora_alpha), stacked_r=int(stacked_r),
+                effective_scaling=frozen_scaling,
+                heter=heter,
+                per_client_ranks={int(c): int(local_ranks[c]) for c in sorted(selected_clients_set)} if heter else None,
+                per_client_alphas={int(c): frozen_scaling * local_ranks[c] for c in sorted(selected_clients_set)} if heter else None,
                 selected_clients=[int(c) for c in sorted(selected_clients_set)],
                 frozen_adapter_params=int(
                     sum(v.numel() for v in A_frozen_dict.values())
