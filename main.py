@@ -16,6 +16,7 @@ from peft import (
 from fed_utils import FedAvg, client_selection, global_evaluation, GeneralClient
 import datasets
 from utils.prompter import Prompter
+from utils.dataset_schema import prompt_fields
 import numpy as np
 import random
 import copy
@@ -90,12 +91,13 @@ def fl_finetune(
             f"prompt template: {prompt_template_name}\n"
             f"seed: {seed}\n"
         )
-    assert (
-        global_model
-    ), "Please specify a --global_model, e.g. --global_modell='decapoda-research/llama-7b-hf'"
+    assert global_model, (
+        "Please specify a --global_model, e.g. "
+        "--global_modell='decapoda-research/llama-7b-hf'"
+    )
 
     data_path = os.path.join(data_path, str(num_clients))
-    assert (os.path.exists(data_path), "Please generate the data files for each client")
+    assert os.path.exists(data_path), "Please generate the data files for each client"
 
     # set up the global model & toknizer
     gradient_accumulation_steps = local_batch_size // local_micro_batch_size
@@ -164,29 +166,18 @@ def fl_finetune(
         return result
 
     def generate_and_tokenize_prompt(data_point):
-        if data_path == './data_dolly/10':
-            full_prompt = prompter.generate_prompt(
-                data_point["instruction"],
-                data_point["context"],
-                data_point["response"],
-            )
-        elif data_path == './data_wiz/10' or data_path == './data_mix/20':
-            full_prompt = prompter.generate_prompt(
-                data_point["instruction"],
-                None,
-                data_point["output"],
-            )
-        else:
-            full_prompt = prompter.generate_prompt(
-                data_point["instruction"],
-                data_point["input"],
-                data_point["output"],
-            )
+        instruction, prompt_input, prompt_label, _ = prompt_fields(data_point)
+        full_prompt = prompter.generate_prompt(
+            instruction,
+            prompt_input,
+            prompt_label,
+        )
 
         tokenized_full_prompt = tokenize(full_prompt)
         if not train_on_inputs:
             user_prompt = prompter.generate_prompt(
-                data_point["instruction"], data_point["context"]
+                instruction,
+                prompt_input,
             )
             tokenized_user_prompt = tokenize(user_prompt, add_eos_token=False)
             user_prompt_len = len(tokenized_user_prompt["input_ids"])

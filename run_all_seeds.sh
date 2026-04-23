@@ -1,11 +1,11 @@
 #!/bin/bash
-#SBATCH --job-name=flora_dolly_seed2
+#SBATCH --job-name=flora_dolly_stratified_seed0
 #SBATCH --output=logs/%x_%j.out
 #SBATCH --error=logs/%x_%j.err
 #SBATCH --partition=ampere
 #SBATCH --nodes=1
 #SBATCH --nodelist=gpunode06
-#SBATCH --gres=gpu:a100:2
+#SBATCH --gres=gpu:a100:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=0
 #SBATCH --time=2-00:00:00
@@ -19,13 +19,16 @@ mkdir -p logs
 module load conda
 conda activate flora
 
-SEEDS=(2)
-DATASET="wiz"
-DATA_PATH="./data_${DATASET}"
+SEEDS=(0)
+DATASET="${DATASET:-dolly_stratified}"
+DATA_ROOT="${DATA_ROOT:-./data_${DATASET}}"
+DATA_PATH="${DATA_ROOT}"
+OUTPUT_TAG="${OUTPUT_TAG:-$(basename "${DATA_ROOT}" | sed 's/^data_//')}"
 
 for SEED in "${SEEDS[@]}"; do
   echo "============================================"
   echo "Running all experiments with seed=${SEED}"
+  echo "Dataset root: ${DATA_PATH}"
   echo "============================================"
 
   # TinyLlama Homogeneous
@@ -33,7 +36,7 @@ for SEED in "${SEEDS[@]}"; do
   python main.py \
     --global_model 'tinyllama' \
     --data_path "${DATA_PATH}" \
-    --output_dir "./flora-tinyllama-homo-${DATASET}/seed${SEED}/" \
+    --output_dir "./flora-tinyllama-homo-${OUTPUT_TAG}/seed${SEED}/" \
     --num_communication_rounds 3 \
     --num_clients 10 \
     --local_num_epochs 1 \
@@ -53,7 +56,7 @@ for SEED in "${SEEDS[@]}"; do
   python main.py \
     --global_model 'tinyllama' \
     --data_path "${DATA_PATH}" \
-    --output_dir "./flora-tinyllama-heter-${DATASET}/seed${SEED}/" \
+    --output_dir "./flora-tinyllama-heter-${OUTPUT_TAG}/seed${SEED}/" \
     --num_communication_rounds 3 \
     --num_clients 10 \
     --local_num_epochs 1 \
@@ -73,7 +76,7 @@ for SEED in "${SEEDS[@]}"; do
   python main.py \
     --global_model 'llama-7b' \
     --data_path "${DATA_PATH}" \
-    --output_dir "./flora-llama-homo-${DATASET}/seed${SEED}/" \
+    --output_dir "./flora-llama-homo-${OUTPUT_TAG}/seed${SEED}/" \
     --num_communication_rounds 1 \
     --num_clients 10 \
     --local_num_epochs 1 \
@@ -93,7 +96,7 @@ for SEED in "${SEEDS[@]}"; do
   python main.py \
     --global_model 'llama-7b' \
     --data_path "${DATA_PATH}" \
-    --output_dir "./flora-llama-heter-${DATASET}/seed${SEED}/" \
+    --output_dir "./flora-llama-heter-${OUTPUT_TAG}/seed${SEED}/" \
     --num_communication_rounds 1 \
     --num_clients 10 \
     --local_num_epochs 1 \

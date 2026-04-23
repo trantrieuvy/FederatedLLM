@@ -36,6 +36,7 @@ from fed_utils.model_aggregation_layercraft import FedAvg
 from fed_utils.client_participation_scheduling import client_selection
 from fed_utils.evaluation import global_evaluation
 from utils.prompter import Prompter
+from utils.dataset_schema import prompt_fields
 
 
 # ---------------------------------------------------------------------------
@@ -243,22 +244,14 @@ def fl_finetune(
         return result
 
     def generate_and_tokenize_prompt(data_point):
-        if data_path == "./data/10":
-            full_prompt = prompter.generate_prompt(
-                data_point["instruction"], data_point["context"], data_point["response"],
-            )
-        elif data_path in ("./data_wiz/10", "./data_mix/20"):
-            full_prompt = prompter.generate_prompt(
-                data_point["instruction"], None, data_point["output"],
-            )
-        else:
-            full_prompt = prompter.generate_prompt(
-                data_point["instruction"], data_point.get("input"), data_point["output"],
-            )
+        instruction, prompt_input, prompt_label, _ = prompt_fields(data_point)
+        full_prompt = prompter.generate_prompt(
+            instruction, prompt_input, prompt_label,
+        )
         tokenized = tokenize(full_prompt)
         if not train_on_inputs:
             user_prompt = prompter.generate_prompt(
-                data_point["instruction"], data_point.get("input"),
+                instruction, prompt_input,
             )
             user_len = len(tokenize(user_prompt, add_eos_token=False)["input_ids"])
             tokenized["labels"] = [-100] * user_len + tokenized["labels"][user_len:]
