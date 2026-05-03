@@ -96,6 +96,7 @@ Pillow==10.0.1
 pip==24.0
 pkginfo==1.9.6
 pluggy==1.0.0
+plotly
 portalocker==2.8.2
 prompt-toolkit==3.0.36
 protobuf==4.25.3
@@ -179,4 +180,3 @@ word2number==1.1
 xxhash==3.4.1
 yarl==1.9.4
 zstandard==0.19.0
-
