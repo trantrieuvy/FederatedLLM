@@ -18,6 +18,11 @@ RUN_DIR_RE = re.compile(
     r"(?P<model>tinyllama|llama|llama-7b)-(?P<setting>homo|heter)-"
     r"e(?P<epochs>\d+)-r(?P<rounds>\d+)$"
 )
+LIVE_OUTPUT_DIR_RE = re.compile(r"^output_dir=(?P<output_dir>.+)$", re.MULTILINE)
+LIVE_ACCURACY_RE = re.compile(
+    r"Acc round\s+(?P<round>\d+):\s+"
+    r"(?P<accuracy>[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][-+]?\d+)?)"
+)
 
 EXP2_NONLINEAR_FLORA_DIR_RE = re.compile(
     r"^exp2-(?P<model>tinyllama|llama)-nonlinear-"
@@ -79,6 +84,10 @@ PAPER_BASELINE_ROUNDS = {
 }
 
 
+def _normalize_accuracy(value: float) -> float:
+    return value * 100 if value <= 1 else value
+
+
 def _read_scores(path: Path) -> list[float]:
     scores = []
     for line in path.read_text().splitlines():
@@ -86,7 +95,7 @@ def _read_scores(path: Path) -> list[float]:
         if not line:
             continue
         value = float(line)
-        scores.append(value * 100 if value <= 1 else value)
+        scores.append(_normalize_accuracy(value))
     return scores
 
 
@@ -125,6 +134,10 @@ def _empty_scores_frame() -> pd.DataFrame:
             "Accuracy",
             "Run dir",
             "Score path",
+            "Observed rounds",
+            "Complete run",
+            "Result source",
+            "Run status",
         ]
     )
 
@@ -158,6 +171,44 @@ def _iter_tuning_run_dirs(base_dir: str | Path | Iterable[str | Path]):
             yield run_dir
 
 
+def _resolve_path(path: str | Path) -> Path:
+    return Path(path).expanduser().resolve(strict=False)
+
+
+def _is_relative_to(path: Path, root: Path) -> bool:
+    try:
+        path.relative_to(root)
+        return True
+    except ValueError:
+        return False
+
+
+def _iter_live_log_paths(
+    log_dir: str | Path | Iterable[str | Path] = "logs",
+    pattern: str = "epoch_round_tuning_*.out",
+):
+    raw_paths = [log_dir] if isinstance(log_dir, str | Path) else list(log_dir)
+    seen = set()
+    for raw_path in raw_paths:
+        path = Path(raw_path)
+        path_text = str(raw_path)
+        if any(marker in path_text for marker in "*?[]"):
+            candidates = path.parent.glob(path.name)
+        elif path.is_dir():
+            candidates = path.glob(pattern)
+        elif path.exists():
+            candidates = [path]
+        else:
+            candidates = []
+
+        for candidate in sorted(candidates):
+            key = candidate.resolve(strict=False)
+            if key in seen or not candidate.is_file():
+                continue
+            seen.add(key)
+            yield candidate
+
+
 def _iter_exp2_nonlinear_flora_dirs(base_dir: str | Path | Iterable[str | Path]):
     search_roots = []
     for base_path in _iter_base_paths(base_dir):
@@ -189,10 +240,18 @@ def _append_run_record(
     scores: list[float],
     run_dir: Path,
     score_path: Path,
+    observed_rounds: int | None = None,
+    complete_run: bool | None = None,
+    result_source: str = "score log",
+    run_status: str | None = None,
+    extra_fields: dict | None = None,
 ) -> None:
     if not scores:
         return
-    run_records.append(
+    observed_rounds = len(scores) if observed_rounds is None else int(observed_rounds)
+    complete_run = observed_rounds >= int(rounds) if complete_run is None else bool(complete_run)
+    run_status = run_status or ("Complete" if complete_run else "Partial log")
+    record = (
         {
             "Method key": method,
             "Method": METHOD_LABELS[method],
@@ -208,16 +267,70 @@ def _append_run_record(
             "Scores": scores,
             "Run dir": str(run_dir),
             "Score path": str(score_path),
-            "Score count": len(scores),
+            "Observed rounds": observed_rounds,
+            "Complete run": complete_run,
+            "Result source": result_source,
+            "Run status": run_status,
+            "Score count": observed_rounds,
         }
+    )
+    if extra_fields:
+        record.update(extra_fields)
+    run_records.append(record)
+
+
+def _records_to_scores_frame(run_records: list[dict]) -> pd.DataFrame:
+    if not run_records:
+        return _empty_scores_frame()
+
+    row_keys = [
+        "Method key",
+        "Method",
+        "Dataset",
+        "Dataset label",
+        "Model key",
+        "Model",
+        "Setting key",
+        "Setting",
+        "Local epochs",
+        "Config rounds",
+        "Seed",
+        "Run dir",
+        "Score path",
+        "Observed rounds",
+        "Complete run",
+        "Result source",
+        "Run status",
+    ]
+    rows = []
+    for record in run_records:
+        for round_idx, accuracy in enumerate(record["Scores"], start=1):
+            rows.append(
+                {
+                    key: record[key]
+                    for key in row_keys
+                    if key in record
+                }
+                | {
+                    "Round": round_idx,
+                    "Accuracy": float(accuracy),
+                }
+            )
+
+    return pd.DataFrame(rows).sort_values(
+        ["Dataset", "Method key", "Model key", "Setting key", "Local epochs", "Seed", "Round"]
     )
 
 
-def load_tuning_results(base_dir: str | Path | Iterable[str | Path] = ".") -> pd.DataFrame:
+def load_tuning_results(
+    base_dir: str | Path | Iterable[str | Path] = ".",
+    complete_only: bool = False,
+) -> pd.DataFrame:
     """Discover tuning run directories and return one row per evaluated round.
 
     Pass the repo root, a grouped run directory, legacy exp2 nonlinear FLoRA
-    directories, or a list of run directories.
+    directories, or a list of run directories. Set complete_only=True to skip
+    runs whose score log has fewer rows than the configured round count.
     """
 
     run_records = []
@@ -238,7 +351,11 @@ def load_tuning_results(base_dir: str | Path | Iterable[str | Path] = ".") -> pd
             score_path = _score_path(run_dir, seed, method)
             if score_path is None:
                 continue
-            scores = _read_scores(score_path)
+            rounds = int(info["rounds"])
+            raw_scores = _read_scores(score_path)
+            if complete_only and len(raw_scores) < rounds:
+                continue
+            scores = raw_scores[:rounds]
             _append_run_record(
                 run_records,
                 method=method,
@@ -246,11 +363,12 @@ def load_tuning_results(base_dir: str | Path | Iterable[str | Path] = ".") -> pd
                 model=model,
                 setting=info["setting"],
                 epochs=int(info["epochs"]),
-                rounds=int(info["rounds"]),
+                rounds=rounds,
                 seed=seed,
                 scores=scores,
                 run_dir=run_dir,
                 score_path=score_path,
+                observed_rounds=len(raw_scores),
             )
 
     for run_dir in _iter_exp2_nonlinear_flora_dirs(base_dir):
@@ -271,7 +389,10 @@ def load_tuning_results(base_dir: str | Path | Iterable[str | Path] = ".") -> pd
             score_path = seed_dir / "10" / "log.txt"
             if not score_path.exists():
                 continue
-            scores = _read_scores(score_path)[:rounds]
+            raw_scores = _read_scores(score_path)
+            if complete_only and len(raw_scores) < rounds:
+                continue
+            scores = raw_scores[:rounds]
             _append_run_record(
                 run_records,
                 method=method,
@@ -284,6 +405,7 @@ def load_tuning_results(base_dir: str | Path | Iterable[str | Path] = ".") -> pd
                 scores=scores,
                 run_dir=run_dir,
                 score_path=score_path,
+                observed_rounds=len(raw_scores),
             )
 
     if not run_records:
@@ -304,37 +426,102 @@ def load_tuning_results(base_dir: str | Path | Iterable[str | Path] = ".") -> pd
         best = group.sort_values(["Score count", "Config rounds"], ascending=False).iloc[0]
         selected_runs.append(best.to_dict())
 
-    rows = []
-    for record in selected_runs:
-        for round_idx, accuracy in enumerate(record["Scores"], start=1):
-            rows.append(
-                {
-                    key: record[key]
-                    for key in [
-                        "Method key",
-                        "Method",
-                        "Dataset",
-                        "Dataset label",
-                        "Model key",
-                        "Model",
-                        "Setting key",
-                        "Setting",
-                        "Local epochs",
-                        "Config rounds",
-                        "Seed",
-                        "Run dir",
-                        "Score path",
-                    ]
-                }
-                | {
-                    "Round": round_idx,
-                    "Accuracy": float(accuracy),
-                }
-            )
+    return _records_to_scores_frame(selected_runs)
 
-    return pd.DataFrame(rows).sort_values(
-        ["Dataset", "Method key", "Model key", "Setting key", "Local epochs", "Seed", "Round"]
+
+def load_live_tuning_results(
+    log_dir: str | Path | Iterable[str | Path] = "logs",
+    *,
+    run_roots: str | Path | Iterable[str | Path] | None = None,
+    pattern: str = "epoch_round_tuning_*.out",
+) -> pd.DataFrame:
+    """Parse in-progress tuning scores from Slurm stdout logs.
+
+    This is intended for live plotting only. It reads each stdout log's
+    output_dir=... line, parses Acc round N: ... lines, and marks the rows as
+    incomplete because final log.txt files are still the source of truth for
+    complete runs.
+    """
+
+    allowed_roots = (
+        None
+        if run_roots is None
+        else [_resolve_path(path) for path in _iter_base_paths(run_roots)]
     )
+    run_records = []
+
+    for log_path in _iter_live_log_paths(log_dir, pattern):
+        text = log_path.read_text(errors="replace")
+        output_matches = list(LIVE_OUTPUT_DIR_RE.finditer(text))
+        if not output_matches:
+            continue
+
+        output_dir = output_matches[-1].group("output_dir").strip().strip('"').strip("'")
+        seed_dir = Path(output_dir.rstrip("/"))
+        seed = _parse_seed(seed_dir)
+        if seed is None:
+            continue
+
+        run_dir = seed_dir.parent
+        match = RUN_DIR_RE.match(run_dir.name)
+        if not match:
+            continue
+
+        resolved_run_dir = _resolve_path(run_dir)
+        if allowed_roots and not any(_is_relative_to(resolved_run_dir, root) for root in allowed_roots):
+            continue
+
+        info = match.groupdict()
+        rounds = int(info["rounds"])
+        scores_by_round = {}
+        for score_match in LIVE_ACCURACY_RE.finditer(text):
+            round_idx = int(score_match.group("round"))
+            if round_idx >= rounds:
+                continue
+            scores_by_round[round_idx] = _normalize_accuracy(float(score_match.group("accuracy")))
+        if not scores_by_round:
+            continue
+
+        scores = [scores_by_round[round_idx] for round_idx in sorted(scores_by_round)]
+        method = info["method"]
+        model = "llama" if info["model"] == "llama-7b" else info["model"]
+        _append_run_record(
+            run_records,
+            method=method,
+            dataset=info["dataset"],
+            model=model,
+            setting=info["setting"],
+            epochs=int(info["epochs"]),
+            rounds=rounds,
+            seed=seed,
+            scores=scores,
+            run_dir=run_dir,
+            score_path=log_path,
+            observed_rounds=len(scores),
+            complete_run=False,
+            result_source="slurm stdout",
+            run_status="Live partial",
+            extra_fields={"Log mtime": log_path.stat().st_mtime},
+        )
+
+    if not run_records:
+        return _empty_scores_frame()
+
+    selected_runs = []
+    id_columns = [
+        "Method key",
+        "Dataset",
+        "Model key",
+        "Setting key",
+        "Local epochs",
+        "Seed",
+        "Run dir",
+    ]
+    for _, group in pd.DataFrame(run_records).groupby(id_columns, sort=False):
+        best = group.sort_values(["Score count", "Log mtime"], ascending=False).iloc[0]
+        selected_runs.append(best.to_dict())
+
+    return _records_to_scores_frame(selected_runs)
 
 
 def summarize_tuning_results(scores: pd.DataFrame) -> pd.DataFrame:
@@ -353,6 +540,9 @@ def summarize_tuning_results(scores: pd.DataFrame) -> pd.DataFrame:
         "Local epochs",
         "Round",
     ]
+    for optional_column in ["Result source", "Run status"]:
+        if optional_column in scores.columns:
+            group_columns.append(optional_column)
 
     summary = (
         scores.groupby(group_columns)

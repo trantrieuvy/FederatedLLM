@@ -16,6 +16,7 @@ Changes vs. linear FLoRA (main.py):
 import os
 import copy
 import json
+import shutil
 from typing import List
 
 import fire
@@ -137,6 +138,92 @@ def _parse_stacked(stacked_weights):
         elif key.endswith(".B_new"):
             B_dict[key[:-6]] = val
     return A_dict, B_dict
+
+
+def _stacked_state_dict(A_dict, B_dict):
+    """Convert module-keyed A/B dicts back to the adapter state-dict format."""
+    if set(A_dict) != set(B_dict):
+        missing_A = sorted(set(B_dict) - set(A_dict))
+        missing_B = sorted(set(A_dict) - set(B_dict))
+        raise ValueError(
+            f"Mismatched A/B keys while formatting stacked adapter: "
+            f"missing_A={missing_A}, missing_B={missing_B}"
+        )
+
+    state_dict = {}
+    for name in sorted(A_dict):
+        state_dict[f"{name}.A_new"] = A_dict[name].detach().cpu().clone()
+        state_dict[f"{name}.B_new"] = B_dict[name].detach().cpu().clone()
+    return state_dict
+
+
+def _validate_adapter_pair(A_dict, B_dict, label):
+    if set(A_dict) != set(B_dict):
+        missing_A = sorted(set(B_dict) - set(A_dict))
+        missing_B = sorted(set(A_dict) - set(B_dict))
+        raise ValueError(
+            f"{label} adapter has mismatched A/B keys: "
+            f"missing_A={missing_A}, missing_B={missing_B}"
+        )
+
+    for name in A_dict:
+        A = A_dict[name]
+        B = B_dict[name]
+        if A.ndim != 2 or B.ndim != 2:
+            raise ValueError(
+                f"{label} adapter {name} must contain 2D A/B tensors, "
+                f"got A{tuple(A.shape)} and B{tuple(B.shape)}"
+            )
+        if A.shape[0] != B.shape[1]:
+            raise ValueError(
+                f"{label} adapter {name} has inconsistent rank: "
+                f"A{tuple(A.shape)} and B{tuple(B.shape)}"
+            )
+
+
+def _accumulate_stacked_adapters(A_prev, B_prev, A_round, B_round):
+    """Append the current round nonlinear residual to the cumulative adapter."""
+    _validate_adapter_pair(A_round, B_round, "round")
+    if (A_prev is None) != (B_prev is None):
+        raise ValueError("Previous cumulative adapter must provide both A and B or neither.")
+
+    if A_prev is None:
+        return (
+            {name: tensor.detach().cpu().clone() for name, tensor in A_round.items()},
+            {name: tensor.detach().cpu().clone() for name, tensor in B_round.items()},
+        )
+
+    _validate_adapter_pair(A_prev, B_prev, "previous cumulative")
+    if set(A_prev) != set(A_round):
+        missing_prev = sorted(set(A_round) - set(A_prev))
+        missing_round = sorted(set(A_prev) - set(A_round))
+        raise ValueError(
+            f"Cannot accumulate adapters with different module keys: "
+            f"missing_previous={missing_prev}, missing_round={missing_round}"
+        )
+
+    A_cumulative, B_cumulative = {}, {}
+    for name in sorted(A_round):
+        A_old = A_prev[name].detach().cpu()
+        B_old = B_prev[name].detach().cpu()
+        A_new = A_round[name].detach().cpu()
+        B_new = B_round[name].detach().cpu()
+
+        if A_old.shape[1] != A_new.shape[1]:
+            raise ValueError(
+                f"A tensor input dimension mismatch for {name}: "
+                f"previous={tuple(A_old.shape)}, round={tuple(A_new.shape)}"
+            )
+        if B_old.shape[0] != B_new.shape[0]:
+            raise ValueError(
+                f"B tensor output dimension mismatch for {name}: "
+                f"previous={tuple(B_old.shape)}, round={tuple(B_new.shape)}"
+            )
+
+        A_cumulative[name] = torch.cat([A_old, A_new], dim=0).clone()
+        B_cumulative[name] = torch.cat([B_old, B_new], dim=1).clone()
+
+    return A_cumulative, B_cumulative
 
 
 # ---------------------------------------------------------------------------
@@ -336,15 +423,29 @@ def fl_finetune(
             nonlinear=True,
         )
         stacked_path = os.path.join(output_dir, str(epoch), "adapter_model.bin")
-        A_frozen_dict, B_frozen_dict = _parse_stacked(
-            torch.load(stacked_path, map_location="cpu")
+        round_stacked_weights = torch.load(stacked_path, map_location="cpu")
+        round_A_dict, round_B_dict = _parse_stacked(round_stacked_weights)
+        round_stacked_r = next(iter(round_A_dict.values())).shape[0]
+
+        epoch_dir = os.path.join(output_dir, str(epoch))
+        os.makedirs(epoch_dir, exist_ok=True)
+        torch.save(
+            round_stacked_weights,
+            os.path.join(epoch_dir, "adapter_model_delta.bin"),
         )
-        stacked_r = next(iter(A_frozen_dict.values())).shape[0]
+
+        A_frozen_dict, B_frozen_dict = _accumulate_stacked_adapters(
+            A_frozen_dict, B_frozen_dict, round_A_dict, round_B_dict
+        )
+        cumulative_stacked_r = next(iter(A_frozen_dict.values())).shape[0]
+        torch.save(_stacked_state_dict(A_frozen_dict, B_frozen_dict), stacked_path)
+
         if heter:
             client_ranks_str = "+".join(str(local_ranks[c]) for c in sorted(selected_clients_set))
-            print(f"  Stacked adapter: r={stacked_r} ({client_ranks_str})")
+            print(f"  Round adapter: r={round_stacked_r} ({client_ranks_str})")
         else:
-            print(f"  Stacked adapter: r={stacked_r} ({len(selected_clients_set)} clients × {lora_r})")
+            print(f"  Round adapter: r={round_stacked_r} ({len(selected_clients_set)} clients × {lora_r})")
+        print(f"  Cumulative adapter: r={cumulative_stacked_r}")
 
         # ---- Evaluate: frozen adapters only, B_new=zeros → no leakage ----
         model_eval, _ = _inject_adapters(
@@ -363,17 +464,22 @@ def fl_finetune(
         torch.cuda.empty_cache()
 
         # Save round metadata
-        epoch_dir = os.path.join(output_dir, str(epoch))
-        os.makedirs(epoch_dir, exist_ok=True)
         with open(os.path.join(epoch_dir, "round_config.json"), "w") as f:
             json.dump(dict(
                 epoch=int(epoch),
-                lora_r=int(lora_r), lora_alpha=int(lora_alpha), stacked_r=int(stacked_r),
+                lora_r=int(lora_r), lora_alpha=int(lora_alpha),
+                stacked_r=int(cumulative_stacked_r),
+                round_stacked_r=int(round_stacked_r),
+                cumulative_stacked_r=int(cumulative_stacked_r),
                 effective_scaling=frozen_scaling,
                 heter=heter,
                 per_client_ranks={int(c): int(local_ranks[c]) for c in sorted(selected_clients_set)} if heter else None,
                 per_client_alphas={int(c): frozen_scaling * local_ranks[c] for c in sorted(selected_clients_set)} if heter else None,
                 selected_clients=[int(c) for c in sorted(selected_clients_set)],
+                round_adapter_params=int(
+                    sum(v.numel() for v in round_A_dict.values())
+                    + sum(v.numel() for v in round_B_dict.values())
+                ),
                 frozen_adapter_params=int(
                     sum(v.numel() for v in A_frozen_dict.values())
                     + sum(v.numel() for v in B_frozen_dict.values())
@@ -381,7 +487,9 @@ def fl_finetune(
             ), f, indent=2)
 
         if epoch < (num_communication_rounds - 1):
-            os.system(f"rm -rf {os.path.join(output_dir, str(epoch))}")
+            for name in os.listdir(epoch_dir):
+                if name.startswith("local_output_"):
+                    shutil.rmtree(os.path.join(epoch_dir, name), ignore_errors=True)
 
     print(f"\nFinal accuracies: {acc_list}")
     with open(os.path.join(output_dir, "log.txt"), "a") as f:
