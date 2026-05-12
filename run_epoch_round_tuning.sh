@@ -89,7 +89,7 @@ log_path_for() {
 
   if [[ "${method}" == "flora" ]]; then
     echo "${output_dir}10log.txt"
-  elif [[ "${method}" == "ffa" || "${method}" == "nonlinear_flora" ]]; then
+  elif [[ "${method}" == "ffa" || "${method}" == "nonlinear_flora" || "${method}" == "linear_flora_cumulative" ]]; then
     echo "${output_dir}10/log.txt"
   else
     echo "Unknown method: ${method}" >&2
@@ -197,6 +197,25 @@ run_row() {
       nonlinear_flora)
         cmd=(
           python main_nonlinear_flora.py
+          --global_model "${model_arg}"
+          --data_path "${data_path}"
+          --output_dir "${output_dir}"
+          --num_communication_rounds "${rounds}"
+          --num_clients 10
+          --local_num_epochs "${epochs}"
+          --local_batch_size 128
+          --local_micro_batch_size 16
+          --local_learning_rate 3e-4
+          --lora_r 16
+          --lora_alpha 32
+          --heter "${heter_flag}"
+          --dev_data_path "${DEV_DATA_PATH}"
+          --seed "${seed}"
+        )
+        ;;
+      linear_flora_cumulative)
+        cmd=(
+          python main_linear_flora_cumulative.py
           --global_model "${model_arg}"
           --data_path "${data_path}"
           --output_dir "${output_dir}"
