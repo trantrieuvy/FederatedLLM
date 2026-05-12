@@ -79,6 +79,7 @@ msgpack==1.0.8
 multidict==6.0.5
 multiprocess==0.70.15
 networkx==3.1
+nbformat==5.10.4
 nh3==0.2.15
 nltk==3.8.1
 numexpr==2.9.0
