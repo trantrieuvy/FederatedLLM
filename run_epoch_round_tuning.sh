@@ -18,6 +18,8 @@ FORCE="${FORCE:-false}"
 DRY_RUN="${DRY_RUN:-false}"
 SKIP_ENV_SETUP="${SKIP_ENV_SETUP:-false}"
 MANIFEST_INDEX_BASE="${MANIFEST_INDEX_BASE:-1}"
+SCRIPT_DIR="${SLURM_SUBMIT_DIR:-$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)}"
+LAYERCRAFT_PATH="${LAYERCRAFT_PATH:-${SCRIPT_DIR}/../layercraft}"
 
 mkdir -p logs
 mkdir -p "${RUN_ROOT}"
@@ -34,6 +36,13 @@ setup_env() {
 
   module load conda
   conda activate "${CONDA_ENV}"
+
+  if [[ -d "${LAYERCRAFT_PATH}/layercraft" ]]; then
+    export PYTHONPATH="${LAYERCRAFT_PATH}:${PYTHONPATH:-}"
+    echo "Using layercraft from ${LAYERCRAFT_PATH}"
+  else
+    echo "Layercraft path not found: ${LAYERCRAFT_PATH}" >&2
+  fi
 }
 
 model_arg_for() {
@@ -44,6 +53,9 @@ model_arg_for() {
       ;;
     llama|llama-7b)
       echo "llama-7b"
+      ;;
+    roberta|roberta-base)
+      echo "roberta-base"
       ;;
     *)
       echo "Unknown model: ${model}" >&2
@@ -60,6 +72,9 @@ model_tag_for() {
       ;;
     llama|llama-7b)
       echo "llama"
+      ;;
+    roberta|roberta-base)
+      echo "roberta-base"
       ;;
     *)
       echo "Unknown model: ${model}" >&2
@@ -80,6 +95,18 @@ log_path_for() {
     echo "Unknown method: ${method}" >&2
     return 1
   fi
+}
+
+glue_task_for_dataset() {
+  local dataset="$1"
+  case "${dataset}" in
+    rte|rte_stratified|rte_dirichlet)
+      echo "rte"
+      ;;
+    *)
+      echo "${dataset}"
+      ;;
+  esac
 }
 
 run_row() {
@@ -120,75 +147,105 @@ run_row() {
   fi
 
   local cmd=()
-  case "${method}" in
-    flora)
-      cmd=(
-        python main.py
-        --global_model "${model_arg}"
-        --data_path "${data_path}"
-        --output_dir "${output_dir}"
-        --num_communication_rounds "${rounds}"
-        --num_clients 10
-        --local_num_epochs "${epochs}"
-        --local_batch_size 128
-        --local_micro_batch_size 16
-        --local_learning_rate 3e-4
-        --lora_r 16
-        --lora_alpha 32
-        --stacking True
-        --heter "${heter_flag}"
-        --full False
-        --dev_data_path "${DEV_DATA_PATH}"
-        --seed "${seed}"
-      )
-      ;;
-    nonlinear_flora)
-      cmd=(
-        python main_nonlinear_flora.py
-        --global_model "${model_arg}"
-        --data_path "${data_path}"
-        --output_dir "${output_dir}"
-        --num_communication_rounds "${rounds}"
-        --num_clients 10
-        --local_num_epochs "${epochs}"
-        --local_batch_size 128
-        --local_micro_batch_size 16
-        --local_learning_rate 3e-4
-        --lora_r 16
-        --lora_alpha 32
-        --heter "${heter_flag}"
-        --dev_data_path "${DEV_DATA_PATH}"
-        --seed "${seed}"
-      )
-      ;;
-    ffa)
-      cmd=(
-        python main_ffa.py
-        --global_model "${model_arg}"
-        --data_path "${data_path}"
-        --output_dir "${output_dir}"
-        --num_communication_rounds "${rounds}"
-        --num_clients 10
-        --local_num_epochs "${epochs}"
-        --local_batch_size 128
-        --local_micro_batch_size 16
-        --local_learning_rate 3e-4
-        --lora_r 16
-        --lora_alpha 32
-        --activation gelu
-        --heter "${heter_flag}"
-        --dev_data_path "${DEV_DATA_PATH}"
-        --seed "${seed}"
-      )
-      ;;
-    *)
-      echo "Unknown method: ${method}" >&2
-      exit 1
-      ;;
-  esac
+  if [[ "${model_arg}" == "roberta-base" ]]; then
+    local glue_task
+    glue_task="$(glue_task_for_dataset "${dataset}")"
+    cmd=(
+      python main_roberta_glue.py
+      --method "${method}"
+      --global_model "${model_arg}"
+      --task_name "${glue_task}"
+      --data_path "${data_path}"
+      --output_dir "${output_dir}"
+      --num_communication_rounds "${rounds}"
+      --num_clients 10
+      --local_num_epochs "${epochs}"
+      --local_batch_size 32
+      --local_micro_batch_size 16
+      --local_learning_rate 5e-4
+      --warmup_ratio 0.06
+      --weight_decay 0.1
+      --max_seq_length 512
+      --lora_r 8
+      --lora_alpha 8
+      --heter "${heter_flag}"
+      --seed "${seed}"
+    )
+  else
+    case "${method}" in
+      flora)
+        cmd=(
+          python main.py
+          --global_model "${model_arg}"
+          --data_path "${data_path}"
+          --output_dir "${output_dir}"
+          --num_communication_rounds "${rounds}"
+          --num_clients 10
+          --local_num_epochs "${epochs}"
+          --local_batch_size 128
+          --local_micro_batch_size 16
+          --local_learning_rate 3e-4
+          --lora_r 16
+          --lora_alpha 32
+          --stacking True
+          --heter "${heter_flag}"
+          --full False
+          --dev_data_path "${DEV_DATA_PATH}"
+          --seed "${seed}"
+        )
+        ;;
+      nonlinear_flora)
+        cmd=(
+          python main_nonlinear_flora.py
+          --global_model "${model_arg}"
+          --data_path "${data_path}"
+          --output_dir "${output_dir}"
+          --num_communication_rounds "${rounds}"
+          --num_clients 10
+          --local_num_epochs "${epochs}"
+          --local_batch_size 128
+          --local_micro_batch_size 16
+          --local_learning_rate 3e-4
+          --lora_r 16
+          --lora_alpha 32
+          --heter "${heter_flag}"
+          --dev_data_path "${DEV_DATA_PATH}"
+          --seed "${seed}"
+        )
+        ;;
+      ffa)
+        cmd=(
+          python main_ffa.py
+          --global_model "${model_arg}"
+          --data_path "${data_path}"
+          --output_dir "${output_dir}"
+          --num_communication_rounds "${rounds}"
+          --num_clients 10
+          --local_num_epochs "${epochs}"
+          --local_batch_size 128
+          --local_micro_batch_size 16
+          --local_learning_rate 3e-4
+          --lora_r 16
+          --lora_alpha 32
+          --activation gelu
+          --heter "${heter_flag}"
+          --dev_data_path "${DEV_DATA_PATH}"
+          --seed "${seed}"
+        )
+        ;;
+      *)
+        echo "Unknown method: ${method}" >&2
+        exit 1
+        ;;
+    esac
+  fi
 
   if [[ "${setting}" == "heter" ]]; then
-    cmd+=(--local_ranks "[64,32,16,16,8,8,4,4,4,4]")
+    if [[ "${model_arg}" == "roberta-base" ]]; then
+      cmd+=(--local_ranks "[32,16,8,8,4,4,2,2,2,2]")
+    else
+      cmd+=(--local_ranks "[64,32,16,16,8,8,4,4,4,4]")
+    fi
   fi
 
   echo "============================================"
