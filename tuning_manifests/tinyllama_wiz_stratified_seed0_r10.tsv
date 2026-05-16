@@ -1,0 +1,17 @@
+method	dataset	model	setting	epochs	rounds	seed
+flora	wiz_stratified	tinyllama	homo	1	10	0
+flora	wiz_stratified	tinyllama	homo	2	10	0
+flora	wiz_stratified	tinyllama	homo	3	10	0
+flora	wiz_stratified	tinyllama	homo	5	10	0
+flora	wiz_stratified	tinyllama	heter	1	10	0
+flora	wiz_stratified	tinyllama	heter	2	10	0
+flora	wiz_stratified	tinyllama	heter	3	10	0
+flora	wiz_stratified	tinyllama	heter	5	10	0
+ffa	wiz_stratified	tinyllama	homo	1	10	0
+ffa	wiz_stratified	tinyllama	homo	2	10	0
+ffa	wiz_stratified	tinyllama	homo	3	10	0
+ffa	wiz_stratified	tinyllama	homo	5	10	0
+ffa	wiz_stratified	tinyllama	heter	1	10	0
+ffa	wiz_stratified	tinyllama	heter	2	10	0
+ffa	wiz_stratified	tinyllama	heter	3	10	0
+ffa	wiz_stratified	tinyllama	heter	5	10	0

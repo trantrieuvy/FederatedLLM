@@ -1,0 +1,17 @@
+method	dataset	model	setting	epochs	rounds	seed
+linear_flora_cumulative	dolly_stratified	tinyllama	homo	1	10	0
+linear_flora_cumulative	dolly_stratified	tinyllama	homo	2	10	0
+linear_flora_cumulative	dolly_stratified	tinyllama	homo	3	10	0
+linear_flora_cumulative	dolly_stratified	tinyllama	homo	5	10	0
+linear_flora_cumulative	dolly_stratified	tinyllama	heter	1	10	0
+linear_flora_cumulative	dolly_stratified	tinyllama	heter	2	10	0
+linear_flora_cumulative	dolly_stratified	tinyllama	heter	3	10	0
+linear_flora_cumulative	dolly_stratified	tinyllama	heter	5	10	0
+linear_flora_cumulative	wiz_stratified	tinyllama	homo	1	10	0
+linear_flora_cumulative	wiz_stratified	tinyllama	homo	2	10	0
+linear_flora_cumulative	wiz_stratified	tinyllama	homo	3	10	0
+linear_flora_cumulative	wiz_stratified	tinyllama	homo	5	10	0
+linear_flora_cumulative	wiz_stratified	tinyllama	heter	1	10	0
+linear_flora_cumulative	wiz_stratified	tinyllama	heter	2	10	0
+linear_flora_cumulative	wiz_stratified	tinyllama	heter	3	10	0
+linear_flora_cumulative	wiz_stratified	tinyllama	heter	5	10	0

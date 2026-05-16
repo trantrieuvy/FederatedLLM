@@ -1,0 +1,17 @@
+method	dataset	model	setting	epochs	rounds	seed
+ffa	wiz_stratified	tinyllama	homo	1	50	0
+ffa	wiz_stratified	tinyllama	homo	1	100	0
+ffa	wiz_stratified	tinyllama	heter	1	50	0
+ffa	wiz_stratified	tinyllama	heter	1	100	0
+ffa	dolly_stratified	tinyllama	homo	1	50	0
+ffa	dolly_stratified	tinyllama	homo	1	100	0
+ffa	dolly_stratified	tinyllama	heter	1	50	0
+ffa	dolly_stratified	tinyllama	heter	1	100	0
+ffa	wiz	tinyllama	homo	1	50	0
+ffa	wiz	tinyllama	homo	1	100	0
+ffa	wiz	tinyllama	heter	1	50	0
+ffa	wiz	tinyllama	heter	1	100	0
+ffa	dolly	tinyllama	homo	1	50	0
+ffa	dolly	tinyllama	homo	1	100	0
+ffa	dolly	tinyllama	heter	1	50	0
+ffa	dolly	tinyllama	heter	1	100	0

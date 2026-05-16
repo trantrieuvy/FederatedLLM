@@ -1,0 +1,17 @@
+method	dataset	model	setting	epochs	rounds	seed
+nonlinear_flora	rte_stratified	roberta-base	homo	5	10	0
+nonlinear_flora	rte_stratified	roberta-base	homo	8	10	0
+nonlinear_flora	rte_stratified	roberta-base	heter	2	10	0
+nonlinear_flora	rte_stratified	roberta-base	heter	3	10	0
+nonlinear_flora	rte_stratified	roberta-base	heter	5	10	0
+nonlinear_flora	rte_stratified	roberta-base	heter	8	10	0
+ffa	rte_stratified	roberta-base	homo	1	10	0
+ffa	rte_stratified	roberta-base	homo	2	10	0
+ffa	rte_stratified	roberta-base	homo	3	10	0
+ffa	rte_stratified	roberta-base	homo	5	10	0
+ffa	rte_stratified	roberta-base	homo	8	10	0
+ffa	rte_stratified	roberta-base	heter	1	10	0
+ffa	rte_stratified	roberta-base	heter	2	10	0
+ffa	rte_stratified	roberta-base	heter	3	10	0
+ffa	rte_stratified	roberta-base	heter	5	10	0
+ffa	rte_stratified	roberta-base	heter	8	10	0

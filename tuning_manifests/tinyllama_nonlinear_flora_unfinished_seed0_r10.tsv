@@ -1,0 +1,12 @@
+method	dataset	model	setting	epochs	rounds	seed
+nonlinear_flora	wiz_stratified	tinyllama	homo	5	10	0
+nonlinear_flora	wiz_stratified	tinyllama	heter	5	10	0
+nonlinear_flora	wiz	tinyllama	homo	1	10	0
+nonlinear_flora	wiz	tinyllama	homo	2	10	0
+nonlinear_flora	wiz	tinyllama	homo	3	10	0
+nonlinear_flora	wiz	tinyllama	homo	5	10	0
+nonlinear_flora	wiz	tinyllama	heter	1	10	0
+nonlinear_flora	wiz	tinyllama	heter	2	10	0
+nonlinear_flora	wiz	tinyllama	heter	3	10	0
+nonlinear_flora	wiz	tinyllama	heter	5	10	0
+nonlinear_flora	dolly	tinyllama	heter	5	10	0

@@ -1,0 +1,17 @@
+method	dataset	model	setting	epochs	rounds	seed
+flora	dolly	tinyllama	homo	1	10	0
+flora	dolly	tinyllama	homo	2	10	0
+flora	dolly	tinyllama	homo	3	10	0
+flora	dolly	tinyllama	homo	5	10	0
+flora	dolly	tinyllama	heter	1	10	0
+flora	dolly	tinyllama	heter	2	10	0
+flora	dolly	tinyllama	heter	3	10	0
+flora	dolly	tinyllama	heter	5	10	0
+ffa	dolly	tinyllama	homo	1	10	0
+ffa	dolly	tinyllama	homo	2	10	0
+ffa	dolly	tinyllama	homo	3	10	0
+ffa	dolly	tinyllama	homo	5	10	0
+ffa	dolly	tinyllama	heter	1	10	0
+ffa	dolly	tinyllama	heter	2	10	0
+ffa	dolly	tinyllama	heter	3	10	0
+ffa	dolly	tinyllama	heter	5	10	0
