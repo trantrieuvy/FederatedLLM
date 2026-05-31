@@ -14,6 +14,7 @@ from peft import (
     AdaLoraModel,
 )
 from fed_utils import FedAvg, client_selection, global_evaluation, GeneralClient
+from fed_utils.local_monitoring import initialize_local_metrics_file
 import datasets
 from utils.prompter import Prompter
 from utils.dataset_schema import prompt_fields
@@ -36,7 +37,8 @@ def fl_finetune(
         local_micro_batch_size: int = 16,
         local_num_epochs: int = 3,
         local_learning_rate: float = 3e-4,
-        local_val_set_size: int = 0,
+        local_val_set_size: float = 0,
+        local_train_monitor_size: int = 500,
         local_save_steps: int = 3,
         cutoff_len: int = 512,
         # LoRA hyperparams
@@ -79,6 +81,7 @@ def fl_finetune(
             f"local_num_epochs: {local_num_epochs}\n"
             f"local_learning_rate: {local_learning_rate}\n"
             f"local_val_set_size: {local_val_set_size}\n"
+            f"local_train_monitor_size: {local_train_monitor_size}\n"
             f"local_save_steps: {local_save_steps}\n"
             f"cutoff_len: {cutoff_len}\n"
             f"lora_r: {lora_r}\n"
@@ -240,6 +243,9 @@ def fl_finetune(
     last_client_id = None
     local_dataset_len_dict = dict()
     output_dir = os.path.join(output_dir, str(num_clients))
+    local_metrics_path = (
+        initialize_local_metrics_file(output_dir) if local_val_set_size > 0 else None
+    )
 
     acc_list = []
 
@@ -316,10 +322,19 @@ def fl_finetune(
             else:
                 model_client = model
 
-            client = GeneralClient(client_id, model_client, data_path, output_dir)
+            client = GeneralClient(
+                client_id,
+                model_client,
+                data_path,
+                output_dir,
+                method="flora",
+                local_metrics_path=local_metrics_path,
+            )
 
             print("\nPreparing the local dataset and trainer for Client_{}".format(client_id))
-            client.preprare_local_dataset(generate_and_tokenize_prompt, local_val_set_size)
+            client.preprare_local_dataset(
+                generate_and_tokenize_prompt, local_val_set_size, local_train_monitor_size
+            )
             client.build_local_trainer(tokenizer,
                                        local_micro_batch_size,
                                        gradient_accumulation_steps,
@@ -330,6 +345,7 @@ def fl_finetune(
 
             print("Initiating the local training of Client_{}".format(client_id))
             client.initiate_local_training()
+            client.evaluate_local_baseline(epoch, train_on_inputs)
 
             print("Local training starts ... ")
             client.train()

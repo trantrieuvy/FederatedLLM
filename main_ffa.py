@@ -38,6 +38,7 @@ from transformers import (
 
 from fed_utils.client_participation_scheduling import client_selection
 from fed_utils.evaluation import global_evaluation
+from fed_utils.local_monitoring import LocalMetricsTrainer, initialize_local_metrics_file
 from utils.dataset_schema import prompt_fields
 from utils.prompter import Prompter
 
@@ -250,36 +251,53 @@ def _aggregate_B_only(
 
 
 class FFAClient:
-    def __init__(self, client_id, model, data_path, output_dir):
+    def __init__(self, client_id, model, data_path, output_dir, local_metrics_path=None):
         self.client_id = client_id
         self.model = model
         self.local_data_path = os.path.join(data_path, f"local_training_{client_id}.json")
         self.local_data = load_dataset("json", data_files=self.local_data_path)
         self.output_dir = output_dir
+        self.local_metrics_path = local_metrics_path
+        self.local_monitoring_enabled = local_metrics_path is not None
         self.local_output_dir = os.path.join(
             self.output_dir,
             "trainer_saved",
             f"local_output_{client_id}",
         )
 
-    def preprare_local_dataset(self, generate_and_tokenize_prompt, local_val_set_size):
+    def preprare_local_dataset(self, generate_and_tokenize_prompt, local_val_set_size, local_train_monitor_size=500):
+        self.local_monitor_train_dataset = None
         if local_val_set_size > 0:
             local_train_val = self.local_data["train"].train_test_split(
                 test_size=local_val_set_size,
                 shuffle=True,
                 seed=42,
             )
-            self.local_train_dataset = (
-                local_train_val["train"].shuffle().map(generate_and_tokenize_prompt)
-            )
-            self.local_eval_dataset = (
-                local_train_val["test"].shuffle().map(generate_and_tokenize_prompt)
-            )
+            if self.local_monitoring_enabled:
+                if local_train_monitor_size <= 0:
+                    raise ValueError("local_train_monitor_size must be greater than zero.")
+                local_train = local_train_val["train"].shuffle(seed=42)
+                local_eval = local_train_val["test"].shuffle(seed=42)
+                self.local_train_dataset = local_train.map(generate_and_tokenize_prompt)
+                self.local_eval_dataset = local_eval.map(generate_and_tokenize_prompt)
+                monitor_size = min(int(local_train_monitor_size), len(local_train))
+                self.local_monitor_train_dataset = local_train.select(range(monitor_size)).map(
+                    generate_and_tokenize_prompt
+                )
+            else:
+                self.local_train_dataset = (
+                    local_train_val["train"].shuffle().map(generate_and_tokenize_prompt)
+                )
+                self.local_eval_dataset = (
+                    local_train_val["test"].shuffle().map(generate_and_tokenize_prompt)
+                )
         else:
             self.local_train_dataset = self.local_data["train"].shuffle().map(
                 generate_and_tokenize_prompt
             )
             self.local_eval_dataset = None
+            if self.local_monitoring_enabled:
+                raise ValueError("Local monitoring requires local_val_set_size > 0.")
         self.local_val_set_size = local_val_set_size
 
     def build_local_trainer(
@@ -292,6 +310,7 @@ class FFAClient:
         group_by_length,
         ddp,
     ):
+        monitoring = self.local_monitoring_enabled and self.local_val_set_size > 0
         self.train_args = transformers.TrainingArguments(
             per_device_train_batch_size=local_micro_batch_size,
             gradient_accumulation_steps=gradient_accumulation_steps,
@@ -301,13 +320,13 @@ class FFAClient:
             bf16=True,
             logging_steps=1,
             optim="adamw_torch",
-            evaluation_strategy="steps" if self.local_val_set_size > 0 else "no",
+            evaluation_strategy="epoch" if monitoring else ("steps" if self.local_val_set_size > 0 else "no"),
             save_strategy="steps",
-            eval_steps=200 if self.local_val_set_size > 0 else None,
+            eval_steps=None if monitoring else (200 if self.local_val_set_size > 0 else None),
             save_steps=5000000,
             output_dir=self.local_output_dir,
             save_total_limit=1,
-            load_best_model_at_end=True if self.local_val_set_size > 0 else False,
+            load_best_model_at_end=False if monitoring else (True if self.local_val_set_size > 0 else False),
             ddp_find_unused_parameters=False if ddp else None,
             group_by_length=group_by_length,
             dataloader_drop_last=False,
@@ -315,7 +334,7 @@ class FFAClient:
             gradient_checkpointing=True,
             gradient_checkpointing_kwargs={"use_reentrant": False},
         )
-        self.local_trainer = transformers.Trainer(
+        trainer_kwargs = dict(
             model=self.model,
             train_dataset=self.local_train_dataset,
             eval_dataset=self.local_eval_dataset,
@@ -327,6 +346,16 @@ class FFAClient:
                 padding=True,
             ),
         )
+        if monitoring:
+            self.local_trainer = LocalMetricsTrainer(
+                **trainer_kwargs,
+                local_monitor_train_dataset=self.local_monitor_train_dataset,
+                local_metrics_path=self.local_metrics_path,
+                local_method="ffa",
+                local_client_id=self.client_id,
+            )
+        else:
+            self.local_trainer = transformers.Trainer(**trainer_kwargs)
 
     def initiate_local_training(self):
         self.model.config.use_cache = False
@@ -336,6 +365,10 @@ class FFAClient:
 
     def train(self):
         self.local_trainer.train()
+
+    def evaluate_local_baseline(self, epoch, train_on_inputs):
+        if self.local_monitoring_enabled:
+            self.local_trainer.evaluate_local_baseline(epoch, train_on_inputs)
 
     def terminate_local_training(
         self,
@@ -371,7 +404,8 @@ def fl_finetune(
     local_micro_batch_size: int = 16,
     local_num_epochs: int = 1,
     local_learning_rate: float = 3e-4,
-    local_val_set_size: int = 0,
+    local_val_set_size: float = 0,
+    local_train_monitor_size: int = 500,
     cutoff_len: int = 512,
     # adapter
     lora_r: int = 16,
@@ -410,6 +444,8 @@ def fl_finetune(
         f"  A_init_std:               {A_init_std}\n"
         f"  local_num_epochs:         {local_num_epochs}\n"
         f"  local_learning_rate:      {local_learning_rate}\n"
+        f"  local_val_set_size:       {local_val_set_size}\n"
+        f"  local_train_monitor_size: {local_train_monitor_size}\n"
         f"  seed:                     {seed}\n"
     )
 
@@ -517,6 +553,9 @@ def fl_finetune(
 
     output_dir = os.path.join(output_dir, str(num_clients))
     os.makedirs(output_dir, exist_ok=True)
+    local_metrics_path = (
+        initialize_local_metrics_file(output_dir) if local_val_set_size > 0 else None
+    )
     torch.save(_module_A_to_state_dict(A_frozen_dict), os.path.join(output_dir, "A_frozen.bin"))
     with open(os.path.join(output_dir, "ffa_config.json"), "w") as f:
         json.dump(
@@ -573,8 +612,12 @@ def fl_finetune(
             trainable = sum(p.numel() for p in model_client.parameters() if p.requires_grad)
             print(f"    adapters={n_adapters}, trainable_B_params={trainable:,}")
 
-            client = FFAClient(client_id, model_client, data_path, output_dir)
-            client.preprare_local_dataset(generate_and_tokenize_prompt, local_val_set_size)
+            client = FFAClient(
+                client_id, model_client, data_path, output_dir, local_metrics_path=local_metrics_path
+            )
+            client.preprare_local_dataset(
+                generate_and_tokenize_prompt, local_val_set_size, local_train_monitor_size
+            )
             client.build_local_trainer(
                 tokenizer,
                 local_micro_batch_size,
@@ -585,6 +628,7 @@ def fl_finetune(
                 ddp,
             )
             client.initiate_local_training()
+            client.evaluate_local_baseline(epoch, train_on_inputs)
             client.train()
             (
                 model_client,

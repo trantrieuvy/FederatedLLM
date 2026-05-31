@@ -33,6 +33,7 @@ from transformers import (
 )
 
 from fed_utils.client_layercraft import GeneralClient
+from fed_utils.local_monitoring import initialize_local_metrics_file
 from fed_utils.model_aggregation_layercraft import FedAvg
 from fed_utils.client_participation_scheduling import client_selection
 from fed_utils.evaluation import global_evaluation
@@ -245,7 +246,8 @@ def fl_finetune(
     local_micro_batch_size: int = 16,
     local_num_epochs: int = 1,
     local_learning_rate: float = 3e-4,
-    local_val_set_size: int = 0,
+    local_val_set_size: float = 0,
+    local_train_monitor_size: int = 500,
     cutoff_len: int = 512,
     # adapter
     lora_r: int = 16,
@@ -271,6 +273,8 @@ def fl_finetune(
         f"  lora_r: {lora_r}  lora_alpha: {lora_alpha}\n"
         f"  local_num_epochs:         {local_num_epochs}\n"
         f"  local_learning_rate:      {local_learning_rate}\n"
+        f"  local_val_set_size:       {local_val_set_size}\n"
+        f"  local_train_monitor_size: {local_train_monitor_size}\n"
         f"  seed:                     {seed}\n"
     )
 
@@ -357,6 +361,9 @@ def fl_finetune(
 
     output_dir = os.path.join(output_dir, str(num_clients))
     os.makedirs(output_dir, exist_ok=True)
+    local_metrics_path = (
+        initialize_local_metrics_file(output_dir) if local_val_set_size > 0 else None
+    )
     acc_list = []
 
     print("\nStarting multi-round linear FLoRA cumulative …")
@@ -399,13 +406,23 @@ def fl_finetune(
             trainable = sum(p.numel() for p in model_client.parameters() if p.requires_grad)
             print(f"  Client_{client_id}: {n_adapters} adapters, trainable={trainable:,}")
 
-            client = GeneralClient(client_id, model_client, data_path, output_dir)
-            client.preprare_local_dataset(generate_and_tokenize_prompt, local_val_set_size)
+            client = GeneralClient(
+                client_id,
+                model_client,
+                data_path,
+                output_dir,
+                method="linear_flora_cumulative",
+                local_metrics_path=local_metrics_path,
+            )
+            client.preprare_local_dataset(
+                generate_and_tokenize_prompt, local_val_set_size, local_train_monitor_size
+            )
             client.build_local_trainer(
                 tokenizer, local_micro_batch_size, gradient_accumulation_steps,
                 local_num_epochs, local_learning_rate, group_by_length, ddp,
             )
             client.initiate_local_training()
+            client.evaluate_local_baseline(epoch, train_on_inputs)
             client.train()
             (model_client, local_dataset_len_dict,
              previously_selected_clients_set, _) = client.terminate_local_training(

@@ -18,6 +18,19 @@ FORCE="${FORCE:-false}"
 DRY_RUN="${DRY_RUN:-false}"
 SKIP_ENV_SETUP="${SKIP_ENV_SETUP:-false}"
 MANIFEST_INDEX_BASE="${MANIFEST_INDEX_BASE:-1}"
+NUM_CLIENTS="${NUM_CLIENTS:-10}"
+LOCAL_VAL_SET_SIZE="${LOCAL_VAL_SET_SIZE:-0}"
+LOCAL_TRAIN_MONITOR_SIZE="${LOCAL_TRAIN_MONITOR_SIZE:-500}"
+TRAIN_ON_INPUTS="${TRAIN_ON_INPUTS:-True}"
+ROBERTA_LORA_R="${ROBERTA_LORA_R:-8}"
+ROBERTA_LORA_ALPHA="${ROBERTA_LORA_ALPHA:-8}"
+ROBERTA_RESUME_FROM_LATEST="${ROBERTA_RESUME_FROM_LATEST:-False}"
+ROBERTA_MAX_ROUNDS_PER_INVOCATION="${ROBERTA_MAX_ROUNDS_PER_INVOCATION:-0}"
+ROBERTA_RETAIN_ADAPTER_EVERY_N_ROUNDS="${ROBERTA_RETAIN_ADAPTER_EVERY_N_ROUNDS:-1}"
+ROBERTA_LOCAL_MONITOR_ACCURACY="${ROBERTA_LOCAL_MONITOR_ACCURACY:-False}"
+ROBERTA_LOCAL_VALIDATION_SOURCE="${ROBERTA_LOCAL_VALIDATION_SOURCE:-local_holdout}"
+ROBERTA_LOCAL_VAL_SET_SIZE_OVERRIDE="${ROBERTA_LOCAL_VAL_SET_SIZE_OVERRIDE:-}"
+ROBERTA_LOCAL_TRAIN_MONITOR_SIZE_OVERRIDE="${ROBERTA_LOCAL_TRAIN_MONITOR_SIZE_OVERRIDE:-}"
 SCRIPT_DIR="${SLURM_SUBMIT_DIR:-$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)}"
 LAYERCRAFT_PATH="${LAYERCRAFT_PATH:-${SCRIPT_DIR}/../layercraft}"
 
@@ -86,11 +99,12 @@ model_tag_for() {
 log_path_for() {
   local method="$1"
   local output_dir="$2"
+  local num_clients="$3"
 
   if [[ "${method}" == "flora" ]]; then
-    echo "${output_dir}10log.txt"
+    echo "${output_dir}${num_clients}log.txt"
   elif [[ "${method}" == "ffa" || "${method}" == "nonlinear_flora" || "${method}" == "linear_flora_cumulative" ]]; then
-    echo "${output_dir}10/log.txt"
+    echo "${output_dir}${num_clients}/log.txt"
   else
     echo "Unknown method: ${method}" >&2
     return 1
@@ -117,6 +131,13 @@ run_row() {
   local epochs="$5"
   local rounds="$6"
   local seed="$7"
+  local num_clients="${8:-${NUM_CLIENTS}}"
+  local lora_r="${9:-}"
+  local lora_alpha="${10:-}"
+  local row_local_val_set_size="${11:-${LOCAL_VAL_SET_SIZE}}"
+  local row_local_train_monitor_size="${12:-${LOCAL_TRAIN_MONITOR_SIZE}}"
+  local effective_local_val_set_size="${row_local_val_set_size}"
+  local effective_local_train_monitor_size="${row_local_train_monitor_size}"
 
   local model_arg
   local model_tag
@@ -126,10 +147,10 @@ run_row() {
   local data_path="./data_${dataset}"
   local output_dir="${RUN_ROOT%/}/tuning-${method}-${dataset}-${model_tag}-${setting}-e${epochs}-r${rounds}/seed${seed}/"
   local log_path
-  log_path="$(log_path_for "${method}" "${output_dir}")"
+  log_path="$(log_path_for "${method}" "${output_dir}" "${num_clients}")"
 
-  if [[ ! -d "${data_path}/10" ]]; then
-    echo "Data path does not contain 10-client split: ${data_path}/10" >&2
+  if [[ ! -d "${data_path}/${num_clients}" ]]; then
+    echo "Data path does not contain ${num_clients}-client split: ${data_path}/${num_clients}" >&2
     exit 1
   fi
 
@@ -149,6 +170,10 @@ run_row() {
   local cmd=()
   if [[ "${model_arg}" == "roberta-base" ]]; then
     local glue_task
+    local effective_lora_r="${lora_r:-${ROBERTA_LORA_R}}"
+    local effective_lora_alpha="${lora_alpha:-${ROBERTA_LORA_ALPHA}}"
+    effective_local_val_set_size="${ROBERTA_LOCAL_VAL_SET_SIZE_OVERRIDE:-${row_local_val_set_size}}"
+    effective_local_train_monitor_size="${ROBERTA_LOCAL_TRAIN_MONITOR_SIZE_OVERRIDE:-${row_local_train_monitor_size}}"
     glue_task="$(glue_task_for_dataset "${dataset}")"
     cmd=(
       python main_roberta_glue.py
@@ -158,7 +183,7 @@ run_row() {
       --data_path "${data_path}"
       --output_dir "${output_dir}"
       --num_communication_rounds "${rounds}"
-      --num_clients 10
+      --num_clients "${num_clients}"
       --local_num_epochs "${epochs}"
       --local_batch_size 32
       --local_micro_batch_size 16
@@ -166,9 +191,16 @@ run_row() {
       --warmup_ratio 0.06
       --weight_decay 0.1
       --max_seq_length 512
-      --lora_r 8
-      --lora_alpha 8
+      --lora_r "${effective_lora_r}"
+      --lora_alpha "${effective_lora_alpha}"
       --heter "${heter_flag}"
+      --local_val_set_size "${effective_local_val_set_size}"
+      --local_train_monitor_size "${effective_local_train_monitor_size}"
+      --local_validation_source "${ROBERTA_LOCAL_VALIDATION_SOURCE}"
+      --resume_from_latest "${ROBERTA_RESUME_FROM_LATEST}"
+      --max_rounds_per_invocation "${ROBERTA_MAX_ROUNDS_PER_INVOCATION}"
+      --retain_adapter_every_n_rounds "${ROBERTA_RETAIN_ADAPTER_EVERY_N_ROUNDS}"
+      --local_monitor_accuracy "${ROBERTA_LOCAL_MONITOR_ACCURACY}"
       --seed "${seed}"
     )
   else
@@ -180,7 +212,7 @@ run_row() {
           --data_path "${data_path}"
           --output_dir "${output_dir}"
           --num_communication_rounds "${rounds}"
-          --num_clients 10
+          --num_clients "${num_clients}"
           --local_num_epochs "${epochs}"
           --local_batch_size 128
           --local_micro_batch_size 16
@@ -201,7 +233,7 @@ run_row() {
           --data_path "${data_path}"
           --output_dir "${output_dir}"
           --num_communication_rounds "${rounds}"
-          --num_clients 10
+          --num_clients "${num_clients}"
           --local_num_epochs "${epochs}"
           --local_batch_size 128
           --local_micro_batch_size 16
@@ -220,7 +252,7 @@ run_row() {
           --data_path "${data_path}"
           --output_dir "${output_dir}"
           --num_communication_rounds "${rounds}"
-          --num_clients 10
+          --num_clients "${num_clients}"
           --local_num_epochs "${epochs}"
           --local_batch_size 128
           --local_micro_batch_size 16
@@ -239,7 +271,7 @@ run_row() {
           --data_path "${data_path}"
           --output_dir "${output_dir}"
           --num_communication_rounds "${rounds}"
-          --num_clients 10
+          --num_clients "${num_clients}"
           --local_num_epochs "${epochs}"
           --local_batch_size 128
           --local_micro_batch_size 16
@@ -257,6 +289,11 @@ run_row() {
         exit 1
         ;;
     esac
+    cmd+=(
+      --local_val_set_size "${effective_local_val_set_size}"
+      --local_train_monitor_size "${effective_local_train_monitor_size}"
+      --train_on_inputs "${TRAIN_ON_INPUTS}"
+    )
   fi
 
   if [[ "${setting}" == "heter" ]]; then
@@ -269,9 +306,16 @@ run_row() {
 
   echo "============================================"
   echo "method=${method} dataset=${dataset} model=${model_tag} setting=${setting}"
-  echo "epochs=${epochs} rounds=${rounds} seed=${seed}"
+  echo "epochs=${epochs} rounds=${rounds} seed=${seed} num_clients=${num_clients}"
   echo "output_dir=${output_dir}"
   echo "dev_data_path=${DEV_DATA_PATH}"
+  echo "local_val_set_size=${effective_local_val_set_size} local_train_monitor_size=${effective_local_train_monitor_size}"
+  if [[ "${model_arg}" == "roberta-base" ]]; then
+    echo "lora_r=${effective_lora_r} lora_alpha=${effective_lora_alpha}"
+    echo "resume_from_latest=${ROBERTA_RESUME_FROM_LATEST} max_rounds_per_invocation=${ROBERTA_MAX_ROUNDS_PER_INVOCATION} retain_adapter_every_n_rounds=${ROBERTA_RETAIN_ADAPTER_EVERY_N_ROUNDS} local_monitor_accuracy=${ROBERTA_LOCAL_MONITOR_ACCURACY} local_validation_source=${ROBERTA_LOCAL_VALIDATION_SOURCE}"
+  else
+    echo "train_on_inputs=${TRAIN_ON_INPUTS}"
+  fi
   echo "============================================"
 
   if [[ "${DRY_RUN}" == "true" ]]; then
@@ -292,11 +336,11 @@ if [[ -n "${SLURM_ARRAY_TASK_ID:-}" ]]; then
     echo "No manifest row for SLURM_ARRAY_TASK_ID=${SLURM_ARRAY_TASK_ID}" >&2
     exit 1
   fi
-  IFS=$'\t' read -r method dataset model setting epochs rounds seed <<< "${row}"
-  run_row "${method}" "${dataset}" "${model}" "${setting}" "${epochs}" "${rounds}" "${seed}"
+  IFS=$'\t' read -r method dataset model setting epochs rounds seed num_clients lora_r lora_alpha local_val_set_size local_train_monitor_size <<< "${row}"
+  run_row "${method}" "${dataset}" "${model}" "${setting}" "${epochs}" "${rounds}" "${seed}" "${num_clients}" "${lora_r}" "${lora_alpha}" "${local_val_set_size}" "${local_train_monitor_size}"
 else
-  while IFS=$'\t' read -r method dataset model setting epochs rounds seed; do
+  while IFS=$'\t' read -r method dataset model setting epochs rounds seed num_clients lora_r lora_alpha local_val_set_size local_train_monitor_size; do
     [[ -z "${method}" || "${method}" == "method" ]] && continue
-    run_row "${method}" "${dataset}" "${model}" "${setting}" "${epochs}" "${rounds}" "${seed}"
+    run_row "${method}" "${dataset}" "${model}" "${setting}" "${epochs}" "${rounds}" "${seed}" "${num_clients}" "${lora_r}" "${lora_alpha}" "${local_val_set_size}" "${local_train_monitor_size}"
   done < "${MANIFEST}"
 fi
