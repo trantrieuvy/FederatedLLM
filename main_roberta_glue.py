@@ -30,7 +30,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from datasets import Dataset
+from datasets import Dataset, load_metric
 from tqdm import tqdm
 from transformers import (
     AutoConfig,
@@ -813,7 +813,7 @@ class GlueClient:
         return len(self.local_train_dataset), adapter_state, classifier_state
 
 
-def _evaluate_accuracy(
+def _evaluate_classification_metrics(
     model: nn.Module,
     tokenizer,
     records: list[dict],
@@ -822,7 +822,8 @@ def _evaluate_accuracy(
     max_seq_length: int,
     batch_size: int,
     device: torch.device,
-) -> float:
+    metric=None,
+) -> dict[str, float]:
     model.eval()
     labels = [int(record["label"]) for record in records]
     predictions: list[int] = []
@@ -851,9 +852,18 @@ def _evaluate_accuracy(
             logits = model(**encoded).logits
             predictions.extend(torch.argmax(logits, dim=-1).cpu().tolist())
 
-    correct = sum(int(pred == label) for pred, label in zip(predictions, labels))
     model.train()
-    return correct / len(labels)
+
+    correct = sum(int(pred == label) for pred, label in zip(predictions, labels))
+    metrics = {"accuracy": float(correct / len(labels))}
+    if metric is not None:
+        metrics.update(
+            {
+                key: float(value)
+                for key, value in metric.compute(predictions=predictions, references=labels).items()
+            }
+        )
+    return metrics
 
 
 def _classification_accuracy_metrics(eval_pred) -> dict[str, float]:
@@ -996,6 +1006,7 @@ def fl_finetune(
     config = AutoConfig.from_pretrained(global_model, num_labels=2, finetuning_task=task_name)
     raw_model = AutoModelForSequenceClassification.from_pretrained(global_model, config=config)
     tokenizer = AutoTokenizer.from_pretrained(global_model, use_fast=True)
+    glue_metric = load_metric("glue", task_name, trust_remote_code=True) if task_name == "cola" else None
 
     for parameter in raw_model.parameters():
         parameter.requires_grad = False
@@ -1290,7 +1301,7 @@ def fl_finetune(
             )
 
         eval_model.to(device)
-        accuracy = _evaluate_accuracy(
+        round_metrics = _evaluate_classification_metrics(
             eval_model,
             tokenizer,
             val_records,
@@ -1299,9 +1310,13 @@ def fl_finetune(
             max_seq_length,
             eval_batch_size,
             device,
+            metric=glue_metric,
         )
+        accuracy = round_metrics["accuracy"]
         accuracy_list.append(accuracy)
         print(f"  Acc round {epoch}: {accuracy}")
+        if "matthews_correlation" in round_metrics:
+            print(f"  MCC round {epoch}: {round_metrics['matthews_correlation']}")
         del eval_model
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
@@ -1341,6 +1356,11 @@ def fl_finetune(
                     "legacy_cumulative_flora_resume": bool(legacy_cumulative_flora_resume),
                     "validation_label_counts": dict(Counter(record["label"] for record in val_records)),
                     "accuracy": float(accuracy),
+                    **{
+                        key: float(value)
+                        for key, value in round_metrics.items()
+                        if key != "accuracy"
+                    },
                 },
                 handle,
                 indent=2,
