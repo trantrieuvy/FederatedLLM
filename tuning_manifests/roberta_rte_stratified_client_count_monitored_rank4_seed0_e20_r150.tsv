@@ -1,0 +1,10 @@
+method	dataset	model	setting	epochs	rounds	seed	num_clients	lora_r	lora_alpha	local_val_set_size	local_train_monitor_size
+flora	rte_stratified	roberta-base	homo	20	150	0	3	4	4	0.1	500
+flora	rte_stratified	roberta-base	homo	20	150	0	10	4	4	0.1	500
+flora	rte_stratified	roberta-base	homo	20	150	0	20	4	4	0.1	500
+nonlinear_flora	rte_stratified	roberta-base	homo	20	150	0	3	4	4	0.1	500
+nonlinear_flora	rte_stratified	roberta-base	homo	20	150	0	10	4	4	0.1	500
+nonlinear_flora	rte_stratified	roberta-base	homo	20	150	0	20	4	4	0.1	500
+ffa	rte_stratified	roberta-base	homo	20	150	0	3	4	4	0.1	500
+ffa	rte_stratified	roberta-base	homo	20	150	0	10	4	4	0.1	500
+ffa	rte_stratified	roberta-base	homo	20	150	0	20	4	4	0.1	500

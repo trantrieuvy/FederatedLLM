@@ -1,0 +1,2 @@
+method	dataset	model	setting	epochs	rounds	seed	num_clients	lora_r	lora_alpha	local_val_set_size	local_train_monitor_size
+ffa	rte_stratified	roberta-base	homo	1	1	0	3	4	4	0.1	500

@@ -117,6 +117,15 @@ glue_task_for_dataset() {
     rte|rte_stratified|rte_dirichlet)
       echo "rte"
       ;;
+    qnli|qnli_stratified)
+      echo "qnli"
+      ;;
+    mrpc|mrpc_stratified)
+      echo "mrpc"
+      ;;
+    cola|cola_stratified)
+      echo "cola"
+      ;;
     *)
       echo "${dataset}"
       ;;
