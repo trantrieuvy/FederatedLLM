@@ -1,0 +1,7 @@
+method	dataset	model	setting	epochs	rounds	seed	num_clients	lora_r	lora_alpha	local_val_set_size	local_train_monitor_size
+flora	qnli_stratified	roberta-base	homo	20	150	0	3	4	4	0.0	0
+flora	qnli_stratified	roberta-base	homo	20	150	0	10	4	4	0.0	0
+flora	qnli_stratified	roberta-base	homo	20	150	0	20	4	4	0.0	0
+ffa	qnli_stratified	roberta-base	homo	20	150	0	3	4	4	0.0	0
+ffa	qnli_stratified	roberta-base	homo	20	150	0	10	4	4	0.0	0
+ffa	qnli_stratified	roberta-base	homo	20	150	0	20	4	4	0.0	0
