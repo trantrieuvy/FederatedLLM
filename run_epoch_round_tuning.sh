@@ -31,6 +31,9 @@ ROBERTA_LOCAL_MONITOR_ACCURACY="${ROBERTA_LOCAL_MONITOR_ACCURACY:-False}"
 ROBERTA_LOCAL_VALIDATION_SOURCE="${ROBERTA_LOCAL_VALIDATION_SOURCE:-local_holdout}"
 ROBERTA_LOCAL_VAL_SET_SIZE_OVERRIDE="${ROBERTA_LOCAL_VAL_SET_SIZE_OVERRIDE:-}"
 ROBERTA_LOCAL_TRAIN_MONITOR_SIZE_OVERRIDE="${ROBERTA_LOCAL_TRAIN_MONITOR_SIZE_OVERRIDE:-}"
+TINYLLAMA_RESUME_FROM_LATEST="${TINYLLAMA_RESUME_FROM_LATEST:-True}"
+TINYLLAMA_MAX_ROUNDS_PER_INVOCATION="${TINYLLAMA_MAX_ROUNDS_PER_INVOCATION:-0}"
+TINYLLAMA_RETAIN_ADAPTER_EVERY_N_ROUNDS="${TINYLLAMA_RETAIN_ADAPTER_EVERY_N_ROUNDS:-1}"
 SCRIPT_DIR="${SLURM_SUBMIT_DIR:-$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)}"
 LAYERCRAFT_PATH="${LAYERCRAFT_PATH:-${SCRIPT_DIR}/../layercraft}"
 
@@ -130,6 +133,41 @@ glue_task_for_dataset() {
       echo "${dataset}"
       ;;
   esac
+}
+
+heter_rank_list_for() {
+  local model_arg="$1"
+  local num_clients="$2"
+  local base_ranks=()
+
+  if [[ "${model_arg}" == "roberta-base" ]]; then
+    base_ranks=(32 16 8 8 4 4 2 2 2 2)
+  else
+    base_ranks=(64 32 16 16 8 8 4 4 4 4)
+  fi
+
+  local rank_count="${#base_ranks[@]}"
+  local fallback_rank="${base_ranks[$((rank_count - 1))]}"
+  local ranks=()
+  local client_id
+  for ((client_id = 0; client_id < num_clients; client_id++)); do
+    if (( client_id < rank_count )); then
+      ranks+=("${base_ranks[${client_id}]}")
+    else
+      ranks+=("${fallback_rank}")
+    fi
+  done
+
+  local joined=""
+  local rank
+  for rank in "${ranks[@]}"; do
+    if [[ -z "${joined}" ]]; then
+      joined="${rank}"
+    else
+      joined="${joined},${rank}"
+    fi
+  done
+  printf '[%s]\n' "${joined}"
 }
 
 run_row() {
@@ -233,6 +271,9 @@ run_row() {
           --full False
           --dev_data_path "${DEV_DATA_PATH}"
           --seed "${seed}"
+          --resume_from_latest "${TINYLLAMA_RESUME_FROM_LATEST}"
+          --max_rounds_per_invocation "${TINYLLAMA_MAX_ROUNDS_PER_INVOCATION}"
+          --retain_adapter_every_n_rounds "${TINYLLAMA_RETAIN_ADAPTER_EVERY_N_ROUNDS}"
         )
         ;;
       nonlinear_flora)
@@ -291,6 +332,9 @@ run_row() {
           --heter "${heter_flag}"
           --dev_data_path "${DEV_DATA_PATH}"
           --seed "${seed}"
+          --resume_from_latest "${TINYLLAMA_RESUME_FROM_LATEST}"
+          --max_rounds_per_invocation "${TINYLLAMA_MAX_ROUNDS_PER_INVOCATION}"
+          --retain_adapter_every_n_rounds "${TINYLLAMA_RETAIN_ADAPTER_EVERY_N_ROUNDS}"
         )
         ;;
       *)
@@ -306,11 +350,7 @@ run_row() {
   fi
 
   if [[ "${setting}" == "heter" ]]; then
-    if [[ "${model_arg}" == "roberta-base" ]]; then
-      cmd+=(--local_ranks "[32,16,8,8,4,4,2,2,2,2]")
-    else
-      cmd+=(--local_ranks "[64,32,16,16,8,8,4,4,4,4]")
-    fi
+    cmd+=(--local_ranks "$(heter_rank_list_for "${model_arg}" "${num_clients}")")
   fi
 
   echo "============================================"
@@ -324,6 +364,7 @@ run_row() {
     echo "resume_from_latest=${ROBERTA_RESUME_FROM_LATEST} max_rounds_per_invocation=${ROBERTA_MAX_ROUNDS_PER_INVOCATION} retain_adapter_every_n_rounds=${ROBERTA_RETAIN_ADAPTER_EVERY_N_ROUNDS} local_monitor_accuracy=${ROBERTA_LOCAL_MONITOR_ACCURACY} local_validation_source=${ROBERTA_LOCAL_VALIDATION_SOURCE}"
   else
     echo "train_on_inputs=${TRAIN_ON_INPUTS}"
+    echo "resume_from_latest=${TINYLLAMA_RESUME_FROM_LATEST} max_rounds_per_invocation=${TINYLLAMA_MAX_ROUNDS_PER_INVOCATION} retain_adapter_every_n_rounds=${TINYLLAMA_RETAIN_ADAPTER_EVERY_N_ROUNDS}"
   fi
   echo "============================================"
 
