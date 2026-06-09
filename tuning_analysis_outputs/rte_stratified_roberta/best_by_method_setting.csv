@@ -1,0 +1,7 @@
+Method,Setting,Best epochs,Best round,Best accuracy,Run status,Result source
+Linear FLoRA,Heter,8,10,60.64981949458483,Complete,score log
+Nonlinear FFA,Heter,8,1,58.48375451263538,Complete,score log
+Nonlinear FLoRA Cumulative,Heter,8,7,61.371841155234655,Complete,score log
+Linear FLoRA,Homo,5,10,62.093862815884485,Complete,score log
+Nonlinear FFA,Homo,2,5,58.48375451263538,Complete,score log
+Nonlinear FLoRA Cumulative,Homo,8,2,59.56678700361011,Complete,score log

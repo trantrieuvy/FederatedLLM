@@ -1,0 +1,25 @@
+Method key,Method,Dataset,Dataset label,Model key,Model,Setting key,Setting,Selected epochs,Selected round,Selected accuracy,Selected std,Selected seed count,Selected seeds,Selected compute cost,Best epochs,Best round,Best accuracy,Accuracy gap to best,Low-cost tie count
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,4,28.523939458691792,0.0,1,0,12,5,9,29.04854503416771,0.5246055754759169,1
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,3,29.901496671286427,0.0,1,0,6,5,7,30.873034360682343,0.971537689395916,1
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,5,29.619329742120637,0.0,1,0,15,3,5,29.619329742120637,0.0,1
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,7,30.616932937943336,0.0,1,0,21,3,10,31.264767281439244,0.6478343434959086,1
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,6,33.19234141611857,0.0,1,0,6,1,10,33.63478226383233,0.4424408477137547,1
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,1,30.69317878695398,0.0,1,0,2,5,4,31.54860451750488,0.8554257305509019,2
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,3,32.460055269357504,0.0,1,0,6,5,3,33.36740023146743,0.9073449621099243,1
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,2,31.80994536900661,0.0,1,0,4,5,1,32.349736848160674,0.539791479154065,1
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,1,29.38020421842083,0.0,1,0,2,2,5,29.95713368479402,0.5769294663731905,1
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,2,31.028687165879365,0.0,1,0,6,3,2,31.028687165879365,0.0,1
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,1,28.335098379205913,0.0,1,0,5,2,8,29.105461981714768,0.7703636025088549,1
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,5,28.632243921249316,0.0,1,0,5,5,4,29.614578378920374,0.9823344576710582,1
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,1,46.216901483508074,0.0,1,0,3,3,1,46.216901483508074,0.0,1
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,1,45.100873212020446,0.0,1,0,1,1,1,45.100873212020446,0.0,1
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,1,45.736471619380225,0.0,1,0,3,3,1,45.736471619380225,0.0,1
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,1,46.735378514127305,0.0,1,0,1,1,1,46.735378514127305,0.0,1
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,4,30.100207433685593,0.0,1,0,8,3,3,31.060014077748882,0.9598066440632884,1
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,3,30.217557457310612,0.0,1,0,9,3,3,30.217557457310612,0.0,1
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,2,30.096827805285802,0.0,1,0,6,3,2,30.096827805285802,0.0,1
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,6,29.711140580548346,0.0,1,0,12,2,6,29.711140580548346,0.0,1
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,1,44.126889822266726,0.0,1,0,3,3,1,44.126889822266726,0.0,1
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,1,42.01573477140562,0.0,1,0,2,2,1,42.01573477140562,0.0,1
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,1,45.377494561705326,0.0,1,0,3,3,1,45.377494561705326,0.0,1
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,3,42.88281806146077,0.0,1,0,6,2,3,42.88281806146077,0.0,1

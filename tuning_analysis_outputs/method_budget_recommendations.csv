@@ -1,0 +1,25 @@
+Dataset label,Model,Setting,Budget,Max compute cost,Method,Local epochs,Round,Accuracy,Compute cost
+Dolly,TinyLlama,Heter,Low compute,3,Linear FLoRA,2,1,29.38020421842083,2
+Dolly,TinyLlama,Heter,Medium compute,10,Nonlinear FLoRA Cumulative,3,3,31.060014077748882,9
+Dolly,TinyLlama,Heter,High compute,unbounded,Nonlinear FLoRA Cumulative,3,3,31.060014077748882,9
+Dolly,TinyLlama,Homo,Low compute,3,Linear FLoRA,2,1,27.983047872846882,2
+Dolly,TinyLlama,Homo,Medium compute,10,Linear FLoRA,3,2,31.028687165879365,6
+Dolly,TinyLlama,Homo,High compute,unbounded,Linear FLoRA,3,2,31.028687165879365,6
+Dolly stratified,TinyLlama,Heter,Low compute,3,Nonlinear FLoRA Cumulative,1,3,28.48881945017636,3
+Dolly stratified,TinyLlama,Heter,Medium compute,10,Nonlinear FLoRA Cumulative,3,2,30.096827805285802,6
+Dolly stratified,TinyLlama,Heter,High compute,unbounded,Nonlinear FLoRA Cumulative,3,2,30.096827805285802,6
+Dolly stratified,TinyLlama,Homo,Low compute,3,Linear FLoRA,1,2,27.59323346109605,2
+Dolly stratified,TinyLlama,Homo,Medium compute,10,Nonlinear FFA,2,4,29.31128088622011,8
+Dolly stratified,TinyLlama,Homo,High compute,unbounded,Nonlinear FFA,3,10,31.264767281439244,30
+Wizard,TinyLlama,Heter,Low compute,3,Linear FLoRA,3,1,46.216901483508074,3
+Wizard,TinyLlama,Heter,Medium compute,10,Linear FLoRA,3,1,46.216901483508074,3
+Wizard,TinyLlama,Heter,High compute,unbounded,Linear FLoRA,3,1,46.216901483508074,3
+Wizard,TinyLlama,Homo,Low compute,3,Linear FLoRA,1,1,45.100873212020446,1
+Wizard,TinyLlama,Homo,Medium compute,10,Linear FLoRA,1,1,45.100873212020446,1
+Wizard,TinyLlama,Homo,High compute,unbounded,Linear FLoRA,1,1,45.100873212020446,1
+Wizard stratified,TinyLlama,Heter,Low compute,3,Linear FLoRA,3,1,45.736471619380225,3
+Wizard stratified,TinyLlama,Heter,Medium compute,10,Linear FLoRA,3,1,45.736471619380225,3
+Wizard stratified,TinyLlama,Heter,High compute,unbounded,Linear FLoRA,3,1,45.736471619380225,3
+Wizard stratified,TinyLlama,Homo,Low compute,3,Linear FLoRA,1,1,46.735378514127305,1
+Wizard stratified,TinyLlama,Homo,Medium compute,10,Linear FLoRA,1,1,46.735378514127305,1
+Wizard stratified,TinyLlama,Homo,High compute,unbounded,Linear FLoRA,1,1,46.735378514127305,1

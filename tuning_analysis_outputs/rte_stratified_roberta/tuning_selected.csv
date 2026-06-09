@@ -1,0 +1,7 @@
+Method key,Method,Dataset,Dataset label,Model key,Model,Setting key,Setting,Selected epochs,Selected round,Selected accuracy,Selected std,Selected seed count,Selected seeds,Selected compute cost,Best epochs,Best round,Best accuracy,Accuracy gap to best,Low-cost tie count
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,1,58.48375451263538,0.0,1,0,8,8,1,58.48375451263538,0.0,1
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,1,57.761732851985556,0.0,1,0,8,2,5,58.48375451263538,0.7220216606498226,1
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,10,60.64981949458483,0.0,1,0,80,8,10,60.64981949458483,0.0,1
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,5,9,61.371841155234655,0.0,1,0,45,5,10,62.093862815884485,0.7220216606498298,1
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,7,61.371841155234655,0.0,1,0,56,8,7,61.371841155234655,0.0,1
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,2,59.56678700361011,0.0,1,0,16,8,2,59.56678700361011,0.0,1

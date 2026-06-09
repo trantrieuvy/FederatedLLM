@@ -1,0 +1,1 @@
+Task,Run source,Method key,Method,Dataset,Dataset label,Model key,Model,Setting key,Setting,Local epochs,Config rounds,Seed,Client count,Client count label,Round id,Communication round,Metric key,Metric label,Metric value,Accuracy (%),Selected clients,Round stacked rank,Cumulative or global rank,Rank semantics,Local metrics path,Config path

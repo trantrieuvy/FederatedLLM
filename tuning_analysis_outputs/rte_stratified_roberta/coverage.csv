@@ -1,0 +1,7 @@
+Method,Setting,Schedules,Complete runs,Total runs,Min observed rounds,Max observed rounds,Result source
+Linear FLoRA,Heter,"e1/r10, e2/r10, e3/r10, e5/r10, e8/r10",5,5,10,10,score log
+Nonlinear FFA,Heter,"e1/r10, e2/r10, e3/r10, e5/r10, e8/r10",5,5,10,10,score log
+Nonlinear FLoRA Cumulative,Heter,"e1/r10, e2/r10, e3/r10, e5/r10, e8/r10",5,5,10,10,score log
+Linear FLoRA,Homo,"e1/r10, e2/r10, e3/r10, e5/r10, e8/r10",5,5,10,10,score log
+Nonlinear FFA,Homo,"e1/r10, e2/r10, e3/r10, e5/r10, e8/r10",5,5,10,10,score log
+Nonlinear FLoRA Cumulative,Homo,"e1/r10, e2/r10, e3/r10, e5/r10, e8/r10",5,5,10,10,score log

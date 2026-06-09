@@ -1,0 +1,6 @@
+method,dataset,model,setting,epochs,rounds,seed,delta_prev,delta_last
+ffa,dolly_stratified,tinyllama,heter,5,10,0,0.5464995446789693,0.5784627335994585
+ffa,dolly_stratified,tinyllama,homo,5,10,0,1.0311866595674957,1.595612027864334
+ffa,wiz,tinyllama,heter,1,10,0,0.6810156653729003,1.7563714261772603
+ffa,wiz,tinyllama,homo,1,10,0,0.7075715634650983,1.6573371893213
+flora,wiz,tinyllama,homo,3,10,0,0.6310184744507268,1.4175912044786187

@@ -1,0 +1,901 @@
+Method key,Method,Dataset,Dataset label,Model key,Model,Setting key,Setting,Local epochs,Round,Result source,Run status,Mean accuracy,Std accuracy,Seed count,Seeds,Max config rounds,Compute cost
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,1,score log,Complete,47.292418772563174,0.0,1,0,80,1
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,2,score log,Complete,52.34657039711191,0.0,1,0,80,2
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,3,score log,Complete,46.931407942238266,0.0,1,0,80,3
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,4,score log,Complete,56.317689530685925,0.0,1,0,80,4
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,5,score log,Complete,50.90252707581227,0.0,1,0,80,5
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,6,score log,Complete,54.151624548736464,0.0,1,0,80,6
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,7,score log,Complete,51.624548736462096,0.0,1,0,80,7
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,8,score log,Complete,51.985559566786996,0.0,1,0,80,8
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,9,score log,Complete,52.34657039711191,0.0,1,0,80,9
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,10,score log,Complete,51.985559566786996,0.0,1,0,80,10
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,11,score log,Complete,51.985559566786996,0.0,1,0,80,11
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,12,score log,Complete,51.985559566786996,0.0,1,0,80,12
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,13,score log,Complete,52.34657039711191,0.0,1,0,80,13
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,14,score log,Complete,51.985559566786996,0.0,1,0,80,14
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,15,score log,Complete,51.985559566786996,0.0,1,0,80,15
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,16,score log,Complete,51.624548736462096,0.0,1,0,80,16
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,17,score log,Complete,51.624548736462096,0.0,1,0,80,17
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,18,score log,Complete,51.985559566786996,0.0,1,0,80,18
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,19,score log,Complete,51.985559566786996,0.0,1,0,80,19
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,20,score log,Complete,53.42960288808665,0.0,1,0,80,20
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,21,score log,Complete,53.79061371841155,0.0,1,0,80,21
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,22,score log,Complete,54.151624548736464,0.0,1,0,80,22
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,23,score log,Complete,54.51263537906137,0.0,1,0,80,23
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,24,score log,Complete,55.23465703971119,0.0,1,0,80,24
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,25,score log,Complete,54.87364620938629,0.0,1,0,80,25
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,26,score log,Complete,55.23465703971119,0.0,1,0,80,26
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,27,score log,Complete,55.5956678700361,0.0,1,0,80,27
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,28,score log,Complete,54.51263537906137,0.0,1,0,80,28
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,29,score log,Complete,54.87364620938629,0.0,1,0,80,29
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,30,score log,Complete,54.87364620938629,0.0,1,0,80,30
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,31,score log,Complete,54.51263537906137,0.0,1,0,80,31
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,32,score log,Complete,54.87364620938629,0.0,1,0,80,32
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,33,score log,Complete,54.87364620938629,0.0,1,0,80,33
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,34,score log,Complete,55.23465703971119,0.0,1,0,80,34
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,35,score log,Complete,55.23465703971119,0.0,1,0,80,35
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,36,score log,Complete,55.23465703971119,0.0,1,0,80,36
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,37,score log,Complete,55.23465703971119,0.0,1,0,80,37
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,38,score log,Complete,55.23465703971119,0.0,1,0,80,38
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,39,score log,Complete,54.87364620938629,0.0,1,0,80,39
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,40,score log,Complete,55.23465703971119,0.0,1,0,80,40
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,41,score log,Complete,55.23465703971119,0.0,1,0,80,41
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,42,score log,Complete,54.87364620938629,0.0,1,0,80,42
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,43,score log,Complete,55.23465703971119,0.0,1,0,80,43
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,44,score log,Complete,55.23465703971119,0.0,1,0,80,44
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,45,score log,Complete,54.87364620938629,0.0,1,0,80,45
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,46,score log,Complete,54.87364620938629,0.0,1,0,80,46
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,47,score log,Complete,55.23465703971119,0.0,1,0,80,47
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,48,score log,Complete,55.23465703971119,0.0,1,0,80,48
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,49,score log,Complete,55.5956678700361,0.0,1,0,80,49
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,50,score log,Complete,55.5956678700361,0.0,1,0,80,50
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,51,score log,Complete,54.87364620938629,0.0,1,0,80,51
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,52,score log,Complete,55.23465703971119,0.0,1,0,80,52
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,53,score log,Complete,54.151624548736464,0.0,1,0,80,53
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,54,score log,Complete,54.51263537906137,0.0,1,0,80,54
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,55,score log,Complete,54.51263537906137,0.0,1,0,80,55
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,56,score log,Complete,54.151624548736464,0.0,1,0,80,56
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,57,score log,Complete,54.51263537906137,0.0,1,0,80,57
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,58,score log,Complete,54.51263537906137,0.0,1,0,80,58
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,59,score log,Complete,54.87364620938629,0.0,1,0,80,59
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,60,score log,Complete,54.87364620938629,0.0,1,0,80,60
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,61,score log,Complete,54.87364620938629,0.0,1,0,80,61
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,62,score log,Complete,55.5956678700361,0.0,1,0,80,62
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,63,score log,Complete,55.5956678700361,0.0,1,0,80,63
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,64,score log,Complete,54.87364620938629,0.0,1,0,80,64
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,65,score log,Complete,54.87364620938629,0.0,1,0,80,65
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,66,score log,Complete,56.678700361010826,0.0,1,0,80,66
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,67,score log,Complete,56.678700361010826,0.0,1,0,80,67
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,68,score log,Complete,57.03971119133574,0.0,1,0,80,68
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,69,score log,Complete,56.678700361010826,0.0,1,0,80,69
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,70,score log,Complete,56.317689530685925,0.0,1,0,80,70
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,71,score log,Complete,56.317689530685925,0.0,1,0,80,71
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,72,score log,Complete,55.95667870036101,0.0,1,0,80,72
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,73,score log,Complete,55.5956678700361,0.0,1,0,80,73
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,74,score log,Complete,55.95667870036101,0.0,1,0,80,74
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,75,score log,Complete,55.95667870036101,0.0,1,0,80,75
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,76,score log,Complete,55.5956678700361,0.0,1,0,80,76
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,77,score log,Complete,55.95667870036101,0.0,1,0,80,77
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,78,score log,Complete,55.5956678700361,0.0,1,0,80,78
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,79,score log,Complete,55.5956678700361,0.0,1,0,80,79
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,80,score log,Complete,55.95667870036101,0.0,1,0,80,80
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,1,score log,Complete,53.068592057761734,0.0,1,0,40,2
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,2,score log,Complete,52.707581227436826,0.0,1,0,40,4
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,3,score log,Complete,56.678700361010826,0.0,1,0,40,6
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,4,score log,Complete,57.400722021660656,0.0,1,0,40,8
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,5,score log,Complete,58.12274368231047,0.0,1,0,40,10
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,6,score log,Complete,54.87364620938629,0.0,1,0,40,12
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,7,score log,Complete,54.151624548736464,0.0,1,0,40,14
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,8,score log,Complete,54.51263537906137,0.0,1,0,40,16
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,9,score log,Complete,54.87364620938629,0.0,1,0,40,18
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,10,score log,Complete,54.51263537906137,0.0,1,0,40,20
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,11,score log,Complete,53.42960288808665,0.0,1,0,40,22
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,12,score log,Complete,54.151624548736464,0.0,1,0,40,24
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,13,score log,Complete,54.87364620938629,0.0,1,0,40,26
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,14,score log,Complete,55.23465703971119,0.0,1,0,40,28
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,15,score log,Complete,55.5956678700361,0.0,1,0,40,30
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,16,score log,Complete,54.87364620938629,0.0,1,0,40,32
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,17,score log,Complete,54.51263537906137,0.0,1,0,40,34
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,18,score log,Complete,54.151624548736464,0.0,1,0,40,36
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,19,score log,Complete,53.79061371841155,0.0,1,0,40,38
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,20,score log,Complete,54.151624548736464,0.0,1,0,40,40
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,21,score log,Complete,54.151624548736464,0.0,1,0,40,42
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,22,score log,Complete,54.51263537906137,0.0,1,0,40,44
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,23,score log,Complete,54.51263537906137,0.0,1,0,40,46
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,24,score log,Complete,54.151624548736464,0.0,1,0,40,48
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,25,score log,Complete,54.51263537906137,0.0,1,0,40,50
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,26,score log,Complete,54.87364620938629,0.0,1,0,40,52
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,27,score log,Complete,54.87364620938629,0.0,1,0,40,54
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,28,score log,Complete,55.23465703971119,0.0,1,0,40,56
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,29,score log,Complete,55.5956678700361,0.0,1,0,40,58
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,30,score log,Complete,55.5956678700361,0.0,1,0,40,60
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,31,score log,Complete,55.5956678700361,0.0,1,0,40,62
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,32,score log,Complete,55.95667870036101,0.0,1,0,40,64
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,33,score log,Complete,55.95667870036101,0.0,1,0,40,66
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,34,score log,Complete,55.95667870036101,0.0,1,0,40,68
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,35,score log,Complete,55.95667870036101,0.0,1,0,40,70
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,36,score log,Complete,55.95667870036101,0.0,1,0,40,72
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,37,score log,Complete,56.317689530685925,0.0,1,0,40,74
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,38,score log,Complete,56.317689530685925,0.0,1,0,40,76
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,39,score log,Complete,56.317689530685925,0.0,1,0,40,78
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,40,score log,Complete,57.03971119133574,0.0,1,0,40,80
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,1,score log,Complete,54.87364620938629,0.0,1,0,20,4
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,2,score log,Complete,56.317689530685925,0.0,1,0,20,8
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,3,score log,Complete,57.03971119133574,0.0,1,0,20,12
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,4,score log,Complete,56.317689530685925,0.0,1,0,20,16
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,5,score log,Complete,54.51263537906137,0.0,1,0,20,20
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,6,score log,Complete,56.317689530685925,0.0,1,0,20,24
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,7,score log,Complete,54.87364620938629,0.0,1,0,20,28
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,8,score log,Complete,55.5956678700361,0.0,1,0,20,32
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,9,score log,Complete,55.95667870036101,0.0,1,0,20,36
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,10,score log,Complete,55.23465703971119,0.0,1,0,20,40
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,11,score log,Complete,55.23465703971119,0.0,1,0,20,44
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,12,score log,Complete,55.5956678700361,0.0,1,0,20,48
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,13,score log,Complete,55.23465703971119,0.0,1,0,20,52
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,14,score log,Complete,55.23465703971119,0.0,1,0,20,56
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,15,score log,Complete,56.678700361010826,0.0,1,0,20,60
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,16,score log,Complete,56.678700361010826,0.0,1,0,20,64
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,17,score log,Complete,57.400722021660656,0.0,1,0,20,68
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,18,score log,Complete,57.400722021660656,0.0,1,0,20,72
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,19,score log,Complete,57.400722021660656,0.0,1,0,20,76
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,20,score log,Complete,57.761732851985556,0.0,1,0,20,80
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,1,score log,Complete,58.48375451263538,0.0,1,0,10,8
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,2,score log,Complete,58.12274368231047,0.0,1,0,10,16
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,3,score log,Complete,58.48375451263538,0.0,1,0,10,24
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,4,score log,Complete,57.400722021660656,0.0,1,0,10,32
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,5,score log,Complete,57.400722021660656,0.0,1,0,10,40
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,6,score log,Complete,57.400722021660656,0.0,1,0,10,48
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,7,score log,Complete,57.400722021660656,0.0,1,0,10,56
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,8,score log,Complete,56.678700361010826,0.0,1,0,10,64
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,9,score log,Complete,57.03971119133574,0.0,1,0,10,72
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,10,score log,Complete,56.678700361010826,0.0,1,0,10,80
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,1,score log,Complete,47.292418772563174,0.0,1,0,80,1
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,2,score log,Complete,53.068592057761734,0.0,1,0,80,2
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,3,score log,Complete,46.20938628158845,0.0,1,0,80,3
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,4,score log,Complete,56.317689530685925,0.0,1,0,80,4
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,5,score log,Complete,50.54151624548736,0.0,1,0,80,5
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,6,score log,Complete,54.151624548736464,0.0,1,0,80,6
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,7,score log,Complete,51.624548736462096,0.0,1,0,80,7
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,8,score log,Complete,52.34657039711191,0.0,1,0,80,8
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,9,score log,Complete,51.624548736462096,0.0,1,0,80,9
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,10,score log,Complete,51.985559566786996,0.0,1,0,80,10
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,11,score log,Complete,51.624548736462096,0.0,1,0,80,11
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,12,score log,Complete,52.707581227436826,0.0,1,0,80,12
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,13,score log,Complete,52.34657039711191,0.0,1,0,80,13
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,14,score log,Complete,52.707581227436826,0.0,1,0,80,14
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,15,score log,Complete,52.34657039711191,0.0,1,0,80,15
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,16,score log,Complete,51.985559566786996,0.0,1,0,80,16
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,17,score log,Complete,53.42960288808665,0.0,1,0,80,17
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,18,score log,Complete,53.42960288808665,0.0,1,0,80,18
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,19,score log,Complete,54.151624548736464,0.0,1,0,80,19
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,20,score log,Complete,54.151624548736464,0.0,1,0,80,20
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,21,score log,Complete,54.151624548736464,0.0,1,0,80,21
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,22,score log,Complete,53.79061371841155,0.0,1,0,80,22
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,23,score log,Complete,54.87364620938629,0.0,1,0,80,23
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,24,score log,Complete,54.51263537906137,0.0,1,0,80,24
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,25,score log,Complete,54.51263537906137,0.0,1,0,80,25
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,26,score log,Complete,54.87364620938629,0.0,1,0,80,26
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,27,score log,Complete,54.87364620938629,0.0,1,0,80,27
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,28,score log,Complete,54.87364620938629,0.0,1,0,80,28
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,29,score log,Complete,54.51263537906137,0.0,1,0,80,29
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,30,score log,Complete,54.87364620938629,0.0,1,0,80,30
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,31,score log,Complete,55.23465703971119,0.0,1,0,80,31
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,32,score log,Complete,55.5956678700361,0.0,1,0,80,32
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,33,score log,Complete,55.5956678700361,0.0,1,0,80,33
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,34,score log,Complete,55.95667870036101,0.0,1,0,80,34
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,35,score log,Complete,56.317689530685925,0.0,1,0,80,35
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,36,score log,Complete,56.317689530685925,0.0,1,0,80,36
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,37,score log,Complete,56.678700361010826,0.0,1,0,80,37
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,38,score log,Complete,56.678700361010826,0.0,1,0,80,38
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,39,score log,Complete,56.678700361010826,0.0,1,0,80,39
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,40,score log,Complete,55.95667870036101,0.0,1,0,80,40
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,41,score log,Complete,55.95667870036101,0.0,1,0,80,41
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,42,score log,Complete,54.87364620938629,0.0,1,0,80,42
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,43,score log,Complete,54.51263537906137,0.0,1,0,80,43
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,44,score log,Complete,55.23465703971119,0.0,1,0,80,44
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,45,score log,Complete,54.87364620938629,0.0,1,0,80,45
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,46,score log,Complete,54.151624548736464,0.0,1,0,80,46
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,47,score log,Complete,53.42960288808665,0.0,1,0,80,47
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,48,score log,Complete,52.707581227436826,0.0,1,0,80,48
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,49,score log,Complete,53.42960288808665,0.0,1,0,80,49
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,50,score log,Complete,52.707581227436826,0.0,1,0,80,50
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,51,score log,Complete,53.42960288808665,0.0,1,0,80,51
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,52,score log,Complete,54.151624548736464,0.0,1,0,80,52
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,53,score log,Complete,53.79061371841155,0.0,1,0,80,53
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,54,score log,Complete,54.151624548736464,0.0,1,0,80,54
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,55,score log,Complete,54.151624548736464,0.0,1,0,80,55
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,56,score log,Complete,53.79061371841155,0.0,1,0,80,56
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,57,score log,Complete,54.151624548736464,0.0,1,0,80,57
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,58,score log,Complete,53.79061371841155,0.0,1,0,80,58
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,59,score log,Complete,53.42960288808665,0.0,1,0,80,59
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,60,score log,Complete,53.42960288808665,0.0,1,0,80,60
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,61,score log,Complete,53.42960288808665,0.0,1,0,80,61
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,62,score log,Complete,53.42960288808665,0.0,1,0,80,62
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,63,score log,Complete,53.42960288808665,0.0,1,0,80,63
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,64,score log,Complete,53.068592057761734,0.0,1,0,80,64
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,65,score log,Complete,53.068592057761734,0.0,1,0,80,65
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,66,score log,Complete,53.79061371841155,0.0,1,0,80,66
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,67,score log,Complete,53.42960288808665,0.0,1,0,80,67
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,68,score log,Complete,53.42960288808665,0.0,1,0,80,68
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,69,score log,Complete,53.068592057761734,0.0,1,0,80,69
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,70,score log,Complete,53.068592057761734,0.0,1,0,80,70
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,71,score log,Complete,53.42960288808665,0.0,1,0,80,71
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,72,score log,Complete,53.42960288808665,0.0,1,0,80,72
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,73,score log,Complete,53.068592057761734,0.0,1,0,80,73
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,74,score log,Complete,53.42960288808665,0.0,1,0,80,74
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,75,score log,Complete,53.068592057761734,0.0,1,0,80,75
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,76,score log,Complete,52.707581227436826,0.0,1,0,80,76
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,77,score log,Complete,53.068592057761734,0.0,1,0,80,77
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,78,score log,Complete,52.34657039711191,0.0,1,0,80,78
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,79,score log,Complete,53.068592057761734,0.0,1,0,80,79
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,80,score log,Complete,53.42960288808665,0.0,1,0,80,80
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,1,score log,Complete,54.51263537906137,0.0,1,0,40,2
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,2,score log,Complete,52.34657039711191,0.0,1,0,40,4
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,3,score log,Complete,55.95667870036101,0.0,1,0,40,6
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,4,score log,Complete,56.317689530685925,0.0,1,0,40,8
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,5,score log,Complete,58.48375451263538,0.0,1,0,40,10
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,6,score log,Complete,55.23465703971119,0.0,1,0,40,12
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,7,score log,Complete,54.151624548736464,0.0,1,0,40,14
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,8,score log,Complete,54.87364620938629,0.0,1,0,40,16
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,9,score log,Complete,54.87364620938629,0.0,1,0,40,18
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,10,score log,Complete,54.51263537906137,0.0,1,0,40,20
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,11,score log,Complete,54.87364620938629,0.0,1,0,40,22
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,12,score log,Complete,55.5956678700361,0.0,1,0,40,24
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,13,score log,Complete,56.317689530685925,0.0,1,0,40,26
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,14,score log,Complete,55.95667870036101,0.0,1,0,40,28
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,15,score log,Complete,56.678700361010826,0.0,1,0,40,30
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,16,score log,Complete,55.95667870036101,0.0,1,0,40,32
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,17,score log,Complete,55.95667870036101,0.0,1,0,40,34
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,18,score log,Complete,55.95667870036101,0.0,1,0,40,36
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,19,score log,Complete,55.95667870036101,0.0,1,0,40,38
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,20,score log,Complete,55.5956678700361,0.0,1,0,40,40
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,21,score log,Complete,57.03971119133574,0.0,1,0,40,42
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,22,score log,Complete,56.678700361010826,0.0,1,0,40,44
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,23,score log,Complete,57.03971119133574,0.0,1,0,40,46
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,24,score log,Complete,55.95667870036101,0.0,1,0,40,48
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,25,score log,Complete,57.03971119133574,0.0,1,0,40,50
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,26,score log,Complete,57.03971119133574,0.0,1,0,40,52
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,27,score log,Complete,56.317689530685925,0.0,1,0,40,54
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,28,score log,Complete,56.678700361010826,0.0,1,0,40,56
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,29,score log,Complete,56.678700361010826,0.0,1,0,40,58
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,30,score log,Complete,56.317689530685925,0.0,1,0,40,60
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,31,score log,Complete,55.95667870036101,0.0,1,0,40,62
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,32,score log,Complete,55.5956678700361,0.0,1,0,40,64
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,33,score log,Complete,54.51263537906137,0.0,1,0,40,66
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,34,score log,Complete,54.87364620938629,0.0,1,0,40,68
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,35,score log,Complete,54.51263537906137,0.0,1,0,40,70
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,36,score log,Complete,55.5956678700361,0.0,1,0,40,72
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,37,score log,Complete,55.5956678700361,0.0,1,0,40,74
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,38,score log,Complete,55.5956678700361,0.0,1,0,40,76
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,39,score log,Complete,56.317689530685925,0.0,1,0,40,78
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,40,score log,Complete,56.678700361010826,0.0,1,0,40,80
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,1,score log,Complete,53.79061371841155,0.0,1,0,20,4
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,2,score log,Complete,58.48375451263538,0.0,1,0,20,8
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,3,score log,Complete,55.95667870036101,0.0,1,0,20,12
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,4,score log,Complete,55.23465703971119,0.0,1,0,20,16
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,5,score log,Complete,55.5956678700361,0.0,1,0,20,20
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,6,score log,Complete,54.87364620938629,0.0,1,0,20,24
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,7,score log,Complete,54.87364620938629,0.0,1,0,20,28
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,8,score log,Complete,55.5956678700361,0.0,1,0,20,32
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,9,score log,Complete,56.317689530685925,0.0,1,0,20,36
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,10,score log,Complete,56.678700361010826,0.0,1,0,20,40
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,11,score log,Complete,56.317689530685925,0.0,1,0,20,44
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,12,score log,Complete,56.317689530685925,0.0,1,0,20,48
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,13,score log,Complete,56.317689530685925,0.0,1,0,20,52
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,14,score log,Complete,55.5956678700361,0.0,1,0,20,56
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,15,score log,Complete,54.87364620938629,0.0,1,0,20,60
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,16,score log,Complete,54.87364620938629,0.0,1,0,20,64
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,17,score log,Complete,55.23465703971119,0.0,1,0,20,68
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,18,score log,Complete,55.5956678700361,0.0,1,0,20,72
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,19,score log,Complete,55.5956678700361,0.0,1,0,20,76
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,20,score log,Complete,55.95667870036101,0.0,1,0,20,80
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,1,score log,Complete,57.761732851985556,0.0,1,0,10,8
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,2,score log,Complete,58.48375451263538,0.0,1,0,10,16
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,3,score log,Complete,58.48375451263538,0.0,1,0,10,24
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,4,score log,Complete,56.317689530685925,0.0,1,0,10,32
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,5,score log,Complete,56.317689530685925,0.0,1,0,10,40
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,6,score log,Complete,56.678700361010826,0.0,1,0,10,48
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,7,score log,Complete,57.03971119133574,0.0,1,0,10,56
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,8,score log,Complete,57.761732851985556,0.0,1,0,10,64
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,9,score log,Complete,57.03971119133574,0.0,1,0,10,72
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,10,score log,Complete,56.678700361010826,0.0,1,0,10,80
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,1,score log,Complete,47.292418772563174,0.0,1,0,80,1
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,2,score log,Complete,53.068592057761734,0.0,1,0,80,2
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,3,score log,Complete,48.014440433213,0.0,1,0,80,3
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,4,score log,Complete,56.678700361010826,0.0,1,0,80,4
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,5,score log,Complete,51.985559566786996,0.0,1,0,80,5
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,6,score log,Complete,55.5956678700361,0.0,1,0,80,6
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,7,score log,Complete,53.068592057761734,0.0,1,0,80,7
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,8,score log,Complete,54.51263537906137,0.0,1,0,80,8
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,9,score log,Complete,54.151624548736464,0.0,1,0,80,9
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,10,score log,Complete,54.87364620938629,0.0,1,0,80,10
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,11,score log,Complete,54.87364620938629,0.0,1,0,80,11
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,12,score log,Complete,54.51263537906137,0.0,1,0,80,12
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,13,score log,Complete,55.5956678700361,0.0,1,0,80,13
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,14,score log,Complete,57.400722021660656,0.0,1,0,80,14
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,15,score log,Complete,58.12274368231047,0.0,1,0,80,15
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,16,score log,Complete,58.12274368231047,0.0,1,0,80,16
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,17,score log,Complete,57.400722021660656,0.0,1,0,80,17
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,18,score log,Complete,56.678700361010826,0.0,1,0,80,18
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,19,score log,Complete,55.5956678700361,0.0,1,0,80,19
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,20,score log,Complete,55.23465703971119,0.0,1,0,80,20
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,21,score log,Complete,54.87364620938629,0.0,1,0,80,21
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,22,score log,Complete,54.51263537906137,0.0,1,0,80,22
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,23,score log,Complete,54.51263537906137,0.0,1,0,80,23
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,24,score log,Complete,54.87364620938629,0.0,1,0,80,24
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,25,score log,Complete,54.87364620938629,0.0,1,0,80,25
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,26,score log,Complete,53.42960288808665,0.0,1,0,80,26
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,27,score log,Complete,53.79061371841155,0.0,1,0,80,27
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,28,score log,Complete,53.79061371841155,0.0,1,0,80,28
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,29,score log,Complete,54.51263537906137,0.0,1,0,80,29
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,30,score log,Complete,55.23465703971119,0.0,1,0,80,30
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,31,score log,Complete,54.87364620938629,0.0,1,0,80,31
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,32,score log,Complete,54.51263537906137,0.0,1,0,80,32
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,33,score log,Complete,52.707581227436826,0.0,1,0,80,33
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,34,score log,Complete,53.42960288808665,0.0,1,0,80,34
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,35,score log,Complete,53.42960288808665,0.0,1,0,80,35
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,36,score log,Complete,52.707581227436826,0.0,1,0,80,36
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,37,score log,Complete,52.707581227436826,0.0,1,0,80,37
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,38,score log,Complete,53.068592057761734,0.0,1,0,80,38
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,39,score log,Complete,54.151624548736464,0.0,1,0,80,39
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,40,score log,Complete,54.87364620938629,0.0,1,0,80,40
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,41,score log,Complete,55.5956678700361,0.0,1,0,80,41
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,42,score log,Complete,55.5956678700361,0.0,1,0,80,42
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,43,score log,Complete,55.5956678700361,0.0,1,0,80,43
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,44,score log,Complete,54.51263537906137,0.0,1,0,80,44
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,45,score log,Complete,54.87364620938629,0.0,1,0,80,45
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,46,score log,Complete,54.87364620938629,0.0,1,0,80,46
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,47,score log,Complete,54.87364620938629,0.0,1,0,80,47
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,48,score log,Complete,54.87364620938629,0.0,1,0,80,48
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,49,score log,Complete,55.23465703971119,0.0,1,0,80,49
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,50,score log,Complete,55.23465703971119,0.0,1,0,80,50
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,51,score log,Complete,55.23465703971119,0.0,1,0,80,51
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,52,score log,Complete,53.79061371841155,0.0,1,0,80,52
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,53,score log,Complete,55.5956678700361,0.0,1,0,80,53
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,54,score log,Complete,55.5956678700361,0.0,1,0,80,54
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,55,score log,Complete,55.5956678700361,0.0,1,0,80,55
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,56,score log,Complete,54.51263537906137,0.0,1,0,80,56
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,57,score log,Complete,55.23465703971119,0.0,1,0,80,57
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,58,score log,Complete,55.23465703971119,0.0,1,0,80,58
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,59,score log,Complete,54.87364620938629,0.0,1,0,80,59
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,60,score log,Complete,54.87364620938629,0.0,1,0,80,60
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,61,score log,Complete,55.5956678700361,0.0,1,0,80,61
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,62,score log,Complete,55.23465703971119,0.0,1,0,80,62
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,63,score log,Complete,55.23465703971119,0.0,1,0,80,63
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,64,score log,Complete,55.5956678700361,0.0,1,0,80,64
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,65,score log,Complete,56.678700361010826,0.0,1,0,80,65
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,66,score log,Complete,55.95667870036101,0.0,1,0,80,66
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,67,score log,Complete,55.95667870036101,0.0,1,0,80,67
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,68,score log,Complete,55.5956678700361,0.0,1,0,80,68
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,69,score log,Complete,55.5956678700361,0.0,1,0,80,69
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,70,score log,Complete,55.95667870036101,0.0,1,0,80,70
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,71,score log,Complete,55.95667870036101,0.0,1,0,80,71
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,72,score log,Complete,55.5956678700361,0.0,1,0,80,72
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,73,score log,Complete,56.317689530685925,0.0,1,0,80,73
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,74,score log,Complete,55.23465703971119,0.0,1,0,80,74
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,75,score log,Complete,55.23465703971119,0.0,1,0,80,75
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,76,score log,Complete,55.23465703971119,0.0,1,0,80,76
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,77,score log,Complete,55.5956678700361,0.0,1,0,80,77
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,78,score log,Complete,56.678700361010826,0.0,1,0,80,78
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,79,score log,Complete,55.95667870036101,0.0,1,0,80,79
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,80,score log,Complete,55.95667870036101,0.0,1,0,80,80
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,1,score log,Complete,53.42960288808665,0.0,1,0,40,2
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,2,score log,Complete,53.068592057761734,0.0,1,0,40,4
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,3,score log,Complete,56.678700361010826,0.0,1,0,40,6
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,4,score log,Complete,58.12274368231047,0.0,1,0,40,8
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,5,score log,Complete,54.87364620938629,0.0,1,0,40,10
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,6,score log,Complete,55.23465703971119,0.0,1,0,40,12
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,7,score log,Complete,55.23465703971119,0.0,1,0,40,14
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,8,score log,Complete,53.79061371841155,0.0,1,0,40,16
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,9,score log,Complete,55.23465703971119,0.0,1,0,40,18
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,10,score log,Complete,55.23465703971119,0.0,1,0,40,20
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,11,score log,Complete,54.87364620938629,0.0,1,0,40,22
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,12,score log,Complete,54.151624548736464,0.0,1,0,40,24
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,13,score log,Complete,54.151624548736464,0.0,1,0,40,26
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,14,score log,Complete,54.151624548736464,0.0,1,0,40,28
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,15,score log,Complete,54.87364620938629,0.0,1,0,40,30
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,16,score log,Complete,54.151624548736464,0.0,1,0,40,32
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,17,score log,Complete,54.87364620938629,0.0,1,0,40,34
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,18,score log,Complete,54.87364620938629,0.0,1,0,40,36
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,19,score log,Complete,55.5956678700361,0.0,1,0,40,38
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,20,score log,Complete,54.87364620938629,0.0,1,0,40,40
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,21,score log,Complete,54.87364620938629,0.0,1,0,40,42
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,22,score log,Complete,56.317689530685925,0.0,1,0,40,44
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,23,score log,Complete,54.51263537906137,0.0,1,0,40,46
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,24,score log,Complete,55.95667870036101,0.0,1,0,40,48
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,25,score log,Complete,55.23465703971119,0.0,1,0,40,50
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,26,score log,Complete,55.95667870036101,0.0,1,0,40,52
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,27,score log,Complete,56.317689530685925,0.0,1,0,40,54
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,28,score log,Complete,56.678700361010826,0.0,1,0,40,56
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,29,score log,Complete,57.03971119133574,0.0,1,0,40,58
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,30,score log,Complete,57.03971119133574,0.0,1,0,40,60
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,31,score log,Complete,57.03971119133574,0.0,1,0,40,62
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,32,score log,Complete,56.678700361010826,0.0,1,0,40,64
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,33,score log,Complete,57.03971119133574,0.0,1,0,40,66
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,34,score log,Complete,56.678700361010826,0.0,1,0,40,68
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,35,score log,Complete,57.03971119133574,0.0,1,0,40,70
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,36,score log,Complete,57.03971119133574,0.0,1,0,40,72
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,37,score log,Complete,57.03971119133574,0.0,1,0,40,74
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,38,score log,Complete,57.03971119133574,0.0,1,0,40,76
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,39,score log,Complete,57.761732851985556,0.0,1,0,40,78
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,40,score log,Complete,57.400722021660656,0.0,1,0,40,80
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,1,score log,Complete,53.42960288808665,0.0,1,0,20,4
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,2,score log,Complete,57.03971119133574,0.0,1,0,20,8
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,3,score log,Complete,56.678700361010826,0.0,1,0,20,12
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,4,score log,Complete,57.03971119133574,0.0,1,0,20,16
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,5,score log,Complete,56.317689530685925,0.0,1,0,20,20
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,6,score log,Complete,56.678700361010826,0.0,1,0,20,24
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,7,score log,Complete,56.678700361010826,0.0,1,0,20,28
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,8,score log,Complete,56.317689530685925,0.0,1,0,20,32
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,9,score log,Complete,57.400722021660656,0.0,1,0,20,36
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,10,score log,Complete,57.400722021660656,0.0,1,0,20,40
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,11,score log,Complete,58.48375451263538,0.0,1,0,20,44
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,12,score log,Complete,58.844765342960294,0.0,1,0,20,48
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,13,score log,Complete,60.28880866425993,0.0,1,0,20,52
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,14,score log,Complete,61.01083032490975,0.0,1,0,20,56
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,15,score log,Complete,62.093862815884485,0.0,1,0,20,60
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,16,score log,Complete,60.28880866425993,0.0,1,0,20,64
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,17,score log,Complete,59.205776173285194,0.0,1,0,20,68
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,18,score log,Complete,60.28880866425993,0.0,1,0,20,72
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,19,score log,Complete,60.28880866425993,0.0,1,0,20,76
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,20,score log,Complete,60.64981949458483,0.0,1,0,20,80
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,1,score log,Complete,57.03971119133574,0.0,1,0,10,8
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,2,score log,Complete,58.48375451263538,0.0,1,0,10,16
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,3,score log,Complete,57.400722021660656,0.0,1,0,10,24
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,4,score log,Complete,57.761732851985556,0.0,1,0,10,32
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,5,score log,Complete,58.12274368231047,0.0,1,0,10,40
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,6,score log,Complete,58.12274368231047,0.0,1,0,10,48
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,7,score log,Complete,58.844765342960294,0.0,1,0,10,56
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,8,score log,Complete,58.844765342960294,0.0,1,0,10,64
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,9,score log,Complete,58.844765342960294,0.0,1,0,10,72
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,10,score log,Complete,60.64981949458483,0.0,1,0,10,80
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,1,score log,Complete,47.292418772563174,0.0,1,0,80,1
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,2,score log,Complete,52.707581227436826,0.0,1,0,80,2
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,3,score log,Complete,46.931407942238266,0.0,1,0,80,3
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,4,score log,Complete,54.51263537906137,0.0,1,0,80,4
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,5,score log,Complete,51.26353790613718,0.0,1,0,80,5
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,6,score log,Complete,54.51263537906137,0.0,1,0,80,6
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,7,score log,Complete,52.707581227436826,0.0,1,0,80,7
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,8,score log,Complete,53.42960288808665,0.0,1,0,80,8
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,9,score log,Complete,53.068592057761734,0.0,1,0,80,9
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,10,score log,Complete,53.79061371841155,0.0,1,0,80,10
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,11,score log,Complete,54.151624548736464,0.0,1,0,80,11
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,12,score log,Complete,53.42960288808665,0.0,1,0,80,12
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,13,score log,Complete,53.79061371841155,0.0,1,0,80,13
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,14,score log,Complete,54.151624548736464,0.0,1,0,80,14
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,15,score log,Complete,54.51263537906137,0.0,1,0,80,15
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,16,score log,Complete,55.23465703971119,0.0,1,0,80,16
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,17,score log,Complete,55.5956678700361,0.0,1,0,80,17
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,18,score log,Complete,55.23465703971119,0.0,1,0,80,18
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,19,score log,Complete,55.95667870036101,0.0,1,0,80,19
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,20,score log,Complete,56.678700361010826,0.0,1,0,80,20
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,21,score log,Complete,56.678700361010826,0.0,1,0,80,21
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,22,score log,Complete,56.317689530685925,0.0,1,0,80,22
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,23,score log,Complete,55.95667870036101,0.0,1,0,80,23
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,24,score log,Complete,56.317689530685925,0.0,1,0,80,24
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,25,score log,Complete,56.317689530685925,0.0,1,0,80,25
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,26,score log,Complete,56.317689530685925,0.0,1,0,80,26
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,27,score log,Complete,54.87364620938629,0.0,1,0,80,27
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,28,score log,Complete,54.87364620938629,0.0,1,0,80,28
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,29,score log,Complete,54.151624548736464,0.0,1,0,80,29
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,30,score log,Complete,52.707581227436826,0.0,1,0,80,30
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,31,score log,Complete,51.985559566786996,0.0,1,0,80,31
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,32,score log,Complete,53.068592057761734,0.0,1,0,80,32
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,33,score log,Complete,51.985559566786996,0.0,1,0,80,33
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,34,score log,Complete,53.068592057761734,0.0,1,0,80,34
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,35,score log,Complete,52.34657039711191,0.0,1,0,80,35
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,36,score log,Complete,53.068592057761734,0.0,1,0,80,36
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,37,score log,Complete,53.79061371841155,0.0,1,0,80,37
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,38,score log,Complete,53.068592057761734,0.0,1,0,80,38
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,39,score log,Complete,53.42960288808665,0.0,1,0,80,39
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,40,score log,Complete,53.42960288808665,0.0,1,0,80,40
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,41,score log,Complete,54.151624548736464,0.0,1,0,80,41
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,42,score log,Complete,53.068592057761734,0.0,1,0,80,42
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,43,score log,Complete,53.79061371841155,0.0,1,0,80,43
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,44,score log,Complete,54.87364620938629,0.0,1,0,80,44
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,45,score log,Complete,54.51263537906137,0.0,1,0,80,45
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,46,score log,Complete,53.79061371841155,0.0,1,0,80,46
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,47,score log,Complete,53.42960288808665,0.0,1,0,80,47
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,48,score log,Complete,53.42960288808665,0.0,1,0,80,48
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,49,score log,Complete,54.87364620938629,0.0,1,0,80,49
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,50,score log,Complete,54.87364620938629,0.0,1,0,80,50
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,51,score log,Complete,57.03971119133574,0.0,1,0,80,51
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,52,score log,Complete,55.95667870036101,0.0,1,0,80,52
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,53,score log,Complete,56.317689530685925,0.0,1,0,80,53
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,54,score log,Complete,55.95667870036101,0.0,1,0,80,54
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,55,score log,Complete,56.317689530685925,0.0,1,0,80,55
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,56,score log,Complete,55.5956678700361,0.0,1,0,80,56
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,57,score log,Complete,54.87364620938629,0.0,1,0,80,57
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,58,score log,Complete,54.51263537906137,0.0,1,0,80,58
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,59,score log,Complete,54.87364620938629,0.0,1,0,80,59
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,60,score log,Complete,55.23465703971119,0.0,1,0,80,60
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,61,score log,Complete,54.151624548736464,0.0,1,0,80,61
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,62,score log,Complete,54.51263537906137,0.0,1,0,80,62
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,63,score log,Complete,56.317689530685925,0.0,1,0,80,63
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,64,score log,Complete,55.5956678700361,0.0,1,0,80,64
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,65,score log,Complete,54.87364620938629,0.0,1,0,80,65
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,66,score log,Complete,55.5956678700361,0.0,1,0,80,66
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,67,score log,Complete,56.678700361010826,0.0,1,0,80,67
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,68,score log,Complete,56.678700361010826,0.0,1,0,80,68
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,69,score log,Complete,55.5956678700361,0.0,1,0,80,69
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,70,score log,Complete,54.87364620938629,0.0,1,0,80,70
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,71,score log,Complete,55.5956678700361,0.0,1,0,80,71
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,72,score log,Complete,55.95667870036101,0.0,1,0,80,72
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,73,score log,Complete,55.23465703971119,0.0,1,0,80,73
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,74,score log,Complete,56.317689530685925,0.0,1,0,80,74
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,75,score log,Complete,57.761732851985556,0.0,1,0,80,75
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,76,score log,Complete,58.12274368231047,0.0,1,0,80,76
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,77,score log,Complete,55.5956678700361,0.0,1,0,80,77
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,78,score log,Complete,57.400722021660656,0.0,1,0,80,78
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,79,score log,Complete,55.5956678700361,0.0,1,0,80,79
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,80,score log,Complete,56.317689530685925,0.0,1,0,80,80
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,1,score log,Complete,53.068592057761734,0.0,1,0,40,2
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,2,score log,Complete,51.985559566786996,0.0,1,0,40,4
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,3,score log,Complete,55.95667870036101,0.0,1,0,40,6
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,4,score log,Complete,56.317689530685925,0.0,1,0,40,8
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,5,score log,Complete,57.03971119133574,0.0,1,0,40,10
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,6,score log,Complete,54.87364620938629,0.0,1,0,40,12
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,7,score log,Complete,54.87364620938629,0.0,1,0,40,14
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,8,score log,Complete,55.95667870036101,0.0,1,0,40,16
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,9,score log,Complete,55.5956678700361,0.0,1,0,40,18
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,10,score log,Complete,57.03971119133574,0.0,1,0,40,20
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,11,score log,Complete,56.678700361010826,0.0,1,0,40,22
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,12,score log,Complete,55.5956678700361,0.0,1,0,40,24
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,13,score log,Complete,55.23465703971119,0.0,1,0,40,26
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,14,score log,Complete,55.23465703971119,0.0,1,0,40,28
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,15,score log,Complete,56.317689530685925,0.0,1,0,40,30
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,16,score log,Complete,57.03971119133574,0.0,1,0,40,32
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,17,score log,Complete,57.03971119133574,0.0,1,0,40,34
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,18,score log,Complete,56.678700361010826,0.0,1,0,40,36
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,19,score log,Complete,56.317689530685925,0.0,1,0,40,38
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,20,score log,Complete,56.317689530685925,0.0,1,0,40,40
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,21,score log,Complete,57.400722021660656,0.0,1,0,40,42
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,22,score log,Complete,57.03971119133574,0.0,1,0,40,44
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,23,score log,Complete,57.761732851985556,0.0,1,0,40,46
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,24,score log,Complete,58.48375451263538,0.0,1,0,40,48
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,25,score log,Complete,58.844765342960294,0.0,1,0,40,50
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,26,score log,Complete,58.48375451263538,0.0,1,0,40,52
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,27,score log,Complete,57.03971119133574,0.0,1,0,40,54
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,28,score log,Complete,57.761732851985556,0.0,1,0,40,56
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,29,score log,Complete,58.12274368231047,0.0,1,0,40,58
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,30,score log,Complete,58.48375451263538,0.0,1,0,40,60
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,31,score log,Complete,58.48375451263538,0.0,1,0,40,62
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,32,score log,Complete,58.48375451263538,0.0,1,0,40,64
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,33,score log,Complete,57.400722021660656,0.0,1,0,40,66
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,34,score log,Complete,57.400722021660656,0.0,1,0,40,68
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,35,score log,Complete,58.12274368231047,0.0,1,0,40,70
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,36,score log,Complete,58.12274368231047,0.0,1,0,40,72
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,37,score log,Complete,58.12274368231047,0.0,1,0,40,74
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,38,score log,Complete,58.48375451263538,0.0,1,0,40,76
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,39,score log,Complete,57.761732851985556,0.0,1,0,40,78
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,40,score log,Complete,57.761732851985556,0.0,1,0,40,80
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,1,score log,Complete,55.5956678700361,0.0,1,0,20,4
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,2,score log,Complete,55.95667870036101,0.0,1,0,20,8
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,3,score log,Complete,55.5956678700361,0.0,1,0,20,12
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,4,score log,Complete,55.95667870036101,0.0,1,0,20,16
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,5,score log,Complete,56.678700361010826,0.0,1,0,20,20
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,6,score log,Complete,55.5956678700361,0.0,1,0,20,24
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,7,score log,Complete,55.95667870036101,0.0,1,0,20,28
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,8,score log,Complete,56.317689530685925,0.0,1,0,20,32
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,9,score log,Complete,57.03971119133574,0.0,1,0,20,36
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,10,score log,Complete,58.12274368231047,0.0,1,0,20,40
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,11,score log,Complete,57.400722021660656,0.0,1,0,20,44
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,12,score log,Complete,60.28880866425993,0.0,1,0,20,48
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,13,score log,Complete,59.92779783393502,0.0,1,0,20,52
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,14,score log,Complete,61.371841155234655,0.0,1,0,20,56
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,15,score log,Complete,60.64981949458483,0.0,1,0,20,60
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,16,score log,Complete,60.28880866425993,0.0,1,0,20,64
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,17,score log,Complete,60.28880866425993,0.0,1,0,20,68
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,18,score log,Complete,59.92779783393502,0.0,1,0,20,72
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,19,score log,Complete,59.92779783393502,0.0,1,0,20,76
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,20,score log,Complete,60.28880866425993,0.0,1,0,20,80
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,1,score log,Complete,57.400722021660656,0.0,1,0,10,8
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,2,score log,Complete,56.317689530685925,0.0,1,0,10,16
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,3,score log,Complete,55.23465703971119,0.0,1,0,10,24
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,4,score log,Complete,58.12274368231047,0.0,1,0,10,32
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,5,score log,Complete,58.12274368231047,0.0,1,0,10,40
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,6,score log,Complete,60.28880866425993,0.0,1,0,10,48
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,7,score log,Complete,60.64981949458483,0.0,1,0,10,56
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,8,score log,Complete,61.73285198555957,0.0,1,0,10,64
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,9,score log,Complete,61.01083032490975,0.0,1,0,10,72
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,10,score log,Complete,61.73285198555957,0.0,1,0,10,80
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,1,score log,Complete,47.292418772563174,0.0,1,0,80,1
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,2,score log,Complete,52.707581227436826,0.0,1,0,80,2
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,3,score log,Complete,46.57039711191336,0.0,1,0,80,3
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,4,score log,Complete,56.317689530685925,0.0,1,0,80,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,5,score log,Complete,51.26353790613718,0.0,1,0,80,5
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,6,score log,Complete,54.151624548736464,0.0,1,0,80,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,7,score log,Complete,51.26353790613718,0.0,1,0,80,7
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,8,score log,Complete,54.151624548736464,0.0,1,0,80,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,9,score log,Complete,53.068592057761734,0.0,1,0,80,9
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,10,score log,Complete,52.707581227436826,0.0,1,0,80,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,11,score log,Complete,52.707581227436826,0.0,1,0,80,11
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,12,score log,Complete,52.34657039711191,0.0,1,0,80,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,13,score log,Complete,51.985559566786996,0.0,1,0,80,13
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,14,score log,Complete,53.068592057761734,0.0,1,0,80,14
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,15,score log,Complete,53.42960288808665,0.0,1,0,80,15
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,16,score log,Complete,53.79061371841155,0.0,1,0,80,16
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,17,score log,Complete,54.51263537906137,0.0,1,0,80,17
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,18,score log,Complete,54.51263537906137,0.0,1,0,80,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,19,score log,Complete,54.87364620938629,0.0,1,0,80,19
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,20,score log,Complete,55.5956678700361,0.0,1,0,80,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,21,score log,Complete,55.5956678700361,0.0,1,0,80,21
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,22,score log,Complete,55.95667870036101,0.0,1,0,80,22
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,23,score log,Complete,56.317689530685925,0.0,1,0,80,23
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,24,score log,Complete,55.95667870036101,0.0,1,0,80,24
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,25,score log,Complete,56.317689530685925,0.0,1,0,80,25
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,26,score log,Complete,56.678700361010826,0.0,1,0,80,26
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,27,score log,Complete,56.317689530685925,0.0,1,0,80,27
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,28,score log,Complete,56.678700361010826,0.0,1,0,80,28
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,29,score log,Complete,56.317689530685925,0.0,1,0,80,29
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,30,score log,Complete,55.5956678700361,0.0,1,0,80,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,31,score log,Complete,55.5956678700361,0.0,1,0,80,31
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,32,score log,Complete,55.5956678700361,0.0,1,0,80,32
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,33,score log,Complete,55.23465703971119,0.0,1,0,80,33
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,34,score log,Complete,54.87364620938629,0.0,1,0,80,34
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,35,score log,Complete,53.79061371841155,0.0,1,0,80,35
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,36,score log,Complete,53.79061371841155,0.0,1,0,80,36
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,37,score log,Complete,53.42960288808665,0.0,1,0,80,37
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,38,score log,Complete,53.068592057761734,0.0,1,0,80,38
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,39,score log,Complete,53.42960288808665,0.0,1,0,80,39
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,40,score log,Complete,52.707581227436826,0.0,1,0,80,40
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,41,score log,Complete,52.34657039711191,0.0,1,0,80,41
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,42,score log,Complete,51.985559566786996,0.0,1,0,80,42
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,43,score log,Complete,54.151624548736464,0.0,1,0,80,43
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,44,score log,Complete,54.151624548736464,0.0,1,0,80,44
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,45,score log,Complete,53.068592057761734,0.0,1,0,80,45
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,46,score log,Complete,52.707581227436826,0.0,1,0,80,46
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,47,score log,Complete,53.42960288808665,0.0,1,0,80,47
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,48,score log,Complete,53.79061371841155,0.0,1,0,80,48
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,49,score log,Complete,53.79061371841155,0.0,1,0,80,49
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,50,score log,Complete,54.87364620938629,0.0,1,0,80,50
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,51,score log,Complete,54.51263537906137,0.0,1,0,80,51
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,52,score log,Complete,54.151624548736464,0.0,1,0,80,52
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,53,score log,Complete,54.87364620938629,0.0,1,0,80,53
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,54,score log,Complete,55.5956678700361,0.0,1,0,80,54
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,55,score log,Complete,55.23465703971119,0.0,1,0,80,55
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,56,score log,Complete,55.95667870036101,0.0,1,0,80,56
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,57,score log,Complete,55.5956678700361,0.0,1,0,80,57
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,58,score log,Complete,55.5956678700361,0.0,1,0,80,58
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,59,score log,Complete,55.5956678700361,0.0,1,0,80,59
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,60,score log,Complete,55.95667870036101,0.0,1,0,80,60
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,61,score log,Complete,55.95667870036101,0.0,1,0,80,61
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,62,score log,Complete,55.5956678700361,0.0,1,0,80,62
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,63,score log,Complete,55.5956678700361,0.0,1,0,80,63
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,64,score log,Complete,54.87364620938629,0.0,1,0,80,64
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,65,score log,Complete,55.23465703971119,0.0,1,0,80,65
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,66,score log,Complete,55.5956678700361,0.0,1,0,80,66
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,67,score log,Complete,55.5956678700361,0.0,1,0,80,67
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,68,score log,Complete,55.5956678700361,0.0,1,0,80,68
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,69,score log,Complete,56.317689530685925,0.0,1,0,80,69
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,70,score log,Complete,56.678700361010826,0.0,1,0,80,70
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,71,score log,Complete,56.317689530685925,0.0,1,0,80,71
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,72,score log,Complete,55.95667870036101,0.0,1,0,80,72
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,73,score log,Complete,55.5956678700361,0.0,1,0,80,73
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,74,score log,Complete,54.151624548736464,0.0,1,0,80,74
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,75,score log,Complete,54.87364620938629,0.0,1,0,80,75
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,76,score log,Complete,53.79061371841155,0.0,1,0,80,76
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,77,score log,Complete,54.87364620938629,0.0,1,0,80,77
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,78,score log,Complete,54.87364620938629,0.0,1,0,80,78
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,79,score log,Complete,55.23465703971119,0.0,1,0,80,79
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,80,score log,Complete,54.87364620938629,0.0,1,0,80,80
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,1,score log,Complete,53.068592057761734,0.0,1,0,40,2
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,2,score log,Complete,53.068592057761734,0.0,1,0,40,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,3,score log,Complete,56.678700361010826,0.0,1,0,40,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,4,score log,Complete,57.761732851985556,0.0,1,0,40,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,5,score log,Complete,56.678700361010826,0.0,1,0,40,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,6,score log,Complete,54.151624548736464,0.0,1,0,40,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,7,score log,Complete,54.151624548736464,0.0,1,0,40,14
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,8,score log,Complete,54.51263537906137,0.0,1,0,40,16
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,9,score log,Complete,54.87364620938629,0.0,1,0,40,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,10,score log,Complete,55.5956678700361,0.0,1,0,40,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,11,score log,Complete,55.23465703971119,0.0,1,0,40,22
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,12,score log,Complete,55.23465703971119,0.0,1,0,40,24
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,13,score log,Complete,54.151624548736464,0.0,1,0,40,26
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,14,score log,Complete,53.79061371841155,0.0,1,0,40,28
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,15,score log,Complete,53.79061371841155,0.0,1,0,40,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,16,score log,Complete,54.151624548736464,0.0,1,0,40,32
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,17,score log,Complete,53.42960288808665,0.0,1,0,40,34
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,18,score log,Complete,53.42960288808665,0.0,1,0,40,36
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,19,score log,Complete,53.42960288808665,0.0,1,0,40,38
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,20,score log,Complete,54.151624548736464,0.0,1,0,40,40
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,21,score log,Complete,54.87364620938629,0.0,1,0,40,42
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,22,score log,Complete,54.151624548736464,0.0,1,0,40,44
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,23,score log,Complete,54.51263537906137,0.0,1,0,40,46
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,24,score log,Complete,55.95667870036101,0.0,1,0,40,48
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,25,score log,Complete,56.317689530685925,0.0,1,0,40,50
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,26,score log,Complete,56.678700361010826,0.0,1,0,40,52
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,27,score log,Complete,55.95667870036101,0.0,1,0,40,54
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,28,score log,Complete,55.95667870036101,0.0,1,0,40,56
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,29,score log,Complete,55.5956678700361,0.0,1,0,40,58
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,30,score log,Complete,55.5956678700361,0.0,1,0,40,60
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,31,score log,Complete,55.23465703971119,0.0,1,0,40,62
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,32,score log,Complete,55.23465703971119,0.0,1,0,40,64
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,33,score log,Complete,55.95667870036101,0.0,1,0,40,66
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,34,score log,Complete,56.317689530685925,0.0,1,0,40,68
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,35,score log,Complete,57.03971119133574,0.0,1,0,40,70
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,36,score log,Complete,57.400722021660656,0.0,1,0,40,72
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,37,score log,Complete,57.400722021660656,0.0,1,0,40,74
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,38,score log,Complete,58.12274368231047,0.0,1,0,40,76
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,39,score log,Complete,57.761732851985556,0.0,1,0,40,78
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,40,score log,Complete,58.12274368231047,0.0,1,0,40,80
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,1,score log,Complete,54.51263537906137,0.0,1,0,20,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,2,score log,Complete,58.12274368231047,0.0,1,0,20,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,3,score log,Complete,55.95667870036101,0.0,1,0,20,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,4,score log,Complete,56.678700361010826,0.0,1,0,20,16
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,5,score log,Complete,56.678700361010826,0.0,1,0,20,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,6,score log,Complete,54.87364620938629,0.0,1,0,20,24
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,7,score log,Complete,55.23465703971119,0.0,1,0,20,28
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,8,score log,Complete,55.23465703971119,0.0,1,0,20,32
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,9,score log,Complete,55.95667870036101,0.0,1,0,20,36
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,10,score log,Complete,57.03971119133574,0.0,1,0,20,40
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,11,score log,Complete,55.95667870036101,0.0,1,0,20,44
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,12,score log,Complete,56.317689530685925,0.0,1,0,20,48
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,13,score log,Complete,55.5956678700361,0.0,1,0,20,52
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,14,score log,Complete,55.95667870036101,0.0,1,0,20,56
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,15,score log,Complete,58.12274368231047,0.0,1,0,20,60
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,16,score log,Complete,57.761732851985556,0.0,1,0,20,64
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,17,score log,Complete,58.844765342960294,0.0,1,0,20,68
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,18,score log,Complete,59.205776173285194,0.0,1,0,20,72
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,19,score log,Complete,58.844765342960294,0.0,1,0,20,76
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,4,20,score log,Complete,59.56678700361011,0.0,1,0,20,80
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,1,score log,Complete,58.12274368231047,0.0,1,0,10,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,2,score log,Complete,58.48375451263538,0.0,1,0,10,16
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,3,score log,Complete,59.205776173285194,0.0,1,0,10,24
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,4,score log,Complete,55.23465703971119,0.0,1,0,10,32
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,5,score log,Complete,58.12274368231047,0.0,1,0,10,40
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,6,score log,Complete,60.28880866425993,0.0,1,0,10,48
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,7,score log,Complete,61.371841155234655,0.0,1,0,10,56
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,8,score log,Complete,61.01083032490975,0.0,1,0,10,64
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,9,score log,Complete,61.01083032490975,0.0,1,0,10,72
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,10,score log,Complete,61.371841155234655,0.0,1,0,10,80
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,1,score log,Complete,47.292418772563174,0.0,1,0,80,1
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,2,score log,Complete,53.068592057761734,0.0,1,0,80,2
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,3,score log,Complete,46.20938628158845,0.0,1,0,80,3
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,4,score log,Complete,56.317689530685925,0.0,1,0,80,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,5,score log,Complete,50.90252707581227,0.0,1,0,80,5
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,6,score log,Complete,54.151624548736464,0.0,1,0,80,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,7,score log,Complete,51.26353790613718,0.0,1,0,80,7
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,8,score log,Complete,52.707581227436826,0.0,1,0,80,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,9,score log,Complete,51.985559566786996,0.0,1,0,80,9
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,10,score log,Complete,51.985559566786996,0.0,1,0,80,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,11,score log,Complete,51.624548736462096,0.0,1,0,80,11
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,12,score log,Complete,52.707581227436826,0.0,1,0,80,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,13,score log,Complete,52.34657039711191,0.0,1,0,80,13
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,14,score log,Complete,51.985559566786996,0.0,1,0,80,14
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,15,score log,Complete,52.34657039711191,0.0,1,0,80,15
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,16,score log,Complete,53.42960288808665,0.0,1,0,80,16
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,17,score log,Complete,53.79061371841155,0.0,1,0,80,17
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,18,score log,Complete,54.151624548736464,0.0,1,0,80,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,19,score log,Complete,54.51263537906137,0.0,1,0,80,19
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,20,score log,Complete,54.51263537906137,0.0,1,0,80,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,21,score log,Complete,54.51263537906137,0.0,1,0,80,21
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,22,score log,Complete,54.151624548736464,0.0,1,0,80,22
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,23,score log,Complete,54.151624548736464,0.0,1,0,80,23
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,24,score log,Complete,55.23465703971119,0.0,1,0,80,24
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,25,score log,Complete,55.23465703971119,0.0,1,0,80,25
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,26,score log,Complete,55.5956678700361,0.0,1,0,80,26
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,27,score log,Complete,55.23465703971119,0.0,1,0,80,27
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,28,score log,Complete,55.5956678700361,0.0,1,0,80,28
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,29,score log,Complete,55.95667870036101,0.0,1,0,80,29
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,30,score log,Complete,54.87364620938629,0.0,1,0,80,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,31,score log,Complete,54.51263537906137,0.0,1,0,80,31
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,32,score log,Complete,54.51263537906137,0.0,1,0,80,32
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,33,score log,Complete,54.87364620938629,0.0,1,0,80,33
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,34,score log,Complete,55.23465703971119,0.0,1,0,80,34
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,35,score log,Complete,55.23465703971119,0.0,1,0,80,35
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,36,score log,Complete,55.5956678700361,0.0,1,0,80,36
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,37,score log,Complete,54.87364620938629,0.0,1,0,80,37
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,38,score log,Complete,53.79061371841155,0.0,1,0,80,38
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,39,score log,Complete,53.79061371841155,0.0,1,0,80,39
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,40,score log,Complete,53.79061371841155,0.0,1,0,80,40
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,41,score log,Complete,52.707581227436826,0.0,1,0,80,41
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,42,score log,Complete,53.79061371841155,0.0,1,0,80,42
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,43,score log,Complete,51.26353790613718,0.0,1,0,80,43
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,44,score log,Complete,52.707581227436826,0.0,1,0,80,44
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,45,score log,Complete,51.26353790613718,0.0,1,0,80,45
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,46,score log,Complete,52.707581227436826,0.0,1,0,80,46
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,47,score log,Complete,51.26353790613718,0.0,1,0,80,47
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,48,score log,Complete,50.54151624548736,0.0,1,0,80,48
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,49,score log,Complete,50.90252707581227,0.0,1,0,80,49
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,50,score log,Complete,50.18050541516246,0.0,1,0,80,50
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,51,score log,Complete,51.624548736462096,0.0,1,0,80,51
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,52,score log,Complete,51.624548736462096,0.0,1,0,80,52
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,53,score log,Complete,51.624548736462096,0.0,1,0,80,53
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,54,score log,Complete,52.34657039711191,0.0,1,0,80,54
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,55,score log,Complete,51.624548736462096,0.0,1,0,80,55
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,56,score log,Complete,52.34657039711191,0.0,1,0,80,56
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,57,score log,Complete,51.985559566786996,0.0,1,0,80,57
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,58,score log,Complete,51.985559566786996,0.0,1,0,80,58
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,59,score log,Complete,51.624548736462096,0.0,1,0,80,59
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,60,score log,Complete,51.985559566786996,0.0,1,0,80,60
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,61,score log,Complete,52.707581227436826,0.0,1,0,80,61
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,62,score log,Complete,53.42960288808665,0.0,1,0,80,62
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,63,score log,Complete,53.42960288808665,0.0,1,0,80,63
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,64,score log,Complete,53.42960288808665,0.0,1,0,80,64
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,65,score log,Complete,53.068592057761734,0.0,1,0,80,65
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,66,score log,Complete,53.068592057761734,0.0,1,0,80,66
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,67,score log,Complete,53.79061371841155,0.0,1,0,80,67
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,68,score log,Complete,53.42960288808665,0.0,1,0,80,68
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,69,score log,Complete,54.51263537906137,0.0,1,0,80,69
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,70,score log,Complete,54.51263537906137,0.0,1,0,80,70
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,71,score log,Complete,54.151624548736464,0.0,1,0,80,71
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,72,score log,Complete,53.42960288808665,0.0,1,0,80,72
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,73,score log,Complete,53.068592057761734,0.0,1,0,80,73
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,74,score log,Complete,53.79061371841155,0.0,1,0,80,74
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,75,score log,Complete,54.151624548736464,0.0,1,0,80,75
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,76,score log,Complete,54.151624548736464,0.0,1,0,80,76
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,77,score log,Complete,54.51263537906137,0.0,1,0,80,77
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,78,score log,Complete,53.79061371841155,0.0,1,0,80,78
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,79,score log,Complete,54.151624548736464,0.0,1,0,80,79
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,80,score log,Complete,54.151624548736464,0.0,1,0,80,80
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,1,score log,Complete,54.151624548736464,0.0,1,0,40,2
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,2,score log,Complete,52.34657039711191,0.0,1,0,40,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,3,score log,Complete,55.5956678700361,0.0,1,0,40,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,4,score log,Complete,56.317689530685925,0.0,1,0,40,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,5,score log,Complete,57.761732851985556,0.0,1,0,40,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,6,score log,Complete,55.23465703971119,0.0,1,0,40,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,7,score log,Complete,53.79061371841155,0.0,1,0,40,14
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,8,score log,Complete,55.5956678700361,0.0,1,0,40,16
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,9,score log,Complete,54.151624548736464,0.0,1,0,40,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,10,score log,Complete,54.51263537906137,0.0,1,0,40,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,11,score log,Complete,55.23465703971119,0.0,1,0,40,22
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,12,score log,Complete,55.95667870036101,0.0,1,0,40,24
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,13,score log,Complete,56.317689530685925,0.0,1,0,40,26
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,14,score log,Complete,56.317689530685925,0.0,1,0,40,28
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,15,score log,Complete,55.95667870036101,0.0,1,0,40,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,16,score log,Complete,56.317689530685925,0.0,1,0,40,32
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,17,score log,Complete,56.317689530685925,0.0,1,0,40,34
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,18,score log,Complete,55.95667870036101,0.0,1,0,40,36
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,19,score log,Complete,56.317689530685925,0.0,1,0,40,38
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,20,score log,Complete,56.678700361010826,0.0,1,0,40,40
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,21,score log,Complete,57.03971119133574,0.0,1,0,40,42
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,22,score log,Complete,55.5956678700361,0.0,1,0,40,44
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,23,score log,Complete,56.317689530685925,0.0,1,0,40,46
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,24,score log,Complete,56.678700361010826,0.0,1,0,40,48
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,25,score log,Complete,57.400722021660656,0.0,1,0,40,50
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,26,score log,Complete,56.317689530685925,0.0,1,0,40,52
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,27,score log,Complete,56.317689530685925,0.0,1,0,40,54
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,28,score log,Complete,56.678700361010826,0.0,1,0,40,56
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,29,score log,Complete,55.95667870036101,0.0,1,0,40,58
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,30,score log,Complete,55.95667870036101,0.0,1,0,40,60
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,31,score log,Complete,54.87364620938629,0.0,1,0,40,62
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,32,score log,Complete,55.23465703971119,0.0,1,0,40,64
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,33,score log,Complete,56.317689530685925,0.0,1,0,40,66
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,34,score log,Complete,56.678700361010826,0.0,1,0,40,68
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,35,score log,Complete,57.400722021660656,0.0,1,0,40,70
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,36,score log,Complete,57.400722021660656,0.0,1,0,40,72
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,37,score log,Complete,57.761732851985556,0.0,1,0,40,74
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,38,score log,Complete,57.400722021660656,0.0,1,0,40,76
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,39,score log,Complete,58.12274368231047,0.0,1,0,40,78
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,40,score log,Complete,58.12274368231047,0.0,1,0,40,80
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,1,score log,Complete,54.151624548736464,0.0,1,0,20,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,2,score log,Complete,58.48375451263538,0.0,1,0,20,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,3,score log,Complete,56.678700361010826,0.0,1,0,20,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,4,score log,Complete,54.87364620938629,0.0,1,0,20,16
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,5,score log,Complete,55.5956678700361,0.0,1,0,20,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,6,score log,Complete,55.95667870036101,0.0,1,0,20,24
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,7,score log,Complete,55.23465703971119,0.0,1,0,20,28
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,8,score log,Complete,55.5956678700361,0.0,1,0,20,32
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,9,score log,Complete,55.5956678700361,0.0,1,0,20,36
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,10,score log,Complete,55.5956678700361,0.0,1,0,20,40
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,11,score log,Complete,55.23465703971119,0.0,1,0,20,44
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,12,score log,Complete,54.87364620938629,0.0,1,0,20,48
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,13,score log,Complete,55.5956678700361,0.0,1,0,20,52
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,14,score log,Complete,55.95667870036101,0.0,1,0,20,56
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,15,score log,Complete,56.678700361010826,0.0,1,0,20,60
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,16,score log,Complete,56.317689530685925,0.0,1,0,20,64
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,17,score log,Complete,57.400722021660656,0.0,1,0,20,68
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,18,score log,Complete,57.400722021660656,0.0,1,0,20,72
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,19,score log,Complete,58.844765342960294,0.0,1,0,20,76
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,4,20,score log,Complete,58.844765342960294,0.0,1,0,20,80
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,1,score log,Complete,57.400722021660656,0.0,1,0,10,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,2,score log,Complete,59.56678700361011,0.0,1,0,10,16
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,3,score log,Complete,57.03971119133574,0.0,1,0,10,24
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,4,score log,Complete,55.23465703971119,0.0,1,0,10,32
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,5,score log,Complete,55.5956678700361,0.0,1,0,10,40
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,6,score log,Complete,56.678700361010826,0.0,1,0,10,48
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,7,score log,Complete,57.400722021660656,0.0,1,0,10,56
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,8,score log,Complete,57.761732851985556,0.0,1,0,10,64
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,9,score log,Complete,58.12274368231047,0.0,1,0,10,72
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,10,score log,Complete,59.56678700361011,0.0,1,0,10,80

@@ -1,0 +1,31 @@
+Method key,Method,Dataset,Dataset label,Model key,Model,Setting key,Setting,Local epochs,Plateau round,Plateau accuracy,Best round,Best accuracy,Max round observed,Declined after best
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,4,56.317689530685925,4,56.317689530685925,10,True
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,4,57.400722021660656,5,58.12274368231047,10,True
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,3,2,56.317689530685925,2,56.317689530685925,10,True
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,5,2,56.317689530685925,2,56.317689530685925,10,True
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,1,58.48375451263538,1,58.48375451263538,10,True
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,4,56.317689530685925,4,56.317689530685925,10,True
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,5,58.48375451263538,5,58.48375451263538,10,True
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,3,2,55.5956678700361,2,55.5956678700361,10,True
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,5,6,55.95667870036101,8,56.678700361010826,10,False
+ffa,Nonlinear FFA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,1,57.761732851985556,2,58.48375451263538,10,True
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,4,56.678700361010826,4,56.678700361010826,10,True
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,4,58.12274368231047,4,58.12274368231047,10,True
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,3,2,56.678700361010826,2,56.678700361010826,10,True
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,5,4,57.761732851985556,7,58.48375451263538,10,True
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,10,60.64981949458483,10,60.64981949458483,10,False
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,4,54.51263537906137,4,54.51263537906137,10,True
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,4,56.317689530685925,5,57.03971119133574,10,True
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,3,2,55.95667870036101,2,55.95667870036101,10,True
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,5,9,61.371841155234655,10,62.093862815884485,10,False
+flora,Linear FLoRA,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,8,61.73285198555957,8,61.73285198555957,10,False
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,1,4,56.317689530685925,4,56.317689530685925,10,True
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,2,4,57.761732851985556,4,57.761732851985556,10,True
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,3,2,55.5956678700361,3,55.95667870036101,10,True
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,5,3,57.03971119133574,8,57.761732851985556,10,False
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,heter,Heter,8,7,61.371841155234655,7,61.371841155234655,10,False
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,1,4,56.317689530685925,4,56.317689530685925,10,True
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,2,5,57.761732851985556,5,57.761732851985556,10,True
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,3,2,56.317689530685925,2,56.317689530685925,10,True
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,5,6,56.678700361010826,10,57.400722021660656,10,False
+nonlinear_flora,Nonlinear FLoRA Cumulative,rte_stratified,RTE stratified,roberta-base,RoBERTa-base,homo,Homo,8,2,59.56678700361011,2,59.56678700361011,10,True

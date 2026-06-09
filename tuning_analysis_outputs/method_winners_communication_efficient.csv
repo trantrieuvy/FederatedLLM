@@ -1,0 +1,9 @@
+Dataset label,Model,Setting,Method,Epochs,Round,Communication-efficient accuracy,Compute cost
+Dolly,TinyLlama,Heter,Nonlinear FLoRA Cumulative,3,3,31.060014077748882,9
+Dolly,TinyLlama,Homo,Linear FLoRA,3,2,31.028687165879365,6
+Dolly stratified,TinyLlama,Heter,Nonlinear FLoRA Cumulative,3,2,30.096827805285802,6
+Dolly stratified,TinyLlama,Homo,Nonlinear FFA,3,7,30.616932937943336,21
+Wizard,TinyLlama,Heter,Linear FLoRA,3,1,46.216901483508074,3
+Wizard,TinyLlama,Homo,Linear FLoRA,1,1,45.100873212020446,1
+Wizard stratified,TinyLlama,Heter,Linear FLoRA,3,1,45.736471619380225,3
+Wizard stratified,TinyLlama,Homo,Linear FLoRA,1,1,46.735378514127305,1

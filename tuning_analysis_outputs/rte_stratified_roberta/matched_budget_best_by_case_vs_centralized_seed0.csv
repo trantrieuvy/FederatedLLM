@@ -1,0 +1,7 @@
+Method,Setting,Best budget-80 option,Best budget-80 final accuracy,Centralized reference accuracy,Gap below centralized reference (pp)
+Linear FLoRA,Heter,e4/r20,60.64981949458483,72.0,11.350180505415167
+Nonlinear FFA,Heter,e4/r20,57.761732851985556,72.0,14.238267148014444
+Nonlinear FLoRA Cumulative,Heter,e8/r10,61.371841155234655,72.0,10.628158844765345
+Linear FLoRA,Homo,e8/r10,61.73285198555957,72.0,10.26714801444043
+Nonlinear FFA,Homo,e2/r40,56.678700361010826,72.0,15.321299638989174
+Nonlinear FLoRA Cumulative,Homo,e8/r10,59.56678700361011,72.0,12.43321299638989

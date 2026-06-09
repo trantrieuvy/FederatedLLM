@@ -1,0 +1,865 @@
+Method key,Method,Dataset,Dataset label,Model key,Model,Setting key,Setting,Local epochs,Round,Accuracy,Previous round,Previous accuracy,Marginal accuracy gain,Compute cost
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,2,21.28930397783074,1,19.273111073727193,2.016192904103548,2
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,3,22.01067358273452,2,21.28930397783074,0.7213696049037779,3
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,4,21.23329732480398,3,22.01067358273452,-0.7773762579305377,4
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,5,23.949153590490535,4,21.23329732480398,2.715856265686554,5
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,6,22.91282984438322,5,23.949153590490535,-1.036323746107314,6
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,7,25.603691728597553,6,22.91282984438322,2.690861884214332,7
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,8,26.333334942185093,7,25.603691728597553,0.7296432135875399,8
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,9,26.584934364371023,8,26.333334942185093,0.25159942218592946,9
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,10,27.235844016178547,9,26.584934364371023,0.6509096518075239,10
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,2,23.65710080623618,1,21.056383084070806,2.600717722165374,4
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,3,26.80644668629974,2,23.65710080623618,3.14934588006356,6
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,4,26.51456588777064,3,26.80644668629974,-0.29188079852909965,8
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,5,26.86173746535535,4,26.51456588777064,0.3471715775847102,10
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,6,26.738885297636557,5,26.86173746535535,-0.12285216771879348,12
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,7,27.520151217823813,6,26.738885297636557,0.7812659201872556,14
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,8,27.230227440256233,7,27.520151217823813,-0.28992377756758003,16
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,9,28.381292508649324,8,27.230227440256233,1.1510650683930912,18
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,10,27.897415958980826,9,28.381292508649324,-0.4838765496684978,20
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,2,26.13990019014359,1,23.82513694558179,2.3147632445617994,6
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,3,25.9001561963584,2,26.13990019014359,-0.23974399378518996,9
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,4,28.523939458691792,3,25.9001561963584,2.6237832623333937,12
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,5,27.673606481826308,4,28.523939458691792,-0.8503329768654844,15
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,6,28.99100474013072,5,27.673606481826308,1.3173982583044115,18
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,7,27.484371470894807,6,28.99100474013072,-1.5066332692359126,21
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,8,26.032747702455694,7,27.484371470894807,-1.451623768439113,24
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,9,28.5678930566718,8,26.032747702455694,2.5351453542161053,27
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,10,27.40488571251973,9,28.5678930566718,-1.1630073441520707,30
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,2,27.477805924216003,1,26.351499449485623,1.1263064747303808,10
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,3,27.33749721857885,2,27.477805924216003,-0.14030870563715325,15
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,4,28.877256453171864,3,27.33749721857885,1.5397592345930136,20
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,5,26.885019072905504,4,28.877256453171864,-1.99223738026636,25
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,6,27.388338993844048,5,26.885019072905504,0.5033199209385444,30
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,7,27.296017441365,6,27.388338993844048,-0.09232155247904927,35
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,8,26.85146257211699,7,27.296017441365,-0.4445548692480088,40
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,9,29.04854503416771,8,26.85146257211699,2.1970824620507194,45
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,10,26.78360241577812,9,29.04854503416771,-2.2649426183895898,50
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,2,18.70351899465648,1,16.29809090056982,2.405428094086659,2
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,3,23.863084377707665,2,18.70351899465648,5.159565383051184,3
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,4,25.41641902026876,3,23.863084377707665,1.5533346425610937,4
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,5,27.537301801330944,4,25.41641902026876,2.1208827810621855,5
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,6,29.293624081751457,5,27.537301801330944,1.7563222804205125,6
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,7,28.860155876374566,6,29.293624081751457,-0.4334682053768901,7
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,8,27.657774500786342,7,28.860155876374566,-1.2023813755882244,8
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,9,28.501847165791066,8,27.657774500786342,0.8440726650047239,9
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,10,28.810735801387526,9,28.501847165791066,0.3088886355964604,10
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,2,24.089616745270042,1,17.424113974089277,6.6655027711807655,4
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,3,29.901496671286427,2,24.089616745270042,5.811879926016385,6
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,4,28.750279975984398,3,29.901496671286427,-1.151216695302029,8
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,5,28.389198599239197,4,28.750279975984398,-0.3610813767452008,10
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,6,27.54206831027215,5,28.389198599239197,-0.8471302889670476,12
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,7,28.54578655868712,6,27.54206831027215,1.0037182484149696,14
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,8,27.808687335839423,7,28.54578655868712,-0.7370992228476965,16
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,9,30.310144399754986,8,27.808687335839423,2.501457063915563,18
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,10,29.54508980050151,9,30.310144399754986,-0.7650545992534745,20
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,2,27.563013746073224,1,19.702043821918743,7.860969924154482,6
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,3,28.204301574471042,2,27.563013746073224,0.6412878283978181,9
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,4,29.321431473859043,3,28.204301574471042,1.1171298993880008,12
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,5,28.97318645408597,4,29.321431473859043,-0.3482450197730742,15
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,6,28.9555045369498,5,28.97318645408597,-0.01768191713616929,18
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,7,29.560024286637205,6,28.9555045369498,0.6045197496874053,21
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,8,29.159106606085818,7,29.560024286637205,-0.40091768055138743,24
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,9,29.073572801431226,8,29.159106606085818,-0.0855338046545917,27
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,10,29.449209296555324,9,29.073572801431226,0.37563649512409825,30
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,2,28.9713980350406,1,24.30039362524154,4.67100440979906,10
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,3,26.995290869112516,2,28.9713980350406,-1.9761071659280844,15
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,4,29.816646030836875,3,26.995290869112516,2.821355161724359,20
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,5,30.348877311446838,4,29.816646030836875,0.5322312806099632,25
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,6,29.726256956474035,5,30.348877311446838,-0.6226203549728027,30
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,7,30.873034360682343,6,29.726256956474035,1.1467774042083079,35
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,8,29.476836870750837,7,30.873034360682343,-1.396197489931506,40
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,9,28.960025220258682,8,29.476836870750837,-0.5168116504921549,45
+ffa,Nonlinear FFA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,10,29.18985189165965,9,28.960025220258682,0.2298266714009678,50
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,2,19.955074579294326,1,18.32076348701427,1.6343110922800577,2
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,3,21.297598687832863,2,19.955074579294326,1.3425241085385373,3
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,4,21.98872992264974,3,21.297598687832863,0.6911312348168757,4
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,5,22.488107027375445,4,21.98872992264974,0.4993771047257063,5
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,6,25.592671724160294,5,22.488107027375445,3.1045646967848484,6
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,7,24.50469631179817,6,25.592671724160294,-1.0879754123621233,7
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,8,25.997902444933825,7,24.50469631179817,1.4932061331356543,8
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,9,26.404860293623685,8,25.997902444933825,0.40695784868985996,9
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,10,26.28020641367587,9,26.404860293623685,-0.12465387994781452,10
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,2,25.10452253431818,1,19.444955249787988,5.6595672845301905,4
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,3,24.979742179158173,2,25.10452253431818,-0.12478035516000574,6
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,4,25.263251165104045,3,24.979742179158173,0.2835089859458719,8
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,5,27.69211895332363,4,25.263251165104045,2.428867788219584,10
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,6,27.145402210994202,5,27.69211895332363,-0.5467167423294264,12
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,7,27.575156568454556,6,27.145402210994202,0.42975435746035373,14
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,8,27.593233936698976,7,27.575156568454556,0.018077368244419745,16
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,9,28.423145051655762,8,27.593233936698976,0.8299111149567864,18
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,10,25.922830166480527,9,28.423145051655762,-2.5003148851752357,20
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,2,25.567804585243092,1,23.32597960177428,2.2418249834688133,6
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,3,27.601900551512376,2,25.567804585243092,2.034095966269284,9
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,4,25.268655349912645,3,27.601900551512376,-2.3332452015997305,12
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,5,29.619329742120637,4,25.268655349912645,4.350674392207992,15
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,6,27.92600044044117,5,29.619329742120637,-1.6933293016794657,18
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,7,28.16353547830107,6,27.92600044044117,0.2375350378598995,21
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,8,28.93448541122181,7,28.16353547830107,0.7709499329207397,24
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,9,28.606487071755858,8,28.93448541122181,-0.32799833946595314,27
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,10,27.944404334391443,9,28.606487071755858,-0.6620827373644147,30
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,2,26.835100796820736,1,25.121678527954604,1.7134222688661325,10
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,3,26.90129302282639,2,26.835100796820736,0.06619222600565422,15
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,4,28.212133550621747,3,26.90129302282639,1.3108405277953565,20
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,5,29.458925870359533,4,28.212133550621747,1.2467923197377857,25
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,6,27.35703348913242,5,29.458925870359533,-2.1018923812271133,30
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,7,29.01219332116927,6,27.35703348913242,1.6551598320368512,35
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,8,27.679115370475703,7,29.01219332116927,-1.3330779506935677,40
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,9,28.973001141844733,8,27.679115370475703,1.2938857713690304,45
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,10,28.898665834128945,9,28.973001141844733,-0.07433530771578845,50
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,2,19.161024326830027,1,15.851024247055175,3.310000079774852,2
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,3,22.496382578059247,2,19.161024326830027,3.33535825122922,3
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,4,26.14937314177006,3,22.496382578059247,3.652990563710812,4
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,5,27.398392328683464,4,26.14937314177006,1.2490191869134044,5
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,6,27.633404896184246,5,27.398392328683464,0.2350125675007817,6
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,7,28.031812629481596,6,27.633404896184246,0.3984077332973506,7
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,8,28.54904089489799,7,28.031812629481596,0.5172282654163922,8
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,9,28.342641670473263,8,28.54904089489799,-0.20639922442472525,9
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,10,27.679297499751975,9,28.342641670473263,-0.6633441707212882,10
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,2,25.18449874691195,1,18.553322360446,6.631176386465949,4
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,3,27.562321549027182,2,25.18449874691195,2.377822802115233,6
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,4,29.31128088622011,3,27.562321549027182,1.7489593371929288,8
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,5,28.246556852905506,4,29.31128088622011,-1.0647240333146044,10
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,6,28.313626451769565,5,28.246556852905506,0.06706959886405883,12
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,7,27.941164570690226,6,28.313626451769565,-0.37246188107933875,14
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,8,28.63864398461031,7,27.941164570690226,0.6974794139200853,16
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,9,29.548327991430938,8,28.63864398461031,0.9096840068206262,18
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,10,29.76382677072457,9,29.548327991430938,0.21549877929363248,20
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,2,28.433601903706464,1,19.4513250965125,8.982276807193962,6
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,3,28.665720056896998,2,28.433601903706464,0.23211815319053386,9
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,4,28.34582889491508,3,28.665720056896998,-0.3198911619819178,12
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,5,28.955224083372922,4,28.34582889491508,0.6093951884578424,15
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,6,29.23599899447004,5,28.955224083372922,0.2807749110971187,18
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,7,30.616932937943336,6,29.23599899447004,1.3809339434732948,21
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,8,30.318378997843563,7,30.616932937943336,-0.2985539400997723,24
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,9,29.785414210681736,8,30.318378997843563,-0.532964787161827,27
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,10,31.264767281439244,9,29.785414210681736,1.479353070757508,30
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,2,29.112118054819515,1,25.99927769828887,3.1128403565306435,10
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,3,27.405114158158657,2,29.112118054819515,-1.7070038966608578,15
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,4,29.15360801986018,3,27.405114158158657,1.7484938617015224,20
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,5,28.797494836034467,4,29.15360801986018,-0.35611318382571255,25
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,6,29.674882364489875,5,28.797494836034467,0.877387528455408,30
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,7,29.706705757440016,6,29.674882364489875,0.03182339295014103,35
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,8,30.705571806875405,7,29.706705757440016,0.9988660494353887,40
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,9,30.968776637827954,8,30.705571806875405,0.26320483095254943,45
+ffa,Nonlinear FFA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,10,28.456925303153803,9,30.968776637827954,-2.5118513346741516,50
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,2,27.517592858255973,1,27.246486310916655,0.2711065473393184,2
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,3,29.485380152718545,2,27.517592858255973,1.9677872944625712,3
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,4,30.238814181418494,3,29.485380152718545,0.7534340286999495,4
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,5,32.11790727514315,4,30.238814181418494,1.8790930937246593,5
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,6,33.19234141611857,5,32.11790727514315,1.07443414097542,6
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,7,33.49739861895184,6,33.19234141611857,0.3050572028332681,7
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,8,33.02129157096672,7,33.49739861895184,-0.47610704798512415,8
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,9,32.01699222466512,8,33.02129157096672,-1.0042993463016003,9
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,10,33.63478226383233,9,32.01699222466512,1.617790039167211,10
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,2,31.33688334908084,1,29.06456222541301,2.2723211236678296,4
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,3,31.80734061277442,2,31.33688334908084,0.4704572636935822,6
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,4,33.03217713179109,3,31.80734061277442,1.224836519016666,8
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,5,32.427153109769165,4,33.03217713179109,-0.6050240220219223,10
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,6,32.11071966523567,5,32.427153109769165,-0.3164334445334944,12
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,7,31.271170767590746,6,32.11071966523567,-0.8395488976449244,14
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,8,32.09844624254533,7,31.271170767590746,0.8272754749545825,16
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,9,31.42670953408616,8,32.09844624254533,-0.6717367084591679,18
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,10,31.36571298652393,9,31.42670953408616,-0.06099654756222961,20
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,2,32.19803453394798,1,29.24313731007976,2.9548972238682225,6
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,3,31.793211176142027,2,32.19803453394798,-0.4048233578059559,9
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,4,32.489140575088385,3,31.793211176142027,0.6959293989463582,12
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,5,31.94067675720428,4,32.489140575088385,-0.5484638178841053,15
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,6,30.927152427712812,5,31.94067675720428,-1.0135243294914673,18
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,7,31.24418010911357,6,30.927152427712812,0.3170276814007593,21
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,8,31.49561459711265,7,31.24418010911357,0.2514344879990773,24
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,9,31.510503438229765,8,31.49561459711265,0.014888841117116414,27
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,10,31.0101526547609,9,31.510503438229765,-0.5003507834688641,30
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,2,33.11990978473841,1,30.85645266834172,2.2634571163966903,10
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,3,32.64883936141125,2,33.11990978473841,-0.47107042332716276,15
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,4,31.95969148911218,3,32.64883936141125,-0.6891478722990669,20
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,5,31.905815025690977,4,31.95969148911218,-0.053876463421204335,25
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,6,32.28756400045341,5,31.905815025690977,0.38174897476243075,30
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,7,33.559651489261775,6,32.28756400045341,1.272087488808367,35
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,8,32.353252118613426,7,33.559651489261775,-1.2063993706483487,40
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,9,32.21379006636601,8,32.353252118613426,-0.13946205224741703,45
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,10,31.511011872693,9,32.21379006636601,-0.7027781936730086,50
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,2,30.86875479407592,1,28.026955530310804,2.8417992637651146,2
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,3,31.045723327285017,2,30.86875479407592,0.17696853320909867,3
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,4,31.50253404322449,3,31.045723327285017,0.4568107159394721,4
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,5,30.674203975348814,4,31.50253404322449,-0.828330067875676,5
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,6,30.983987070617818,5,30.674203975348814,0.3097830952690046,6
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,7,30.398299903003036,6,30.983987070617818,-0.5856871676147826,7
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,8,31.24547863055368,7,30.398299903003036,0.847178727550645,8
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,9,29.735028280498792,8,31.24547863055368,-1.5104503500548887,9
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,10,29.84947558481743,9,29.735028280498792,0.11444730431863803,10
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,2,30.96181905087866,1,30.69317878695398,0.26864026392468077,4
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,3,30.243548311153184,2,30.96181905087866,-0.718270739725476,6
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,4,31.308589701132465,3,30.243548311153184,1.0650413899792817,8
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,5,31.226615544961067,4,31.308589701132465,-0.08197415617139825,10
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,6,30.61082451564477,5,31.226615544961067,-0.6157910293162985,12
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,7,30.960876404687777,6,30.61082451564477,0.35005188904300866,14
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,8,29.088195139602508,7,30.960876404687777,-1.8726812650852693,16
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,9,29.653939601739797,8,29.088195139602508,0.5657444621372889,18
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,10,31.152244802940505,9,29.653939601739797,1.4983052012007079,20
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,2,31.422283133364008,1,29.83841873091896,1.5838644024450481,6
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,3,29.642683500900162,2,31.422283133364008,-1.779599632463846,9
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,4,30.060059868427892,3,29.642683500900162,0.41737636752773,12
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,5,30.378774001423675,4,30.060059868427892,0.3187141329957832,15
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,6,30.481455809051656,5,30.378774001423675,0.10268180762798096,18
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,7,29.610456601521594,6,30.481455809051656,-0.8709992075300619,21
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,8,28.81207497243561,7,29.610456601521594,-0.7983816290859842,24
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,9,29.292069322348336,8,28.81207497243561,0.47999434991272594,27
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,10,30.57246190067979,9,29.292069322348336,1.2803925783314547,30
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,2,30.670807589026776,1,30.448741073901587,0.2220665151251886,10
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,3,29.59228023224312,2,30.670807589026776,-1.0785273567836562,15
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,4,31.54860451750488,3,29.59228023224312,1.9563242852617613,20
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,5,30.64928849561328,4,31.54860451750488,-0.8993160218916003,25
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,6,29.897059547319806,5,30.64928849561328,-0.7522289482934745,30
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,7,28.93680885378523,6,29.897059547319806,-0.9602506935345758,35
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,8,28.276614334255452,7,28.93680885378523,-0.660194519529778,40
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,9,29.808592526288546,8,28.276614334255452,1.531978192033094,45
+ffa,Nonlinear FFA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,10,27.80395902041818,9,29.808592526288546,-2.004633505870366,50
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,2,28.422156873252106,1,26.989248553082103,1.4329083201700037,2
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,3,28.803796965521567,2,28.422156873252106,0.3816400922694605,3
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,4,30.031834432907345,3,28.803796965521567,1.2280374673857786,4
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,5,32.335661973590916,4,30.031834432907345,2.303827540683571,5
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,6,32.26664779948376,5,32.335661973590916,-0.06901417410715283,6
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,7,31.98859154172351,6,32.26664779948376,-0.2780562577602552,7
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,8,33.06825306705602,7,31.98859154172351,1.0796615253325115,8
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,9,31.585788217376027,8,33.06825306705602,-1.4824648496799924,9
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,10,31.32756125132347,9,31.585788217376027,-0.25822696605255757,10
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,2,30.535685113137802,1,28.85561988759276,1.680065225545043,4
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,3,32.460055269357504,2,30.535685113137802,1.9243701562197018,6
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,4,32.85450763463717,3,32.460055269357504,0.394452365279669,8
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,5,32.272822819085334,4,32.85450763463717,-0.5816848155518386,10
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,6,31.67763881668659,5,32.272822819085334,-0.5951840023987458,12
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,7,32.183055687317804,6,31.67763881668659,0.5054168706312154,14
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,8,30.851972357047707,7,32.183055687317804,-1.331083330270097,16
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,9,30.889392410123946,8,30.851972357047707,0.03742005307623941,18
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,10,31.06304451810197,9,30.889392410123946,0.17365210797802533,20
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,2,30.688905720740404,1,29.389020205280364,1.2998855154600406,6
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,3,31.118111978637724,2,30.688905720740404,0.42920625789732014,9
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,4,31.716742544066847,3,31.118111978637724,0.5986305654291222,12
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,5,32.74667537017022,4,31.716742544066847,1.0299328261033764,15
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,6,32.29950701197954,5,32.74667537017022,-0.44716835819068024,18
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,7,31.92046157500626,6,32.29950701197954,-0.3790454369732821,21
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,8,31.666838103800764,7,31.92046157500626,-0.253623471205497,24
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,9,32.21268340799826,8,31.666838103800764,0.5458453041974991,27
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,10,32.28645874691834,9,32.21268340799826,0.07377533892007904,30
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,2,31.50314675541451,1,30.304244375917698,1.1989023794968112,10
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,3,33.36740023146743,2,31.50314675541451,1.8642534760529195,15
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,4,30.850546806053902,3,33.36740023146743,-2.516853425413526,20
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,5,30.452684372180443,4,30.850546806053902,-0.39786243387345976,25
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,6,31.688224619527837,5,30.452684372180443,1.2355402473473944,30
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,7,32.043147271093176,6,31.688224619527837,0.35492265156533875,35
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,8,32.672639569768094,7,32.043147271093176,0.6294922986749185,40
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,9,32.438626087407854,8,32.672639569768094,-0.23401348236023978,45
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,10,30.338248186890926,9,32.438626087407854,-2.1003779005169285,50
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,2,31.246502422386634,1,27.329563213655454,3.916939208731179,2
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,3,30.604218213703316,2,31.246502422386634,-0.6422842086833178,3
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,4,31.29403599652349,3,30.604218213703316,0.6898177828201746,4
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,5,30.364004097888277,4,31.29403599652349,-0.9300318986352138,5
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,6,30.640942425818103,5,30.364004097888277,0.27693832792982676,6
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,7,30.430127193212293,6,30.640942425818103,-0.21081523260581037,7
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,8,30.735799074133542,7,30.430127193212293,0.3056718809212491,8
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,9,29.66614522881424,8,30.735799074133542,-1.0696538453193014,9
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,10,29.60549887564778,9,29.66614522881424,-0.06064635316646161,10
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,2,31.80994536900661,1,29.923304076320186,1.8866412926864236,4
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,3,31.128868885387682,2,31.80994536900661,-0.6810764836189271,6
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,4,30.862417374680067,3,31.128868885387682,-0.26645151070761486,8
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,5,31.835038377536396,4,30.862417374680067,0.9726210028563287,10
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,6,29.21144878254196,5,31.835038377536396,-2.623589594994435,12
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,7,30.404670318411064,6,29.21144878254196,1.1932215358691032,14
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,8,30.594756423061835,7,30.404670318411064,0.1900861046507707,16
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,9,31.546275223403324,8,30.594756423061835,0.9515188003414892,18
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,10,30.477971490093424,9,31.546275223403324,-1.0683037333099001,20
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,2,31.42034924090052,1,30.91851002035319,0.5018392205473319,6
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,3,30.83614043766531,2,31.42034924090052,-0.5842088032352102,9
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,4,30.34127793215971,3,30.83614043766531,-0.4948625055056013,12
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,5,31.185312877610105,4,30.34127793215971,0.8440349454503959,15
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,6,31.84749089318692,5,31.185312877610105,0.6621780155768136,18
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,7,30.72401022506444,6,31.84749089318692,-1.123480668122479,21
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,8,29.84293739917302,7,30.72401022506444,-0.8810728258914189,24
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,9,30.56360548577008,8,29.84293739917302,0.7206680865970583,27
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,10,30.551818057653595,9,30.56360548577008,-0.011787428116484477,30
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,2,30.601994022033107,1,32.349736848160674,-1.747742826127567,10
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,3,31.645519449205707,2,30.601994022033107,1.0435254271726002,15
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,4,30.381811726628495,3,31.645519449205707,-1.2637077225772124,20
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,5,27.77995057397165,4,30.381811726628495,-2.601861152656845,25
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,6,29.543763720556516,5,27.77995057397165,1.7638131465848659,30
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,7,28.032641149191956,6,29.543763720556516,-1.5111225713645595,35
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,8,28.647679272489757,7,28.032641149191956,0.6150381232978006,40
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,9,28.721787806997902,8,28.647679272489757,0.07410853450814514,45
+ffa,Nonlinear FFA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,10,28.581165763424604,9,28.721787806997902,-0.14062204357329833,50
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,2,27.637384909655573,1,24.380947549324038,3.2564373603315353,2
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,3,27.158977652027627,2,27.637384909655573,-0.47840725762794634,3
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,4,26.308994304282944,3,27.158977652027627,-0.8499833477446828,4
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,5,27.022525222768266,4,26.308994304282944,0.713530918485322,5
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,6,27.709217262599257,5,27.022525222768266,0.6866920398309908,6
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,7,26.538921968040853,6,27.709217262599257,-1.1702952945584038,7
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,8,28.368719626339562,7,26.538921968040853,1.829797658298709,8
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,9,27.943582137529443,8,28.368719626339562,-0.4251374888101189,9
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,10,27.135806539974773,9,27.943582137529443,-0.8077755975546701,10
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,2,29.093940332709405,1,29.38020421842083,-0.28626388571142414,4
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,3,27.72523454457918,2,29.093940332709405,-1.3687057881302245,6
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,4,27.94806734622142,3,27.72523454457918,0.22283280164224095,8
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,5,29.95713368479402,4,27.94806734622142,2.009066338572598,10
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,6,29.33993454320025,5,29.95713368479402,-0.617199141593769,12
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,7,29.604089890723916,6,29.33993454320025,0.26415534752366554,14
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,8,29.747797875067693,7,29.604089890723916,0.14370798434377718,16
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,9,27.632280169050773,8,29.747797875067693,-2.11551770601692,18
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,10,28.834408267833282,9,27.632280169050773,1.2021280987825094,20
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,2,29.239962529536236,1,28.379102042258353,0.8608604872778827,6
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,3,29.422202458681294,2,29.239962529536236,0.1822399291450587,9
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,4,28.342653928096663,3,29.422202458681294,-1.0795485305846313,12
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,5,28.47312678111565,4,28.342653928096663,0.13047285301898626,15
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,6,28.02480285423708,5,28.47312678111565,-0.4483239268785688,18
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,7,27.34953307914274,6,28.02480285423708,-0.675269775094339,21
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,8,26.836335261068257,7,27.34953307914274,-0.5131978180744845,24
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,9,28.121018206736824,8,26.836335261068257,1.2846829456685676,27
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,10,27.603019089114113,9,28.121018206736824,-0.5179991176227112,30
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,2,29.23888293929154,1,29.09271979993631,0.1461631393552274,10
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,3,26.839270761111973,2,29.23888293929154,-2.3996121781795665,15
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,4,26.877149148672704,3,26.839270761111973,0.03787838756073114,20
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,5,27.31281650485078,4,26.877149148672704,0.43566735617807595,25
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,6,26.183754780513752,5,27.31281650485078,-1.1290617243370278,30
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,7,27.77470872482014,6,26.183754780513752,1.5909539443063885,35
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,8,26.134455961014464,7,27.77470872482014,-1.6402527638056768,40
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,9,27.280963496072413,8,26.134455961014464,1.1465075350579497,45
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,10,26.17251739399218,9,27.280963496072413,-1.108446102080233,50
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,2,27.614028507987747,1,18.010128348096284,9.603900159891463,2
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,3,26.585125530414842,2,27.614028507987747,-1.0289029775729048,3
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,4,27.66823879720235,3,26.585125530414842,1.0831132667875067,4
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,5,27.545509092791843,4,27.66823879720235,-0.12272970441050646,5
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,6,26.725295097132783,5,27.545509092791843,-0.82021399565906,6
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,7,28.720285787559614,6,26.725295097132783,1.9949906904268317,7
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,8,27.072113671880064,7,28.720285787559614,-1.6481721156795501,8
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,9,28.246422027111002,8,27.072113671880064,1.174308355230938,9
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,10,29.85784710827064,9,28.246422027111002,1.6114250811596378,10
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,2,28.255832567351234,1,27.983047872846882,0.2727846945043524,4
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,3,28.79523766284935,2,28.255832567351234,0.5394050954981147,6
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,4,27.638068186193433,3,28.79523766284935,-1.1571694766559162,8
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,5,30.53585210089038,4,27.638068186193433,2.897783914696948,10
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,6,29.203063953326964,5,30.53585210089038,-1.3327881475634165,12
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,7,29.458413348457814,6,29.203063953326964,0.25534939513084964,14
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,8,29.24455166705512,7,29.458413348457814,-0.2138616814026939,16
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,9,29.506879572471373,8,29.24455166705512,0.26232790541625306,18
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,10,29.552222519942273,9,29.506879572471373,0.04534294747089973,20
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,2,31.028687165879365,1,26.508065536872305,4.52062162900706,6
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,3,28.848531127361767,2,31.028687165879365,-2.180156038517598,9
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,4,27.59275631055207,3,28.848531127361767,-1.2557748168096978,12
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,5,28.230679542480697,4,27.59275631055207,0.6379232319286281,15
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,6,28.736019897065372,5,28.230679542480697,0.5053403545846749,18
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,7,28.644235151620904,6,28.736019897065372,-0.09178474544446757,21
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,8,28.692853443901644,7,28.644235151620904,0.04861829228073944,24
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,9,28.49340473168539,8,28.692853443901644,-0.1994487122162525,27
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,10,28.245048562134993,9,28.49340473168539,-0.24835616955039796,30
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,2,28.854729337720336,1,27.36925694574564,1.485472391974696,10
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,3,27.002630835986828,2,28.854729337720336,-1.8520985017335079,15
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,4,28.21303399309617,3,27.002630835986828,1.2104031571093437,20
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,5,29.378843106659414,4,28.21303399309617,1.1658091135632418,25
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,6,29.216810949450707,5,29.378843106659414,-0.16203215720870645,30
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,7,27.67479355501969,6,29.216810949450707,-1.5420173944310172,35
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,8,29.596836073923154,7,27.67479355501969,1.9220425189034636,40
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,9,27.397886623678907,8,29.596836073923154,-2.198949450244246,45
+flora,Linear FLoRA,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,10,28.198280141477248,9,27.397886623678907,0.8003935177983408,50
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,2,26.545189102425244,1,21.69317730541828,4.852011797006963,2
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,3,27.31806762394634,2,26.545189102425244,0.7728785215210969,3
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,4,26.30168927482657,3,27.31806762394634,-1.0163783491197727,4
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,5,28.026638786238717,4,26.30168927482657,1.7249495114121487,5
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,6,26.534710578422533,5,28.026638786238717,-1.4919282078161835,6
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,7,26.381374873671405,6,26.534710578422533,-0.1533357047511288,7
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,8,28.068034935260595,7,26.381374873671405,1.6866600615891905,8
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,9,26.837950462767658,8,28.068034935260595,-1.230084472492937,9
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,10,28.869235565072458,9,26.837950462767658,2.0312851023047998,10
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,2,27.67119604250633,1,26.884230732154695,0.7869653103516363,4
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,3,28.15823949879011,2,27.67119604250633,0.48704345628377865,6
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,4,27.016708883020012,3,28.15823949879011,-1.1415306157700975,8
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,5,28.54926799514608,4,27.016708883020012,1.5325591121260693,10
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,6,26.803648200656514,5,28.54926799514608,-1.745619794489567,12
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,7,27.890324833725224,6,26.803648200656514,1.0866766330687092,14
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,8,29.105461981714768,7,27.890324833725224,1.2151371479895445,16
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,9,26.689458908345344,8,29.105461981714768,-2.416003073369424,18
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,10,26.860644143175293,9,26.689458908345344,0.17118523482994874,20
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,2,28.074673271321913,1,27.570072854161403,0.5046004171605105,6
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,3,27.644203605089096,2,28.074673271321913,-0.4304696662328169,9
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,4,26.995168267349552,3,27.644203605089096,-0.6490353377395444,12
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,5,27.62892674318814,4,26.995168267349552,0.6337584758385866,15
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,6,27.375268615803357,5,27.62892674318814,-0.25365812738478155,18
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,7,27.726689081102485,6,27.375268615803357,0.3514204652991282,21
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,8,26.31342327278285,7,27.726689081102485,-1.413265808319636,24
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,9,26.21475131177814,8,26.31342327278285,-0.09867196100470821,27
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,10,26.22564916092398,9,26.21475131177814,0.010897849145838023,30
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,2,26.765437884652044,1,28.335098379205913,-1.5696604945538688,10
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,3,28.488122144311152,2,26.765437884652044,1.7226842596591077,15
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,4,28.35857496868705,3,28.488122144311152,-0.12954717562410067,20
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,5,26.80086035718967,4,28.35857496868705,-1.5577146114973814,25
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,6,27.14895638655552,5,26.80086035718967,0.3480960293658484,30
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,7,27.301862421421603,6,27.14895638655552,0.1529060348660849,35
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,8,25.16649940362658,7,27.301862421421603,-2.1353630177950222,40
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,9,25.64759817472954,8,25.16649940362658,0.4810987711029604,45
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,10,25.236108865291328,9,25.64759817472954,-0.41148930943821327,50
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,2,27.59323346109605,1,18.059769315225516,9.533464145870536,2
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,3,26.17242893154984,2,27.59323346109605,-1.42080452954621,3
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,4,28.075547991262916,3,26.17242893154984,1.9031190597130738,4
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,5,28.632243921249316,4,28.075547991262916,0.5566959299864003,5
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,6,26.726266986126106,5,28.632243921249316,-1.9059769351232099,6
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,7,27.519786346143544,6,26.726266986126106,0.793519360017438,7
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,8,26.67803071598159,7,27.519786346143544,-0.8417556301619555,8
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,9,27.891771398668684,8,26.67803071598159,1.2137406826870958,9
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,10,27.966428218518747,9,27.891771398668684,0.07465681985006256,10
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,2,28.499362960700335,1,26.59888386371691,1.9004790969834247,4
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,3,28.415731852952735,2,28.499362960700335,-0.08363110774759974,6
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,4,28.6595880299153,3,28.415731852952735,0.24385617696256645,8
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,5,28.43066924709003,4,28.6595880299153,-0.22891878282527145,10
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,6,28.573934683372936,5,28.43066924709003,0.14326543628290622,12
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,7,27.789406263338236,6,28.573934683372936,-0.7845284200347002,14
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,8,27.692075971427865,7,27.789406263338236,-0.0973302919103709,16
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,9,28.77335344977812,8,27.692075971427865,1.0812774783502554,18
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,10,28.1666550583703,9,28.77335344977812,-0.6066983914078214,20
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,2,28.846910496548638,1,26.887652848139187,1.9592576484094515,6
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,3,27.29233521221631,2,28.846910496548638,-1.5545752843323264,9
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,4,27.72321118997404,3,27.29233521221631,0.43087597775772934,12
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,5,27.545966067846788,4,27.72321118997404,-0.1772451221272533,15
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,6,27.72880583974409,5,27.545966067846788,0.18283977189730294,18
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,7,28.856039124716244,6,27.72880583974409,1.127233284972153,21
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,8,29.165202821828203,7,28.856039124716244,0.3091636971119591,24
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,9,28.84428912215567,8,29.165202821828203,-0.32091369967253414,27
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,10,28.042840948222754,9,28.84428912215567,-0.8014481739329149,30
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,2,28.352936201762862,1,28.548736037734646,-0.1957998359717834,10
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,3,28.364074237912096,2,28.352936201762862,0.011138036149233699,15
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,4,29.614578378920374,3,28.364074237912096,1.2505041410082782,20
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,5,28.430879734228164,4,29.614578378920374,-1.1836986446922104,25
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,6,27.056922748036747,5,28.430879734228164,-1.3739569861914163,30
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,7,29.13094055613926,6,27.056922748036747,2.0740178081025142,35
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,8,28.58018440671366,7,29.13094055613926,-0.5507561494256024,40
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,9,28.53978254826806,8,28.58018440671366,-0.04040185844559829,45
+flora,Linear FLoRA,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,10,28.63917281760045,9,28.53978254826806,0.09939026933238893,50
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,2,42.154465751529465,1,42.09638351770471,0.05808223382475575,2
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,3,41.318367793120984,2,42.154465751529465,-0.8360979584084802,3
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,4,40.33482461579716,3,41.318367793120984,-0.9835431773238241,4
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,5,41.174367677097216,4,40.33482461579716,0.8395430613000556,5
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,6,39.964022385882494,5,41.174367677097216,-1.210345291214722,6
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,7,40.70022229407088,6,39.964022385882494,0.7361999081883894,7
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,8,40.126600048526605,7,40.70022229407088,-0.5736222455442785,8
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,9,40.36102206504088,8,40.126600048526605,0.23442201651427297,9
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,10,40.18660413366696,9,40.36102206504088,-0.1744179313739167,10
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,2,41.95165125461138,1,44.27272264988395,-2.3210713952725754,4
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,3,42.16890867527782,2,41.95165125461138,0.21725742066644216,6
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,4,43.59053657311651,3,42.16890867527782,1.4216278978386896,8
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,5,44.68460555687419,4,43.59053657311651,1.0940689837576798,10
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,6,43.262463446157405,5,44.68460555687419,-1.4221421107167842,12
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,7,42.30121151519487,6,43.262463446157405,-0.9612519309625327,14
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,8,42.65858595736021,7,42.30121151519487,0.3573744421653373,16
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,9,42.74021735913149,8,42.65858595736021,0.0816314017712827,18
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,10,42.17589144163384,9,42.74021735913149,-0.5643259174976549,20
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,2,42.69232295744253,1,46.216901483508074,-3.5245785260655467,6
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,3,41.57884824931198,2,42.69232295744253,-1.1134747081305463,9
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,4,40.425838782194226,3,41.57884824931198,-1.153009467117755,12
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,5,41.35918654437782,4,40.425838782194226,0.9333477621835939,15
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,6,39.37290582500889,5,41.35918654437782,-1.9862807193689278,18
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,7,36.97790831561571,6,39.37290582500889,-2.3949975093931855,21
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,8,38.83675422782672,7,36.97790831561571,1.8588459122110095,24
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,9,35.99160542090973,8,38.83675422782672,-2.8451488069169883,27
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,10,38.33263238124551,9,35.99160542090973,2.341026960335782,30
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,2,38.09010533713283,1,46.06484928810766,-7.974743950974826,10
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,3,36.06911318318587,2,38.09010533713283,-2.0209921539469633,15
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,4,34.98601579789163,3,36.06911318318587,-1.0830973852942378,20
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,5,33.79226976184032,4,34.98601579789163,-1.1937460360513086,25
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,6,34.00229743929237,5,33.79226976184032,0.21002767745204665,30
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,7,32.01066069008484,6,34.00229743929237,-1.9916367492075295,35
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,8,33.34326023990073,7,32.01066069008484,1.332599549815889,40
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,9,31.052209556969636,8,33.34326023990073,-2.2910506829310933,45
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,10,30.444415841415307,9,31.052209556969636,-0.6077937155543296,50
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,2,40.959383223356234,1,45.100873212020446,-4.141489988664212,2
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,3,40.747855190921676,2,40.959383223356234,-0.21152803243455764,3
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,4,39.27837422974832,3,40.747855190921676,-1.4694809611733533,4
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,5,38.60890283884426,4,39.27837422974832,-0.6694713909040644,5
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,6,38.051035298927175,5,38.60890283884426,-0.5578675399170834,6
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,7,37.747856915591086,6,38.051035298927175,-0.30317838333608904,7
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,8,35.6476079283212,7,37.747856915591086,-2.100248987269886,8
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,9,35.2878620871314,8,35.6476079283212,-0.3597458411897989,9
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,10,35.58244737864831,9,35.2878620871314,0.2945852915169098,10
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,2,41.62260652971888,1,42.288709736475546,-0.6661032067566666,4
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,3,43.32040114715666,2,41.62260652971888,1.6977946174377792,6
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,4,40.32606039484363,3,43.32040114715666,-2.994340752313029,8
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,5,43.332710945166696,4,40.32606039484363,3.006650550323066,10
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,6,41.62255153634585,5,43.332710945166696,-1.710159408820843,12
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,7,42.33972430992514,6,41.62255153634585,0.7171727735792857,14
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,8,40.982815561653126,7,42.33972430992514,-1.3569087482720121,16
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,9,40.13543079304065,8,40.982815561653126,-0.8473847686124785,18
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,10,39.19553969492619,9,40.13543079304065,-0.9398910981144581,20
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,2,37.64734670432514,1,36.82410660637841,0.82324009794673,6
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,3,37.18937819257118,2,37.64734670432514,-0.45796851175395403,9
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,4,36.98061311965547,3,37.18937819257118,-0.20876507291571045,12
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,5,36.8568089350097,4,36.98061311965547,-0.12380418464577048,15
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,6,36.204606434725235,5,36.8568089350097,-0.6522025002844671,18
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,7,36.986538002395456,6,36.204606434725235,0.7819315676702203,21
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,8,36.746180233494854,7,36.986538002395456,-0.24035776890060134,24
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,9,34.9640894014745,8,36.746180233494854,-1.7820908320203515,27
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,10,36.08904946377896,9,34.9640894014745,1.12496006230446,30
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,2,37.90364206374151,1,40.22545299620975,-2.3218109324682388,10
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,3,36.47299347667154,2,37.90364206374151,-1.4306485870699674,15
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,4,35.397391985070875,3,36.47299347667154,-1.0756014916006649,20
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,5,34.44443527776004,4,35.397391985070875,-0.9529567073108325,25
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,6,37.06405933075061,5,34.44443527776004,2.6196240529905666,30
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,7,36.5836114624765,6,37.06405933075061,-0.480447868274112,35
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,8,36.41143213148031,7,36.5836114624765,-0.17217933099618676,40
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,9,36.00277416006926,8,36.41143213148031,-0.40865797141105276,45
+flora,Linear FLoRA,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,10,34.60655148438787,9,36.00277416006926,-1.3962226756813862,50
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,2,44.55370053034588,1,40.962371725851554,3.5913288044943243,2
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,3,43.18967446552127,2,44.55370053034588,-1.364026064824607,3
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,4,42.64053898182721,3,43.18967446552127,-0.5491354836940587,4
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,5,41.85446285768038,4,42.64053898182721,-0.786076124146831,5
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,6,40.71225721684303,5,41.85446285768038,-1.1422056408373535,6
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,7,40.75242309096717,6,40.71225721684303,0.040165874124141965,7
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,8,39.899243448296964,7,40.75242309096717,-0.8531796426702059,8
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,9,38.46348993557084,8,39.899243448296964,-1.435753512726123,9
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,10,39.537687333823804,9,38.46348993557084,1.074197398252963,10
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,2,41.4372507631636,1,43.17941780344309,-1.7421670402794902,4
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,3,41.68343682203057,2,41.4372507631636,0.2461860588669751,6
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,4,41.45091914246466,3,41.68343682203057,-0.23251767956590896,8
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,5,42.09469708569437,4,41.45091914246466,0.6437779432297077,10
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,6,41.38137628514904,5,42.09469708569437,-0.7133208005453326,12
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,7,43.20431654274306,6,41.38137628514904,1.82294025759402,14
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,8,42.2516757096005,7,43.20431654274306,-0.95264083314256,16
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,9,41.89242993187752,8,42.2516757096005,-0.3592457777229754,18
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,10,42.3593810169204,9,41.89242993187752,0.4669510850428793,20
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,2,40.841104783528245,1,45.736471619380225,-4.895366835851981,6
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,3,41.31261735061147,2,40.841104783528245,0.47151256708322364,9
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,4,40.53710485750259,3,41.31261735061147,-0.7755124931088773,12
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,5,37.6314347591111,4,40.53710485750259,-2.9056700983914894,15
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,6,37.02127547106051,5,37.6314347591111,-0.610159288050589,18
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,7,37.21335645081311,6,37.02127547106051,0.1920809797525962,21
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,8,37.146915906238185,7,37.21335645081311,-0.06644054457492388,24
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,9,37.972842962937094,8,37.146915906238185,0.8259270566989088,27
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,10,35.821307926948755,9,37.972842962937094,-2.1515350359883385,30
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,2,36.80443975392592,1,42.251335180609416,-5.446895426683497,10
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,3,35.26691386890039,2,36.80443975392592,-1.5375258850255307,15
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,4,34.99511415438871,3,35.26691386890039,-0.2717997145116797,20
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,5,31.839035490159006,4,34.99511415438871,-3.156078664229703,25
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,6,34.60048975737026,5,31.839035490159006,2.7614542672112563,30
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,7,32.248526650088,6,34.60048975737026,-2.351963107282259,35
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,8,33.35833548105423,7,32.248526650088,1.1098088309662302,40
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,9,32.05193831709167,8,33.35833548105423,-1.306397163962565,45
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,10,31.99538648792212,9,32.05193831709167,-0.056551829169549706,50
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,2,41.117728108320165,1,46.735378514127305,-5.61765040580714,2
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,3,39.8452998456584,2,41.117728108320165,-1.2724282626617622,3
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,4,38.46128903414804,3,39.8452998456584,-1.3840108115103646,4
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,5,39.255259332818476,4,38.46128903414804,0.7939702986704376,5
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,6,37.685708414100766,5,39.255259332818476,-1.5695509187177095,6
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,7,36.255459633379154,6,37.685708414100766,-1.4302487807216124,7
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,8,35.09393275753956,7,36.255459633379154,-1.1615268758395914,8
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,9,34.01226406783887,8,35.09393275753956,-1.0816686897006917,9
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,10,35.33815133634038,9,34.01226406783887,1.3258872685015106,10
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,2,40.48567704396104,1,42.06053398504614,-1.5748569410851019,4
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,3,41.169868072882686,2,40.48567704396104,0.6841910289216457,6
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,4,39.40311884522087,3,41.169868072882686,-1.766749227661819,8
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,5,39.029558358114365,4,39.40311884522087,-0.37356048710650214,10
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,6,39.78101174756354,5,39.029558358114365,0.7514533894491748,12
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,7,40.58308828152438,6,39.78101174756354,0.8020765339608431,14
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,8,38.097814466066545,7,40.58308828152438,-2.4852738154578375,16
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,9,38.78052865532214,8,38.097814466066545,0.6827141892555986,18
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,10,38.93576736298945,9,38.78052865532214,0.15523870766730852,20
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,2,38.96640122941547,1,38.96556114099866,0.0008400884168082712,6
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,3,37.270587106415526,2,38.96640122941547,-1.6958141229999413,9
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,4,37.6132669388148,3,37.270587106415526,0.342679832399277,12
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,5,37.83172811457966,4,37.6132669388148,0.21846117576485824,15
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,6,36.74586633120484,5,37.83172811457966,-1.085861783374824,18
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,7,36.233095347280674,6,36.74586633120484,-0.5127709839241632,21
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,8,35.01441513039428,7,36.233095347280674,-1.2186802168863906,24
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,9,36.846725023702994,8,35.01441513039428,1.832309893308711,27
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,10,34.91267504195656,9,36.846725023702994,-1.9340499817464334,30
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,2,37.796396179905315,1,41.04211865978867,-3.245722479883355,10
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,3,36.01754330244951,2,37.796396179905315,-1.7788528774558046,15
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,4,36.262198134374266,3,36.01754330244951,0.24465483192475546,20
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,5,35.0160624337951,4,36.262198134374266,-1.246135700579167,25
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,6,34.278925286372335,5,35.0160624337951,-0.7371371474227644,30
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,7,34.8216795894449,6,34.278925286372335,0.542754303072563,35
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,8,32.461718148293265,7,34.8216795894449,-2.3599614411516328,40
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,9,33.87737605032875,8,32.461718148293265,1.415657902035484,45
+flora,Linear FLoRA,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,10,32.03620603630801,9,33.87737605032875,-1.84117001402074,50
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,2,26.81936661071425,1,21.818983741200153,5.000382869514098,2
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,3,26.844627551019983,2,26.81936661071425,0.02526094030573134,3
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,4,27.755430708514893,3,26.844627551019983,0.9108031574949109,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,5,29.69565835524501,4,27.755430708514893,1.940227646730115,5
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,6,29.287289374346297,5,29.69565835524501,-0.408368980898711,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,7,28.373788470187968,6,29.287289374346297,-0.9135009041583295,7
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,8,28.75184033274527,7,28.373788470187968,0.37805186255730305,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,9,31.026771776370715,8,28.75184033274527,2.2749314436254444,9
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,1,10,29.638360771718663,9,31.026771776370715,-1.3884110046520526,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,2,25.82494592112029,1,25.937045206971256,-0.11209928585096662,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,3,30.01118822469756,2,25.82494592112029,4.18624230357727,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,4,30.100207433685593,3,30.01118822469756,0.08901920898803439,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,5,29.626678876915896,4,30.100207433685593,-0.47352855676969696,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,6,30.80384931646257,5,29.626678876915896,1.1771704395466749,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,7,30.087677618236853,6,30.80384931646257,-0.7161716982257182,14
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,8,30.3498497450722,7,30.087677618236853,0.2621721268353454,16
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,9,30.132990668794097,8,30.3498497450722,-0.21685907627810153,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,2,10,29.11914510174347,9,30.132990668794097,-1.0138455670506268,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,2,29.432533562917246,1,27.789584720914757,1.6429488420024896,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,3,31.060014077748882,2,29.432533562917246,1.6274805148316354,9
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,4,28.677555555401508,3,31.060014077748882,-2.382458522347374,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,5,29.076129200507943,4,28.677555555401508,0.3985736451064348,15
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,6,29.21768801088376,5,29.076129200507943,0.14155881037581608,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,7,29.283462194289843,6,29.21768801088376,0.06577418340608432,21
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,8,27.832306348712393,7,29.283462194289843,-1.4511558455774498,24
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,9,27.49413545688897,8,27.832306348712393,-0.33817089182342386,27
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,3,10,28.58779565251109,9,27.49413545688897,1.093660195622121,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,2,27.270157371909505,1,29.147440776539053,-1.877283404629548,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,3,25.863407657144837,2,27.270157371909505,-1.4067497147646684,15
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,4,26.766888724176297,3,25.863407657144837,0.9034810670314606,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,5,27.886308230205913,4,26.766888724176297,1.1194195060296153,25
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,6,26.897496257016517,5,27.886308230205913,-0.9888119731893958,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,7,28.565918284122116,6,26.897496257016517,1.6684220271055992,35
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,8,27.226113244112504,7,28.565918284122116,-1.3398050400096118,40
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,9,26.108321289033814,8,27.226113244112504,-1.1177919550786903,45
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,heter,Heter,5,10,26.068466205186922,9,26.108321289033814,-0.039855083846891404,50
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,2,23.698493750052556,1,16.8079114453645,6.890582304688056,2
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,3,26.220886139449924,2,23.698493750052556,2.5223923893973677,3
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,4,26.222183674763684,3,26.220886139449924,0.0012975353137605339,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,5,27.327845122847588,4,26.222183674763684,1.1056614480839038,5
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,6,26.88443767817517,5,27.327845122847588,-0.4434074446724168,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,7,27.661519620793552,6,26.88443767817517,0.7770819426183806,7
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,8,26.129946504035072,7,27.661519620793552,-1.53157311675848,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,9,28.14995252884155,8,26.129946504035072,2.0200060248064773,9
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,1,10,28.322168858089565,9,28.14995252884155,0.1722163292480161,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,2,28.42350139092521,1,26.46616623189893,1.9573351590262789,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,3,28.85442998983271,2,28.42350139092521,0.43092859890749935,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,4,27.52784676570716,3,28.85442998983271,-1.3265832241255495,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,5,27.1812071584277,4,27.52784676570716,-0.3466396072794602,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,6,28.947906736768065,5,27.1812071584277,1.766699578340365,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,7,29.543345518706527,6,28.947906736768065,0.5954387819384621,14
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,8,29.451739257656094,7,29.543345518706527,-0.09160626105043335,16
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,9,29.503750183386384,8,29.451739257656094,0.05201092573028987,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,2,10,29.01702783697486,9,29.503750183386384,-0.486722346411522,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,2,28.469315590963483,1,25.945933251406156,2.523382339557326,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,3,30.217557457310612,2,28.469315590963483,1.7482418663471293,9
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,4,28.26248479502648,3,30.217557457310612,-1.955072662284131,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,5,27.01578858163325,4,28.26248479502648,-1.246696213393232,15
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,6,27.905450731484354,5,27.01578858163325,0.8896621498511053,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,7,28.095705603885524,6,27.905450731484354,0.19025487240116945,21
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,8,27.11839772236616,7,28.095705603885524,-0.9773078815193621,24
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,9,28.437058733472742,8,27.11839772236616,1.318661011106581,27
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,3,10,28.55253346246946,9,28.437058733472742,0.11547472899671618,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,2,26.92551723273158,1,27.862926693202674,-0.9374094604710947,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,3,27.8099071843471,2,26.92551723273158,0.8843899516155211,15
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,4,27.054016680795552,3,27.8099071843471,-0.755890503551548,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,5,26.5345194554578,4,27.054016680795552,-0.5194972253377514,25
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,6,29.01387312750692,5,26.5345194554578,2.4793536720491183,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,7,28.12492379422785,6,29.01387312750692,-0.8889493332790686,35
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,8,28.364555218416694,7,28.12492379422785,0.2396314241888433,40
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,9,25.389337821490894,8,28.364555218416694,-2.9752173969257996,45
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly,Dolly,tinyllama,TinyLlama,homo,Homo,5,10,25.916514031317988,9,25.389337821490894,0.5271762098270933,50
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,2,26.10977205137389,1,22.345644973949984,3.7641270774239075,2
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,3,28.48881945017636,2,26.10977205137389,2.37904739880247,3
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,4,26.477957230375427,3,28.48881945017636,-2.0108622198009343,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,5,27.748882870943568,4,26.477957230375427,1.2709256405681408,5
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,6,26.480514796826416,5,27.748882870943568,-1.2683680741171521,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,7,29.838121020158713,6,26.480514796826416,3.357606223332297,7
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,8,29.61147862045932,7,29.838121020158713,-0.2266423996993936,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,9,28.519139434178236,8,29.61147862045932,-1.0923391862810838,9
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,1,10,29.446810771236304,9,28.519139434178236,0.9276713370580687,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,2,27.73453658780684,1,24.978596701004413,2.7559398868024267,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,3,28.11795354962013,2,27.73453658780684,0.383416961813289,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,4,28.958233852372146,3,28.11795354962013,0.8402803027520171,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,5,27.514209774444037,4,28.958233852372146,-1.444024077928109,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,6,27.19938284940967,5,27.514209774444037,-0.3148269250343674,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,7,27.905896748988894,6,27.19938284940967,0.7065138995792246,14
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,8,28.166269910565493,7,27.905896748988894,0.26037316157659873,16
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,9,27.066296239156035,8,28.166269910565493,-1.0999736714094581,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,2,10,28.047500447909623,9,27.066296239156035,0.9812042087535886,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,2,30.096827805285802,1,27.193574535942876,2.903253269342926,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,3,28.284580800448005,2,30.096827805285802,-1.812247004837797,9
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,4,27.88773393621656,3,28.284580800448005,-0.39684686423144555,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,5,28.866144544676935,4,27.88773393621656,0.9784106084603756,15
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,6,26.715374850344244,5,28.866144544676935,-2.1507696943326913,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,7,26.355132027194234,6,26.715374850344244,-0.3602428231500099,21
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,8,28.18746868985614,7,26.355132027194234,1.8323366626619055,24
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,9,28.35435902958374,8,28.18746868985614,0.16689033972760114,27
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,3,10,29.707429381652457,9,28.35435902958374,1.3530703520687162,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,2,27.198729509688423,1,28.55533392947922,-1.3566044197907985,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,3,26.484806497100887,2,27.198729509688423,-0.7139230125875358,15
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,4,26.330577470412635,3,26.484806497100887,-0.15422902668825245,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,5,28.052865930789554,4,26.330577470412635,1.7222884603769195,25
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,6,25.990468866530335,5,28.052865930789554,-2.062397064259219,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,7,25.305620688546366,6,25.990468866530335,-0.6848481779839695,35
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,8,25.955502398297526,7,25.305620688546366,0.6498817097511598,40
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,9,26.023301023555224,8,25.955502398297526,0.06779862525769786,45
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,heter,Heter,5,10,26.40047534178798,9,26.023301023555224,0.3771743182327576,50
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,2,24.995920124302,1,16.9551544508751,8.0407656734269,2
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,3,26.78555549155355,2,24.995920124302,1.7896353672515488,3
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,4,27.623167078543275,3,26.78555549155355,0.8376115869897269,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,5,27.235802727993953,4,27.623167078543275,-0.3873643505493227,5
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,6,25.481604676004903,5,27.235802727993953,-1.75419805198905,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,7,27.265650552703054,6,25.481604676004903,1.7840458766981513,7
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,8,25.7869241219692,7,27.265650552703054,-1.478726430733854,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,9,27.009502061162372,8,25.7869241219692,1.2225779391931724,9
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,1,10,27.91626263970389,9,27.009502061162372,0.9067605785415189,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,2,27.592716770446103,1,25.986437358789306,1.6062794116567964,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,3,27.765491873080567,2,27.592716770446103,0.17277510263446416,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,4,28.534661800833117,3,27.765491873080567,0.7691699277525501,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,5,27.793407292545584,4,28.534661800833117,-0.7412545082875326,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,6,29.711140580548346,5,27.793407292545584,1.9177332880027613,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,7,28.575341249438214,6,29.711140580548346,-1.1357993311101318,14
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,8,28.522255702397814,7,28.575341249438214,-0.053085547040399916,16
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,9,26.529090977381358,8,28.522255702397814,-1.993164725016456,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,2,10,27.249142196928332,9,26.529090977381358,0.7200512195469742,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,2,28.468738416487206,1,26.67849258442286,1.7902458320643468,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,3,28.511577306444313,2,28.468738416487206,0.04283888995710683,9
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,4,27.158419854002712,3,28.511577306444313,-1.3531574524416001,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,5,26.507763284208334,4,27.158419854002712,-0.6506565697943785,15
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,6,27.760424352061854,5,26.507763284208334,1.25266106785352,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,7,27.593457192778526,6,27.760424352061854,-0.1669671592833275,21
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,8,27.242562633618796,7,27.593457192778526,-0.35089455915973033,24
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,9,27.792744393411823,8,27.242562633618796,0.550181759793027,27
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,3,10,27.20058534666052,9,27.792744393411823,-0.592159046751302,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,2,27.279441682195742,1,28.501332071875236,-1.2218903896794941,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,3,26.22426358912982,2,27.279441682195742,-1.0551780930659227,15
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,4,27.41262642650138,3,26.22426358912982,1.1883628373715602,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,5,26.572279924582816,4,27.41262642650138,-0.8403465019185639,25
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,6,27.504074588005402,5,26.572279924582816,0.9317946634225862,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,7,27.420801184291772,6,27.504074588005402,-0.08327340371362979,35
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,8,27.726803633277306,7,27.420801184291772,0.3060024489855344,40
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,9,26.969736703997594,8,27.726803633277306,-0.7570669292797128,45
+nonlinear_flora,Nonlinear FLoRA Cumulative,dolly_stratified,Dolly stratified,tinyllama,TinyLlama,homo,Homo,5,10,28.193077668628426,9,26.969736703997594,1.2233409646308324,50
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,2,40.637648857323946,1,37.41708558555792,3.220563271766025,2
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,3,37.4241799934044,2,40.637648857323946,-3.2134688639195446,3
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,4,39.77454763991461,3,37.4241799934044,2.3503676465102075,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,5,39.28317933377622,4,39.77454763991461,-0.49136830613839066,5
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,6,39.80133769589784,5,39.28317933377622,0.5181583621216248,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,7,39.63579573239874,6,39.80133769589784,-0.165541963499102,7
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,8,40.543975336476905,7,39.63579573239874,0.908179604078164,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,9,40.58272280350685,8,40.543975336476905,0.038747467029942584,9
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,1,10,40.75082893552834,9,40.58272280350685,0.16810613202149227,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,2,43.14543861560761,1,37.647739908589465,5.497698707018145,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,3,42.49890161954967,2,43.14543861560761,-0.6465369960579395,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,4,42.33925565286243,3,42.49890161954967,-0.1596459666872434,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,5,43.80033216857398,4,42.33925565286243,1.4610765157115537,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,6,41.66056914983843,5,43.80033216857398,-2.1397630187355503,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,7,40.38323249198264,6,41.66056914983843,-1.2773366578557912,14
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,8,41.45677349023282,7,40.38323249198264,1.0735409982501807,16
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,9,40.36123642459319,8,41.45677349023282,-1.0955370656396326,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,2,10,41.08861160773231,9,40.36123642459319,0.7273751831391237,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,2,42.974337649211,1,44.126889822266726,-1.1525521730557244,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,3,40.85126224538407,2,42.974337649211,-2.123075403826931,9
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,4,39.89742024561935,3,40.85126224538407,-0.9538419997647196,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,5,39.83401612540271,4,39.89742024561935,-0.06340412021663866,15
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,6,38.533009819524686,5,39.83401612540271,-1.3010063058780261,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,7,37.956146175460965,6,38.533009819524686,-0.5768636440637209,21
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,8,38.74308099145276,7,37.956146175460965,0.7869348159917919,24
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,9,37.71366282917626,8,38.74308099145276,-1.0294181622764995,27
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,3,10,38.08582787435301,9,37.71366282917626,0.3721650451767502,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,2,36.89677398704623,1,40.935502578760016,-4.0387285917137845,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,3,35.66881586068468,2,36.89677398704623,-1.2279581263615498,15
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,4,35.673418853053036,3,35.66881586068468,0.004602992368354819,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,5,35.23398558088858,4,35.673418853053036,-0.4394332721644574,25
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,6,35.27487521590451,5,35.23398558088858,0.04088963501592957,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,7,34.207688147147884,6,35.27487521590451,-1.067187068756624,35
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,8,33.05659044291794,7,34.207688147147884,-1.1510977042299473,40
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,9,35.104818630010634,8,33.05659044291794,2.048228187092697,45
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,heter,Heter,5,10,34.295502689327115,9,35.104818630010634,-0.8093159406835184,50
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,2,35.70729726118481,1,37.05090452151188,-1.3436072603270688,2
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,3,38.45480131456653,2,35.70729726118481,2.747504053381718,3
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,4,39.000537613711096,3,38.45480131456653,0.5457362991445649,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,5,39.54135756921836,4,39.000537613711096,0.540819955507267,5
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,6,39.80446790051658,5,39.54135756921836,0.2631103312982148,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,7,39.3295127284336,6,39.80446790051658,-0.47495517208297855,7
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,8,41.21052693114394,7,39.3295127284336,1.8810142027103396,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,9,41.676938523093256,8,41.21052693114394,0.46641159194931703,9
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,1,10,41.082273143940945,9,41.676938523093256,-0.5946653791523104,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,2,40.25846232149045,1,42.01573477140562,-1.7572724499151704,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,3,41.18135473459231,2,40.25846232149045,0.922892413101863,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,4,41.06076548667039,3,41.18135473459231,-0.12058924792192016,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,5,40.527876944347554,4,41.06076548667039,-0.5328885423228371,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,6,40.3314927659418,5,40.527876944347554,-0.19638417840575073,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,7,40.52972106822109,6,40.3314927659418,0.1982283022792899,14
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,8,39.821489037163914,7,40.52972106822109,-0.7082320310571788,16
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,9,39.859194699280216,8,39.821489037163914,0.03770566211630211,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,2,10,38.23875488117675,9,39.859194699280216,-1.6204398181034634,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,2,37.02340249768608,1,40.568602426281096,-3.545199928595018,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,3,37.3069053249081,2,37.02340249768608,0.2835028272220228,9
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,4,37.65083627040766,3,37.3069053249081,0.34393094549955805,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,5,35.50748618841618,4,37.65083627040766,-2.1433500819914784,15
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,6,35.61136323121401,5,35.50748618841618,0.10387704279782639,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,7,35.59452315228036,6,35.61136323121401,-0.016840078933647362,21
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,8,35.42313388605757,7,35.59452315228036,-0.17138926622278916,24
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,9,36.3069420017184,8,35.42313388605757,0.8838081156608268,27
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,3,10,34.673016756735734,9,36.3069420017184,-1.6339252449826631,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,2,35.68705406417659,1,37.08505278001363,-1.3979987158370406,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,3,34.26244560379585,2,35.68705406417659,-1.424608460380746,15
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,4,33.68245065114029,3,34.26244560379585,-0.5799949526555537,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,5,33.62710703515214,4,33.68245065114029,-0.05534361598814996,25
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,6,34.124460811706555,5,33.62710703515214,0.49735377655441226,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,7,33.71215463903447,6,34.124460811706555,-0.412306172672082,35
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,8,33.60817355359102,7,33.71215463903447,-0.10398108544345064,40
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,9,32.74586844711227,8,33.60817355359102,-0.8623051064787504,45
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz,Wizard,tinyllama,TinyLlama,homo,Homo,5,10,33.35027522302321,9,32.74586844711227,0.6044067759109382,50
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,2,39.5209180115286,1,37.62759031106434,1.893327700464262,2
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,3,38.97058400816587,2,39.5209180115286,-0.5503340033627282,3
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,4,38.75417241850416,3,38.97058400816587,-0.21641158966171048,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,5,37.33056438116408,4,38.75417241850416,-1.423608037340081,5
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,6,37.55286277275333,5,37.33056438116408,0.22229839158924847,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,7,37.63499189588549,6,37.55286277275333,0.08212912313216236,7
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,8,39.03042197014309,7,37.63499189588549,1.3954300742575967,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,9,39.57066489217925,8,39.03042197014309,0.540242922036164,9
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,1,10,38.919691625305305,9,39.57066489217925,-0.6509732668739474,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,2,43.750394462293066,1,38.17825433786213,5.572140124430938,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,3,42.766399439198054,2,43.750394462293066,-0.9839950230950123,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,4,41.54241720380633,3,42.766399439198054,-1.2239822353917233,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,5,42.30857491337313,4,41.54241720380633,0.766157709566798,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,6,41.43921769149232,5,42.30857491337313,-0.8693572218808114,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,7,41.40160196815773,6,41.43921769149232,-0.03761572333458929,14
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,8,41.25255526715691,7,41.40160196815773,-0.1490467010008203,16
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,9,42.25245270076792,8,41.25255526715691,0.9998974336110109,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,2,10,40.838792212957806,9,42.25245270076792,-1.4136604878101124,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,2,41.08214118911205,1,45.377494561705326,-4.295353372593276,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,3,41.50742598469234,2,41.08214118911205,0.4252847955802892,9
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,4,39.50909491852582,3,41.50742598469234,-1.9983310661665215,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,5,40.013467000197025,4,39.50909491852582,0.5043720816712067,15
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,6,38.41577830319722,5,40.013467000197025,-1.5976886969998034,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,7,35.09840526993911,6,38.41577830319722,-3.3173730332581144,21
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,8,36.554246744515794,7,35.09840526993911,1.4558414745766868,24
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,9,35.88332583252124,8,36.554246744515794,-0.670920911994557,27
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,3,10,36.89003846809176,9,35.88332583252124,1.0067126355705227,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,2,37.40343269236933,1,42.333528348367786,-4.930095655998457,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,3,36.766346452421224,2,37.40343269236933,-0.6370862399481041,15
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,4,34.12295566761537,3,36.766346452421224,-2.6433907848058524,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,5,35.31840338763508,4,34.12295566761537,1.1954477200197076,25
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,6,35.129406685298,5,35.31840338763508,-0.18899670233707866,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,7,31.997212898375444,6,35.129406685298,-3.1321937869225565,35
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,8,31.71029242772942,7,31.997212898375444,-0.2869204706460238,40
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,9,32.2709462902521,8,31.71029242772942,0.5606538625226776,45
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,heter,Heter,5,10,31.672138300711016,9,32.2709462902521,-0.5988079895410827,50
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,2,35.756062585756446,1,37.366335057803624,-1.6102724720471784,2
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,3,36.136412444339825,2,35.756062585756446,0.38034985858337933,3
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,4,37.62976207042885,3,36.136412444339825,1.493349626089028,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,5,39.50138009068701,4,37.62976207042885,1.871618020258154,5
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,6,39.21099441045227,5,39.50138009068701,-0.2903856802347349,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,7,39.33983876741966,6,39.21099441045227,0.1288443569673845,7
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,8,39.45095982390248,7,39.33983876741966,0.11112105648282267,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,9,39.49783155167943,8,39.45095982390248,0.04687172777695281,9
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,1,10,41.169770338361936,9,39.49783155167943,1.671938786682503,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,2,40.87531461167635,1,41.666271127794005,-0.790956516117653,4
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,3,42.88281806146077,2,40.87531461167635,2.0075034497844157,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,4,40.26954250876913,3,42.88281806146077,-2.61327555269164,8
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,5,40.859707137950146,4,40.26954250876913,0.5901646291810181,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,6,41.67066604665637,5,40.859707137950146,0.8109589087062261,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,7,40.6669235892268,6,41.67066604665637,-1.0037424574295741,14
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,8,41.30160731470246,7,40.6669235892268,0.6346837254756608,16
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,9,40.45939269475542,8,41.30160731470246,-0.8422146199470362,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,2,10,40.72181285167423,9,40.45939269475542,0.2624201569188074,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,2,36.309963840771736,1,41.79641809118881,-5.486454250417076,6
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,3,36.27871684302966,2,36.309963840771736,-0.03124699774207329,9
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,4,35.51204676447048,3,36.27871684302966,-0.76667007855918,12
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,5,36.388262289237495,4,35.51204676447048,0.8762155247670123,15
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,6,35.52867893763009,5,36.388262289237495,-0.8595833516074052,18
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,7,34.82873977583722,6,35.52867893763009,-0.6999391617928694,21
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,8,34.46076607917903,7,34.82873977583722,-0.3679736966581899,24
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,9,34.40274362280598,8,34.46076607917903,-0.05802245637305248,27
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,3,10,34.428159868390814,9,34.40274362280598,0.025416245584835906,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,2,36.16460169460753,1,34.51271845604456,1.6518832385629736,10
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,3,35.568587750544765,2,36.16460169460753,-0.5960139440627685,15
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,4,34.44178468990779,3,35.568587750544765,-1.1268030606369734,20
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,5,33.33093027488856,4,34.44178468990779,-1.110854415019233,25
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,6,33.779585961177915,5,33.33093027488856,0.4486556862893565,30
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,7,33.442369729290284,6,33.779585961177915,-0.3372162318876306,35
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,8,31.906663025530797,7,33.442369729290284,-1.5357067037594874,40
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,9,32.87686279091234,8,31.906663025530797,0.970199765381544,45
+nonlinear_flora,Nonlinear FLoRA Cumulative,wiz_stratified,Wizard stratified,tinyllama,TinyLlama,homo,Homo,5,10,31.291276784328442,9,32.87686279091234,-1.585586006583899,50

@@ -1,0 +1,17 @@
+Dataset label,Setting,Configured budget,Config rounds,Seed,Observed rounds,Complete run,Run status,Result source,Run dir
+Dolly,Heter,r50,50,0,50,True,Complete,score log,epoch_round_tuning_ffa_high_rounds/tuning-ffa-dolly-tinyllama-heter-e1-r50
+Dolly,Heter,r100,100,0,100,True,Complete,score log,epoch_round_tuning_ffa_high_rounds/tuning-ffa-dolly-tinyllama-heter-e1-r100
+Dolly,Homo,r50,50,0,50,True,Complete,score log,epoch_round_tuning_ffa_high_rounds/tuning-ffa-dolly-tinyllama-homo-e1-r50
+Dolly,Homo,r100,100,0,100,True,Complete,score log,epoch_round_tuning_ffa_high_rounds/tuning-ffa-dolly-tinyllama-homo-e1-r100
+Dolly stratified,Heter,r50,50,0,50,True,Complete,score log,epoch_round_tuning_ffa_high_rounds/tuning-ffa-dolly_stratified-tinyllama-heter-e1-r50
+Dolly stratified,Heter,r100,100,0,100,True,Complete,score log,epoch_round_tuning_ffa_high_rounds/tuning-ffa-dolly_stratified-tinyllama-heter-e1-r100
+Dolly stratified,Homo,r50,50,0,50,True,Complete,score log,epoch_round_tuning_ffa_high_rounds/tuning-ffa-dolly_stratified-tinyllama-homo-e1-r50
+Dolly stratified,Homo,r100,100,0,100,True,Complete,score log,epoch_round_tuning_ffa_high_rounds/tuning-ffa-dolly_stratified-tinyllama-homo-e1-r100
+Wizard,Heter,r50,50,0,50,True,Complete,score log,epoch_round_tuning_ffa_high_rounds/tuning-ffa-wiz-tinyllama-heter-e1-r50
+Wizard,Heter,r100,100,0,50,False,Live partial,slurm stdout,epoch_round_tuning_ffa_high_rounds/tuning-ffa-wiz-tinyllama-heter-e1-r100
+Wizard,Homo,r50,50,0,49,False,Live partial,slurm stdout,epoch_round_tuning_ffa_high_rounds/tuning-ffa-wiz-tinyllama-homo-e1-r50
+Wizard,Homo,r100,100,0,51,False,Live partial,slurm stdout,epoch_round_tuning_ffa_high_rounds/tuning-ffa-wiz-tinyllama-homo-e1-r100
+Wizard stratified,Heter,r50,50,0,50,True,Complete,score log,epoch_round_tuning_ffa_high_rounds/tuning-ffa-wiz_stratified-tinyllama-heter-e1-r50
+Wizard stratified,Heter,r100,100,0,51,False,Live partial,slurm stdout,epoch_round_tuning_ffa_high_rounds/tuning-ffa-wiz_stratified-tinyllama-heter-e1-r100
+Wizard stratified,Homo,r50,50,0,50,True,Complete,score log,epoch_round_tuning_ffa_high_rounds/tuning-ffa-wiz_stratified-tinyllama-homo-e1-r50
+Wizard stratified,Homo,r100,100,0,52,False,Live partial,slurm stdout,epoch_round_tuning_ffa_high_rounds/tuning-ffa-wiz_stratified-tinyllama-homo-e1-r100
