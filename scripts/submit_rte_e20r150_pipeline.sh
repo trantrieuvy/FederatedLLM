@@ -34,6 +34,7 @@ Environment overrides:
   MANIFEST=tuning_manifests/roberta_rte_stratified_client_count_monitored_rank4_seed0_e20_r150.tsv
   JOB_PREFIX=rte_e20r150
   SBATCH_TIME=2-00:00:00
+  SBATCH_MEM=24G
   ROBERTA_LOCAL_MONITOR_ACCURACY=True  # default for segments 3+
   ROBERTA_LOCAL_VALIDATION_SOURCE=global_val  # default for segments 4+
   ROBERTA_LOCAL_TRAIN_MONITOR_SIZE_OVERRIDE=0  # default for segments 4+
@@ -48,6 +49,7 @@ SEGMENT_ROUNDS="${SEGMENT_ROUNDS:-10}"
 TOTAL_SEGMENTS="${TOTAL_SEGMENTS:-15}"
 RETAIN_ADAPTER_EVERY_N_ROUNDS="${ROBERTA_RETAIN_ADAPTER_EVERY_N_ROUNDS:-0}"
 JOB_PREFIX="${JOB_PREFIX:-rte_e20r150}"
+SBATCH_MEM="${SBATCH_MEM:-24G}"
 DRY_RUN="false"
 PREVIOUS_JOB_ID=""
 PREVIOUS_ROW_JOBS=""
@@ -363,6 +365,9 @@ submit_row() {
 
   if [[ -n "${SBATCH_TIME:-}" ]]; then
     cmd+=("--time=${SBATCH_TIME}")
+  fi
+  if [[ -n "${SBATCH_MEM:-}" ]]; then
+    cmd+=("--mem=${SBATCH_MEM}")
   fi
 
   local joined_deps

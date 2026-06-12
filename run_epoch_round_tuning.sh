@@ -6,7 +6,7 @@
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:a100:1
 #SBATCH --cpus-per-task=8
-#SBATCH --mem=0
+#SBATCH --mem=24G
 #SBATCH --time=2-00:00:00
 #SBATCH --mail-type=BEGIN,END
 
